@@ -1,0 +1,66 @@
+<div class="row toolbardiv">
+
+</div>
+
+<div class="row">
+    <div class="col-md-6 cardeditor cardbox">
+        <div ng-class="{'cardlayoutdiv':layoutmode}" ui-sortable="sortableOptions" ng-model="cards">
+            <div class="row" ng-repeat="card in cards track by $index" class="onecard" ng-if="card.sync != 'delete'">
+                <div class="col-md-12 onecard">
+                    <div gt-editor id="my-editor" ng-model="content"></div>
+                    <text-angular name="{{'carddata' + $index}}" ng-model="card.conceptdata" ta-target-toolbars="cardtoolbar" ta-file-drop="dropHandler"></text-angular>
+                    <div class="onecardoptionsbox">
+                        <div class="row">
+                            <div class="col-md-6"></div>
+                            <div class="col-md-6 cardoptionboxdiv">
+                                <a class="cardoptionoptionsbtn" ng-click="changeposition($index, -1)"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+                                <a class="cardoptionoptionsbtn" ng-click="changeposition($index, 1)"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                                <a ng-click="deletecard($index)" class="cardoptiondeletebtn"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                <a ng-click="duplicatecard($index)" class="cardoptioncopybtn"><i class="fa fa-files-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button ng-click="addcard()" class="cardaddbtn"><i class="fa fa-plus-circle" aria-hidden="true" ng-if="!layoutmode"></i> Add Card</button>
+
+    </div>
+
+    <div class="col-md-6 toolbardivcol">
+        <!--<button ng-click="layoutmode = !layoutmode">Layout Mode</button>
+        <p style="text-align:center">
+            $$ \sqrt[3]4 $$
+        </p>
+
+        <input type="text" ng-model="math.code">
+
+        <button ng-click="alert()">INSERT</button>-->
+
+        <div id="editorContainer" ng-init="loadmathseditor()"></div>
+
+        <h3>Use Tools to Edit Content</h3>
+        <text-angular-toolbar name="cardtoolbar" ta-toolbar-group-class="btngroupstyle" ta-toolbar-button-class="btngroupstylebutton" ta-toolbar-active-button-class="activetoolbarbtn"></text-angular-toolbar>
+    </div>
+
+
+
+</div>
+
+
+<div class="ln_solid"></div>
+<div class="form-group">
+    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+        <button class="btn btn-primary secondarybg" type="button" ng-click="goback()">Cancel</button>
+        <button type="submit" class="btn btn-success primarybg" ng-click="createcard()">Submit</button>
+    </div>
+</div>
+
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+<script>
+    
+</script>

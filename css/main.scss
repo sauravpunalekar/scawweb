@@ -1,0 +1,219 @@
+/*COLOUR VARIABLES*/
+
+$primary-color: #15a5b0;
+$primary-dark:#0f7b83;
+$secondary-color:#ebebeb;
+$secondary-light:#f8f8f8;
+$grey-text:#636363;
+$light-text:#d3d1d1;
+@font-face {
+    font-family: ceraL;
+    src: url(fonts/Cera_GR_Light.otf);
+}
+@font-face {
+    font-family: ceraM;
+    src: url(fonts/Cera_GR_Bold_Italic.otf);
+}
+@font-face {
+    font-family: ceraB;
+    src: url(fonts/Cera_GR_Bold.otf);
+}
+
+/*sass*/
+
+.searchbox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 120px;
+    margin-top: 1px;
+    padding: 1px 0 0 0;
+    z-index: 2;
+}
+li.search .search-wrapper {
+    margin: 0 0px;
+    transition: margin .25s ease;
+}
+li.search {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 120px;
+    margin-top: 1px;
+    padding: 1px 0 0 0;
+    z-index: 2;
+}
+#search:focus {
+    width: 100%;
+}
+#search:focus + searchicon {
+    right: 2px;
+}
+
+/*#search:focus + #b {
+    background: #ccc
+}*/
+
+#search {
+    width: 80% !important;
+    background-color: white !important;
+    height: 40px !important;
+    box-shadow: 0px 0px 5px -1px black !important;
+    border-radius: 3px !important;
+    margin: 0 0 0px 0 !important;
+    padding: 0 45px 0 15px !important;
+}
+.searchicon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.logobox {
+    background-color: $secondary-color !important;
+    height: 59px;
+}
+.menubg {
+    background-color: $secondary-light !important;
+}
+.side-nav li > a:hover {
+    color: white !important;
+    margin: 3px;
+    background-color: $primary-color !important;
+}
+.dividerline {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    margin-top: -10px !important;
+}
+.side-nav li > a {
+    font-size: 16px !important;
+    color: $grey-text !important;
+}
+.side-nav .subheader {
+    color: $light-text !important;
+    font-size: 12px !important;
+}
+.icons {
+    position: absolute;
+   
+}
+.menulist{
+        display: inline;
+    margin-left: 32px;
+}
+.menutext {
+    top: 4px;
+}
+.dropdownsub {}
+.bg {
+    background-color: #0ed5ca;
+    height: 320px;
+    margin-top: -90px;
+}
+.bgtext{
+    text-align: -webkit-center;
+    padding-top: 85px;
+    color: white;
+    font-size: 37px;
+    font-weight: 900;
+}
+.subbox {
+    text-align: -webkit-center;
+    margin-top: 30px;
+}
+.subbox2 {
+    background-color: white;
+    height: 190px;
+    width: 70%;
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+    box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+}
+.subbox3 {
+    text-align: center;
+    margin-top: -83px;
+    /* padding-left:50px;
+    padding-right:50px;
+    padding-top:270px;
+    padding-bottom: 50px;*/
+}
+.subicons {
+    width: 79px;
+    margin-top: 38px;
+}
+.sublist {
+    padding-top: 5px;
+    font-family: ceraM;
+}
+.subbox4 {
+    text-align: center;
+    /* padding-left:150px;
+    padding-right:150px;
+   */
+}
+$break-small: 992px;
+$break-large: 1200px;
+.contentdiv {
+    padding-left: 300px;
+    @media screen and (max-width: $break-small) {
+        padding-left: 0px;
+    }
+    @media screen and (min-width: $break-large) {}
+}
+.menuicon {
+    color: white;
+    font-size: 30px !important;
+    margin-left: 10px;
+}
+.chapterlist {
+    background-color: white;
+    height: 110px;
+    width: 90%;
+    -webkit-box-shadow: 0px 1px 6px 0px #4f4d4f;
+    -moz-box-shadow: 0px 1px 6px 0px #4f4d4f;
+    box-shadow: 0px 1px 6px 0px #4f4d4f;
+    
+}
+.chapbox {
+    text-align: -webkit-center;
+    margin-top: 30px;
+}
+.chapdivider {
+    height: 1.5px !important;
+    width: 106% !important;
+    margin-left: -11px !important;
+}
+.chaptext {
+    text-align: -webkit-left !important;
+    font-size: 26px !important;
+    margin-top: 14px !important;
+    margin-bottom: 11px !important;
+    margin-left: 12px;
+    color: #191a19 !important;
+    line-height: 26px;
+}
+.chapconcept {
+    text-align: left !important;
+    margin-top: 7px;
+    font-size: 14px;
+    color: #0ed5ca;
+    margin-left: 12px;
+    font-weight: 800;
+
+}
+.chapicon{
+    position: absolute;
+    color: #84a098 !important;
+    margin-left: 4px;
+   
+}
+.chapbuttons{
+    margin-top: 7px !important;
+    color: #84a098 !important;
+    font-weight: 800;
+}
+.chapheight{
+    margin-top: 6px !important;
+    font-size: 14px;
+}
