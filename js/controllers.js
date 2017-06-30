@@ -39,29 +39,49 @@ inqcontroller.controller('home', ['$scope', 'TemplateService', 'NavigationServic
         // routing
 
   }]);
-inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
-  function ($scope, TemplateService, NavigationService, $rootScope) {
-       
+inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$location',
+  function ($scope, TemplateService, NavigationService, $rootScope, $location) {
+
         $scope.title = "Login";
-       
-       
+
+
 
         //INITIALIZATIONS
-
+        $scope.logindata = {
+            contact: "",
+            password: ""
+        };
+        var loginsuccess = function (response) {
+            if (response.data == 'false') {
+                console.log('Login error');
+            } else {
+                console.log(response.data);
+                $.jStorage.set('user', response.data);
+                if ($.jStorage.get('user').access_id != 3) {
+                    $location.path('/subjects');
+                } else {
+                    $location.path('/standards');
+                }
+            }
+        }
         /*function*/
+        $scope.dologin = function () {
+            console.log($scope.logindata);
+            NavigationService.dologin($scope.logindata.contact, $scope.logindata.password).then(loginsuccess);
 
+        }
 
         // routing
 
   }]);
 inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
   function ($scope, TemplateService, NavigationService, $rootScope) {
-       
+
         $scope.title = "Standards";
-       $scope.template = TemplateService;
+        $scope.template = TemplateService;
         TemplateService.content = "views/standards.html";
-       
-       
+
+
 
         //INITIALIZATIONS
 
@@ -73,12 +93,12 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
   }]);
 inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
   function ($scope, TemplateService, NavigationService, $rootScope) {
-       
+
         $scope.title = "ConceptCards";
-       $scope.template = TemplateService;
+        $scope.template = TemplateService;
         TemplateService.content = "views/conceptcards.html";
-       
-       
+
+
 
         //INITIALIZATIONS
 
@@ -128,16 +148,15 @@ inqcontroller.controller('chaptersCtrl', ['$scope', 'TemplateService', 'Navigati
         var getchaptersbysubjectidsuccess = function (response) {
             console.log(response.data);
             $scope.chapters = response.data;
-            
+
         };
         var getchaptersbysubjectiderror = function (response) {
             console.log(response.data);
         };
         NavigationService.getchaptersbysubjectid($scope.subjectid).then(getchaptersbysubjectidsuccess, getchaptersbysubjectiderror);
-      
+
 
         /*function*/
-
 
         // routing
 

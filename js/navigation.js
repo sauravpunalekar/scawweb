@@ -68,7 +68,14 @@ return $http.get(adminurl + 'chapters/getchaptersbysubjectid', {
                     }
                 })
             },
-
+            dologin: function(contact,password){
+                return $http.get(adminurl+'users/scawlogin',{
+                    params:{
+                        contact: contact,
+                        password: password
+                    }
+                })
+            },
 
         }
     });
