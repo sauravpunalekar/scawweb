@@ -47,6 +47,7 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
 
 
         //INITIALIZATIONS
+        $scope.error = false;
         $scope.logindata = {
             contact: "",
             password: ""
@@ -54,7 +55,11 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
         var loginsuccess = function (response) {
             if (response.data == 'false') {
                 console.log('Login error');
+                $scope.error = true;
+
+
             } else {
+                $scope.error = false;
                 console.log(response.data);
                 $.jStorage.set('user', response.data);
                 if ($.jStorage.get('user').access_id != 3) {
@@ -66,6 +71,7 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
         }
         /*function*/
         $scope.dologin = function () {
+            $scope.error = false;
             console.log($scope.logindata);
             NavigationService.dologin($scope.logindata.contact, $scope.logindata.password).then(loginsuccess);
 
@@ -74,28 +80,28 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
         // routing
 
   }]);
-inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope','$location',
-  function ($scope, TemplateService, NavigationService, $rootScope,$location) {
+inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$location',
+  function ($scope, TemplateService, NavigationService, $rootScope, $location) {
 
         $scope.title = "Standards";
         $scope.template = TemplateService;
         TemplateService.content = "views/standards.html";
 
-        var getstandardsuccess = function(response){
+        var getstandardsuccess = function (response) {
             console.log(response.data);
             $scope.standards = response.data;
         }
-        var getstandarderror = function(response){
+        var getstandarderror = function (response) {
             console.log(response.data);
         }
         //INITIALIZATIONS
-        NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess,getstandarderror)
+        NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess, getstandarderror)
         /*function*/
-      
-      
+
+
         // routing
-        $scope.gotosubjects = function(standardid){
-            $.jStorage.get('user').standard_id=standardid;
+        $scope.gotosubjects = function (standardid) {
+            $.jStorage.get('user').standard_id = standardid;
             $location.path('/subjects');
         }
   }]);

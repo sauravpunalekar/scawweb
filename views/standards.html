@@ -6,12 +6,15 @@
 
     <div class="row subbox3" style="text-align:center;">
 
-        <div class="col  s6 m4 l4 subbox" ng-repeat='s in standards' ng-click="gotosubjects(s.id)">
+        <div class="col  s6 m4 l4 subbox" ng-repeat='s in standards' ng-click="gotosubjects(s.id)" ng-if="standards.length >0">
             <div class="standardbox">
                 <div class="standardtext">{{s.name}} Standard</div>
 
             </div>
   
+        </div>
+        <div ng-if="standards.length == 0">
+            <h4>No standards retrived</h4>
         </div>
 
     </div>

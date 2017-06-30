@@ -52,4 +52,18 @@ inq.filter('imagepath', function () {
         return "http://localhost/rest/rest/uploads/" + input;
         //return "http://learnwithinq.com/adminpanel/rest/uploads/" + input;
     };
+    
 });
+inq.directive('ngEnter', function() {
+       return function(scope, element, attrs) {
+           element.bind("keydown keypress", function(event) {
+               if(event.which === 13) {
+                   scope.$apply(function(){
+                       scope.$eval(attrs.ngEnter, {'event': event});
+                   });
+
+                   event.preventDefault();
+               }
+           });
+       };
+   });
