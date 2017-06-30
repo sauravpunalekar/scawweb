@@ -6,10 +6,8 @@ $secondary-color:#ebebeb;
 $secondary-light:#f8f8f8;
 $grey-text:#636363;
 $light-text:#d3d1d1;
-
-.textcenter{
-    text-align: center !important;
-
+.textcenter {
+       text-align: -webkit-center  !important;
 }
 @font-face {
     font-family: ceraL;
@@ -223,12 +221,38 @@ $break-large: 1200px;
 
 /*Login box*/
 
-
 .logintext {
     background-color: $secondary-color;
     height: 480px;
 }
 .loginlogo {
-   background-color: $primary-color;
+    background-color: $primary-color;
     height: 480px;
+}
+
+/*STandard */
+
+.standardtext {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 45px !important;
+}
+.standardbox {
+    background-color: white;
+    height: 190px;
+    padding: 14px;
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+    box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+}
+
+/*card*/
+
+.cardbox {
+    background-color: white;
+    height: 490px;
+    width: 70%;
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+    box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
 }
