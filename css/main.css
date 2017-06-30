@@ -1,7 +1,7 @@
 /*COLOUR VARIABLES*/
 /* line 9, C:/xamp/htdocs/scawweb/css/main.scss */
 .textcenter {
-  text-align: -webkit-center  !important; }
+  text-align: -webkit-center !important; }
 
 @font-face {
   font-family: ceraL;
@@ -270,10 +270,40 @@ li.search {
 /* line 251, C:/xamp/htdocs/scawweb/css/main.scss */
 .cardbox {
   background-color: white;
-  height: 490px;
-  width: 70%;
+  height: 70vh;
+  width: 90%;
   -webkit-box-shadow: 0px 1px 6px 0px #4f4d4f;
   -moz-box-shadow: 0px 1px 6px 0px #4f4d4f;
   box-shadow: 0px 1px 6px 0px #4f4d4f; }
+
+/* line 259, C:/xamp/htdocs/scawweb/css/main.scss */
+.cardbut {
+  background-color: white !important;
+  border: 1px solid #15a5b0 !important; }
+
+/* line 263, C:/xamp/htdocs/scawweb/css/main.scss */
+.cardicon {
+  color: #15a5b0 !important;
+  font-size: 50px !important;
+  text-align: -webkit-center; }
+
+/* line 268, C:/xamp/htdocs/scawweb/css/main.scss */
+.iconrow {
+  padding-left: 30px !important;
+  padding-right: 30px !important; }
+
+/* line 272, C:/xamp/htdocs/scawweb/css/main.scss */
+.starbut {
+  background-color: white !important;
+  border: 1px solid #15a5b0 !important;
+  width: 70px !important;
+  height: 70px !important; }
+
+/* line 278, C:/xamp/htdocs/scawweb/css/main.scss */
+.staricon {
+  color: #15a5b0 !important;
+  font-size: 57px !important;
+  text-align: -webkit-center;
+  margin-top: 6px; }
 
 /*# sourceMappingURL=main.css.map */

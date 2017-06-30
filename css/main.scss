@@ -7,7 +7,7 @@ $secondary-light:#f8f8f8;
 $grey-text:#636363;
 $light-text:#d3d1d1;
 .textcenter {
-       text-align: -webkit-center  !important;
+    text-align: -webkit-center !important;
 }
 @font-face {
     font-family: ceraL;
@@ -250,9 +250,34 @@ $break-large: 1200px;
 
 .cardbox {
     background-color: white;
-    height: 490px;
-    width: 70%;
+    height: 70vh;
+  width: 90%;
     -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+}
+.cardbut {
+    background-color: white !important;
+    border: 1px solid $primary-color !important;
+}
+.cardicon {
+    color: $primary-color !important;
+    font-size: 50px !important;
+    text-align: -webkit-center;
+}
+.iconrow {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+.starbut {
+    background-color: white !important;
+    border: 1px solid $primary-color !important;
+    width: 70px !important;
+    height: 70px !important;
+}
+.staricon {
+    color: #15a5b0 !important;
+    font-size: 57px !important;
+    text-align: -webkit-center;
+    margin-top: 6px;
 }
