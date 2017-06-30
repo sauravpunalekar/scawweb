@@ -60,22 +60,30 @@ var navigationservice = angular.module('navigationservice', [])
                 })
 
             },
-            getchaptersbysubjectid: function(id){
-                
-return $http.get(adminurl + 'chapters/getchaptersbysubjectid', {
+            getchaptersbysubjectid: function (id) {
+
+                return $http.get(adminurl + 'chapters/getchaptersbysubjectid', {
                     params: {
                         subjectid: id
                     }
                 })
             },
-            dologin: function(contact,password){
-                return $http.get(adminurl+'users/scawlogin',{
-                    params:{
+            dologin: function (contact, password) {
+                return $http.get(adminurl + 'users/scawlogin', {
+                    params: {
                         contact: contact,
                         password: password
                     }
                 })
             },
 
+            getstandardsbyboardid: function (id) {
+                return $http.get(adminurl + 'standards/getmanyby', {
+                    params: {
+                        field: 'board_id',
+                        value: id
+                    }
+                })
+            },
         }
     });
