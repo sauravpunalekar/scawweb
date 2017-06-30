@@ -54,6 +54,40 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
         // routing
 
   }]);
+inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
+  function ($scope, TemplateService, NavigationService, $rootScope) {
+       
+        $scope.title = "Standards";
+       $scope.template = TemplateService;
+        TemplateService.content = "views/standards.html";
+       
+       
+
+        //INITIALIZATIONS
+
+        /*function*/
+
+
+        // routing
+
+  }]);
+inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
+  function ($scope, TemplateService, NavigationService, $rootScope) {
+       
+        $scope.title = "ConceptCards";
+       $scope.template = TemplateService;
+        TemplateService.content = "views/conceptcards.html";
+       
+       
+
+        //INITIALIZATIONS
+
+        /*function*/
+
+
+        // routing
+
+  }]);
 
 inqcontroller.controller('subjectsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$location',
   function ($scope, TemplateService, NavigationService, $rootScope, $location) {
