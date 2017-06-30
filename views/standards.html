@@ -6,23 +6,12 @@
 
     <div class="row subbox3" style="text-align:center;">
 
-        <div class="col  s6 m4 l4 subbox">
+        <div class="col  s6 m4 l4 subbox" ng-repeat='s in standards' ng-click="gotosubjects(s.id)">
             <div class="standardbox">
-                <div class="standardtext">8th Standard</div>
+                <div class="standardtext">{{s.name}} Standard</div>
 
             </div>
-        </div>
-        <div class="col  s6 m4 l4 subbox">
-            <div class="standardbox">
-                <div class="standardtext">9th Standard</div>
-
-            </div>
-        </div>
-        <div class="col  s6 m4 l4 subbox">
-            <div class="standardbox">
-                <div class="standardtext">10th Standard</div>
-
-            </div>
+  
         </div>
 
     </div>

@@ -74,22 +74,30 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
         // routing
 
   }]);
-inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
-  function ($scope, TemplateService, NavigationService, $rootScope) {
+inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope','$location',
+  function ($scope, TemplateService, NavigationService, $rootScope,$location) {
 
         $scope.title = "Standards";
         $scope.template = TemplateService;
         TemplateService.content = "views/standards.html";
 
-
-
+        var getstandardsuccess = function(response){
+            console.log(response.data);
+            $scope.standards = response.data;
+        }
+        var getstandarderror = function(response){
+            console.log(response.data);
+        }
         //INITIALIZATIONS
-
+        NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess,getstandarderror)
         /*function*/
-
-
+      
+      
         // routing
-
+        $scope.gotosubjects = function(standardid){
+            $.jStorage.get('user').standard_id=standardid;
+            $location.path('/subjects');
+        }
   }]);
 inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
   function ($scope, TemplateService, NavigationService, $rootScope) {
@@ -124,7 +132,7 @@ inqcontroller.controller('subjectsCtrl', ['$scope', 'TemplateService', 'Navigati
         var getsubjectsbyuseriderror = function (response) {
             console.log(response.data);
         };
-        NavigationService.getsubjectsbyuserid(1).then(getsubjectsbyuseridsuccess, getsubjectsbyuseriderror);
+        NavigationService.getsubjectsbyuserid($.jStorage.get('user').standard_id).then(getsubjectsbyuseridsuccess, getsubjectsbyuseriderror);
 
         /*function*/
 
