@@ -2,10 +2,10 @@
 
 </div>
 
-
+<div class="container">
 <div class="row subbox3" style="text-align:center;">
 
-    <div class="col s12 m4 l4 subbox" ng-repeat='s in subjects' ng-click='gotochapters(s.id)'>
+    <div class="col s6 m4 l4 subbox" ng-repeat='s in subjects' ng-click='gotochapters(s.id)'>
         <div class="subbox2">
             <img src="img/calculator-active.png" class="subicons">
             <div class="sublist">{{ s.name | uppercase}}
@@ -14,14 +14,14 @@
         </div>
     </div>
     
-    <div class="col  s12 m4 l4 subbox">
+    <div class="col  s6 m4 l4 subbox">
         <div class="subbox2">
             <img src="img/play.png" class="subicons">
             <div class="sublist">RESUME</div>
 
         </div>
     </div>
-    <div class="col  s12 m4 l4 subbox">
+    <div class="col  s6 m4 l4 subbox">
         <div class="subbox2">
             <img src="img/question-mark.png" class="subicons">
             <div class="sublist">DOUBTS</div>
@@ -29,5 +29,6 @@
         </div>
     </div>
 
+</div>
 </div>
 

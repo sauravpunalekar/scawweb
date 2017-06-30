@@ -39,6 +39,21 @@ inqcontroller.controller('home', ['$scope', 'TemplateService', 'NavigationServic
         // routing
 
   }]);
+inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
+  function ($scope, TemplateService, NavigationService, $rootScope) {
+       
+        $scope.title = "Login";
+       
+       
+
+        //INITIALIZATIONS
+
+        /*function*/
+
+
+        // routing
+
+  }]);
 
 inqcontroller.controller('subjectsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$location',
   function ($scope, TemplateService, NavigationService, $rootScope, $location) {

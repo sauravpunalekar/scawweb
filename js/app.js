@@ -14,6 +14,10 @@ inq.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'home'
         }).
+          when('/login', {
+            templateUrl: 'views/login.html',
+            controller: 'loginCtrl'
+        }).
           when('/subjects', {
             templateUrl: 'views/template.html',
             controller: 'subjectsCtrl'

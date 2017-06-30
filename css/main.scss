@@ -6,6 +6,11 @@ $secondary-color:#ebebeb;
 $secondary-light:#f8f8f8;
 $grey-text:#636363;
 $light-text:#d3d1d1;
+
+.textcenter{
+    text-align: center !important;
+
+}
 @font-face {
     font-family: ceraL;
     src: url(fonts/Cera_GR_Light.otf);
@@ -96,10 +101,9 @@ li.search {
 }
 .icons {
     position: absolute;
-   
 }
-.menulist{
-        display: inline;
+.menulist {
+    display: inline;
     margin-left: 32px;
 }
 .menutext {
@@ -111,7 +115,7 @@ li.search {
     height: 320px;
     margin-top: -90px;
 }
-.bgtext{
+.bgtext {
     text-align: -webkit-center;
     padding-top: 85px;
     color: white;
@@ -133,6 +137,7 @@ li.search {
 .subbox3 {
     text-align: center;
     margin-top: -83px;
+    cursor: pointer;
     /* padding-left:50px;
     padding-right:50px;
     padding-top:270px;
@@ -173,11 +178,11 @@ $break-large: 1200px;
     -webkit-box-shadow: 0px 1px 6px 0px #4f4d4f;
     -moz-box-shadow: 0px 1px 6px 0px #4f4d4f;
     box-shadow: 0px 1px 6px 0px #4f4d4f;
-    
 }
 .chapbox {
     text-align: -webkit-center;
     margin-top: 30px;
+    cursor: pointer;
 }
 .chapdivider {
     height: 1.5px !important;
@@ -197,23 +202,33 @@ $break-large: 1200px;
     text-align: left !important;
     margin-top: 7px;
     font-size: 14px;
-    color: #0ed5ca;
+    color: $primary-color;
     margin-left: 12px;
     font-weight: 800;
-
 }
-.chapicon{
+.chapicon {
     position: absolute;
     color: #84a098 !important;
     margin-left: 4px;
-   
 }
-.chapbuttons{
+.chapbuttons {
     margin-top: 7px !important;
     color: #84a098 !important;
     font-weight: 800;
 }
-.chapheight{
+.chapheight {
     margin-top: 6px !important;
     font-size: 14px;
+}
+
+/*Login box*/
+
+
+.logintext {
+    background-color: $secondary-color;
+    height: 480px;
+}
+.loginlogo {
+   background-color: $primary-color;
+    height: 480px;
 }
