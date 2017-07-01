@@ -3,7 +3,7 @@ var navigationservice = angular.module('navigationservice', [])
     .factory('NavigationService', function ($http) {
 
         //MACBOOK AND HOME LAPTOP
-        var adminurl = "http://192.168.0.104/rest/rest/index.php/";
+        var adminurl = "http://192.168.0.103/rest/rest/index.php/";
         //PC
         //var adminurl = "http://localhost/inqrest/rest/index.php/";
         //SERVER
