@@ -26,6 +26,10 @@ inq.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'standardsCtrl'
         }).
+        when('/tests', {
+            templateUrl: 'views/template.html',
+            controller: 'testsCtrl'
+        }).
           when('/chapters/:subjectid', {
             templateUrl: 'views/template.html',
             controller: 'chaptersCtrl'

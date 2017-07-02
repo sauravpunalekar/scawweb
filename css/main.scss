@@ -6,20 +6,23 @@ $secondary-color:#ebebeb;
 $secondary-light:#f8f8f8;
 $grey-text:#636363;
 $light-text:#d3d1d1;
+
+/*font*/
+
 .textcenter {
     text-align: -webkit-center !important;
 }
 @font-face {
     font-family: ceraL;
-    src: url(fonts/Cera_GR_Light.otf);
+    src: url("../fonts/Cera GR Light.otf")format("opentype");
 }
 @font-face {
     font-family: ceraM;
-    src: url(fonts/Cera_GR_Bold_Italic.otf);
+    src: url("../fonts/Cera GR Medium.otf")format("opentype");
 }
 @font-face {
     font-family: ceraB;
-    src: url(fonts/Cera_GR_Bold.otf);
+    src: url("../fonts/Cera GR.otf")format("opentype");
 }
 
 /*sass*/
@@ -148,6 +151,7 @@ li.search {
 .sublist {
     padding-top: 5px;
     font-family: ceraM;
+    font-size: 18px;
 }
 .subbox4 {
     text-align: center;
@@ -251,7 +255,10 @@ $break-large: 1200px;
 .cardbox {
     background-color: white;
     height: 70vh;
-  width: 90%;
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
     -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
@@ -259,6 +266,7 @@ $break-large: 1200px;
 .cardbut {
     background-color: white !important;
     border: 1px solid $primary-color !important;
+    width: 100% !important;
 }
 .cardicon {
     color: $primary-color !important;
@@ -272,12 +280,34 @@ $break-large: 1200px;
 .starbut {
     background-color: white !important;
     border: 1px solid $primary-color !important;
-    width: 70px !important;
-    height: 70px !important;
+    width: 100% !important;
 }
 .staricon {
     color: #15a5b0 !important;
     font-size: 57px !important;
     text-align: -webkit-center;
     margin-top: 6px;
+}
+
+/*mcq page*/
+
+.mcqhead {
+    background-color: aliceblue;
+    height: 6vh;
+    border-radius: 6px;
+    padding-top: 11px;
+    font-size: 20px;
+    font-family: ceraB;
+}
+.testbox{
+    background-color: white;
+    height: 70vh;
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    border-radius: 6px;
+     -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+    box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
 }

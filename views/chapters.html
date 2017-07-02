@@ -1,5 +1,5 @@
 <div class="bg">
-   <p class="bgtext">What do you want to learn today ?</p> 
+    <p class="bgtext">What do you want to learn today ?</p>
 </div>
 
 <div class="row subbox3" style="text-align:center;" ng-repeat="c in chapters">
@@ -12,7 +12,13 @@
                 <div class="col s4 chapconcept">{{c.conceptscount}} Concepts</div>
                 <!--        <div class="col s4"></div>-->
                 <div class="col s4 chapbuttons">Doubts <i class="material-icons chapicon">forum</i></div>
-                <div class="col s4 chapbuttons">Test <i class="material-icons chapicon">local_library</i></div>
+                <div class="col s4 chapbuttons"><a data-activates='dropdown1'>Test</a> <i class="material-icons chapicon">local_library</i>
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="#!">one</a></li>
+                        <li><a href="#!">two</a></li>
+                        
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

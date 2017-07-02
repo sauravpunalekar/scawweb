@@ -53,23 +53,23 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
             password: ""
         };
         var loginsuccess = function (response) {
-            if (response.data == 'false') {
-                console.log('Login error');
-                $scope.error = true;
+                if (response.data == 'false') {
+                    console.log('Login error');
+                    $scope.error = true;
 
 
-            } else {
-                $scope.error = false;
-                console.log(response.data);
-                $.jStorage.set('user', response.data);
-                if ($.jStorage.get('user').access_id != 3) {
-                    $location.path('/subjects');
                 } else {
-                    $location.path('/standards');
+                    $scope.error = false;
+                    console.log(response.data);
+                    $.jStorage.set('user', response.data);
+                    if ($.jStorage.get('user').access_id != 3) {
+                        $location.path('/subjects');
+                    } else {
+                        $location.path('/standards');
+                    }
                 }
             }
-        }
-        /*function*/
+            /*function*/
         $scope.dologin = function () {
             $scope.error = false;
             console.log($scope.logindata);
@@ -92,11 +92,11 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
             $scope.standards = response.data;
         }
         var getstandarderror = function (response) {
-            console.log(response.data);
-        }
-        //INITIALIZATIONS
+                console.log(response.data);
+            }
+            //INITIALIZATIONS
         NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess, getstandarderror)
-        /*function*/
+            /*function*/
 
 
         // routing
@@ -105,12 +105,39 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
             $location.path('/subjects');
         }
   }]);
-inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
-  function ($scope, TemplateService, NavigationService, $rootScope) {
+inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope','$interval',
+  function ($scope, TemplateService, NavigationService, $rootScope, $interval) {
 
         $scope.title = "ConceptCards";
         $scope.template = TemplateService;
         TemplateService.content = "views/conceptcards.html";
+
+        var cw = $('.cardbut').width();
+        $('.cardbut').css({
+            'height': cw + 'px'
+        });
+        console.log("test");
+
+        $interval(2000, function () {
+            var sw = $('.starbut').width();
+            $('.starbut').css('height', '104px');
+        }, 1);
+
+
+        //INITIALIZATIONS
+
+        /*function*/
+
+
+        // routing
+
+  }]);
+inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
+  function ($scope, TemplateService, NavigationService, $rootScope) {
+
+        $scope.title = "Tests";
+        $scope.template = TemplateService;
+        TemplateService.content = "views/tests.html";
 
 
 
@@ -184,7 +211,7 @@ inqcontroller.controller('menuCtrl', ['$scope', 'TemplateService', '$location', 
 
 
         $('.button-collapse').sideNav({
-            menuWidth: 300, // Default is 300
+            menuWidth: 350, // Default is 300
             edge: 'left', // Choose the horizontal origin
             closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
             draggable: true // Choose whether you can drag to open on touch screens,
