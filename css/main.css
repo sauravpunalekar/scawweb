@@ -314,7 +314,7 @@ li.search {
 /*mcq page*/
 /* line 296, C:/xamp/htdocs/scawweb/css/main.scss */
 .mcqhead {
-  background-color: aliceblue;
+  background-color: #dae8ea;
   height: 6vh;
   border-radius: 6px;
   padding-top: 1.5vh;
@@ -339,7 +339,7 @@ li.search {
   -webkit-box-shadow: 0px 1px 6px 0px #4f4d4f;
   -moz-box-shadow: 0px 1px 6px 0px #4f4d4f;
   box-shadow: 0px 1px 6px 0px #4f4d4f;
-  margin-top: -15vh; }
+  margin-top: -26vh; }
   @media screen and (max-width: 601px) {
     /* line 309, C:/xamp/htdocs/scawweb/css/main.scss */
     .testbox {
