@@ -149,6 +149,40 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
         // routing
 
   }]);
+inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
+  function ($scope, TemplateService, NavigationService, $rootScope) {
+
+        $scope.title = "Concepts";
+        $scope.template = TemplateService;
+        TemplateService.content = "views/concepts.html";
+
+
+
+        //INITIALIZATIONS
+
+        /*function*/
+
+
+        // routing
+
+  }]);
+inqcontroller.controller('testresultsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
+  function ($scope, TemplateService, NavigationService, $rootScope) {
+
+        $scope.title = "testresults";
+        $scope.template = TemplateService;
+        TemplateService.content = "views/testresults.html";
+
+
+
+        //INITIALIZATIONS
+
+        /*function*/
+
+
+        // routing
+
+  }]);
 
 inqcontroller.controller('subjectsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$location',
   function ($scope, TemplateService, NavigationService, $rootScope, $location) {

@@ -1,7 +1,7 @@
 /*COLOUR VARIABLES*/
 
-$primary-color: #15a5b0;
-$primary-dark:#0f7b83;
+$primary-color: #03bdd6;
+$primary-dark:#0a9dc7;
 $secondary-color:#ebebeb;
 $secondary-light:#f8f8f8;
 $grey-text:#636363;
@@ -11,11 +11,29 @@ $break-small: 601px;
 $break-medium: 992px;
 $break-large: 1200px;
 
+/*Reusables*/
+.margin0 {
+    margin: 0px 0px 0px 0px !important;
+}
+.padding0 {
+    padding: 0px 0px 0px 0px !important;
+}
+.textleft {
+    text-align: left !important;
+}
+.textcenter {
+    text-align: center !important;
+}
+.textright {
+    text-align: right !important;
+}
+.white{
+    color: white !important;
+}
+
 /*font*/
 
-.textcenter {
-    text-align: -webkit-center !important;
-}
+
 @font-face {
     font-family: ceraL;
     src: url("../fonts/Cera GR Light.otf")format("opentype");
@@ -116,7 +134,7 @@ li.search {
 }
 .dropdownsub {}
 .bg {
-    background-color: #0ed5ca;
+    background-color: $primary-color;
     height: 320px;
     margin-top: -90px;
 }
@@ -255,7 +273,7 @@ li.search {
 /*card*/
 
 .cardbox {
-    background-color: white;
+    /* background-color: white;
     height: 70vh;
     width: 90%;
     padding-left: 10px;
@@ -263,7 +281,42 @@ li.search {
     padding-top: 10px;
     -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
-    box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+    box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);*/
+   
+    background-image: url(../img/cards_UI.png);
+    background-repeat: no-repeat;
+    background-size: 100% 70vh;
+    height: 70vh;
+    padding-top: 6%;
+    @media screen and (max-width: $break-tiny) {
+        padding-top: 11%;
+    }
+}
+.cardspage {
+    height: 64vh;
+    width: 84%;
+    margin-top: -11px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-left: -18px;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 1px 6px 0px rgba(55, 45, 59, 0.16);
+}
+.concepthead {
+    background-color: #dae8ea !important;
+    height: 6vh;
+    border-radius: 6px;
+    padding-top: 1% !important;
+    font-size: 18px !important;
+    padding-left: 10px;
+    padding-right: 20px;
+    font-family: ceraB;
+    @media screen and (max-width: $break-small) {
+        font-size: 11px;
+        padding-top: 4%;
+    }
 }
 .cardbut {
     background-color: white !important;
@@ -285,7 +338,7 @@ li.search {
     width: 100% !important;
 }
 .staricon {
-    color: #15a5b0 !important;
+    color: $primary-color !important;
     font-size: 57px !important;
     text-align: -webkit-center;
     margin-top: 6px;
@@ -317,7 +370,6 @@ li.search {
     -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
-    
     margin-top: -26vh;
     @media screen and (max-width: $break-small) {
         width: 120%;
@@ -369,8 +421,196 @@ li.search {
     padding-right: 20px;
     margin-top: 3vh;
 }
-.mcqcontent{
+.mcqcontent {
     overflow-x: hidden;
     overflow-y: scroll;
     height: 90%;
+    width: 100%;
+}
+.concepthead {
+    background-color: #dae8ea !important;
+    height: 6vh;
+    border-radius: 6px;
+    padding-top: 1.5vh;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    font-family: ceraB;
+    @media screen and (max-width: $break-small) {
+        font-size: 14px;
+    }
+}
+.concepticon {
+    font-size: 19px;
+    padding-top: 4px;
+    float: inherit;
+}
+
+/*button*/
+
+.featured-image {
+    max-width: 270px;
+}
+.round-button {
+    width: 100%;
+}
+.round-button-circle {
+    width: 75%;
+    height: 0;
+    padding-bottom: 75%;
+    border-radius: 50%;
+    /* border: 10px solid #cfdcec; */
+    overflow: hidden;
+    border: 1px solid #03bdd6;
+    box-shadow: 0 0 1px grey;
+    /*  @media screen and (max-width: $break-tiny) {
+        width: 75%;
+         padding-bottom: 75%;
+    }*/
+}
+.round-button-circle:hover {
+    background: #03bdd6;
+}
+.round-button i {
+    display: block;
+    float: left;
+    width: 100%;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    line-height: 1em;
+    margin-top: -0.5em;
+    color: $primary-color !important;
+    font-size: 35px !important;
+    text-align: -webkit-center;
+}
+.round-button:hover {
+    color: white !important;
+}
+
+
+/*CONCEPTS TIMELINE*/
+
+
+.conceptpercentouterdiv {
+    padding: 2% !important;
+    padding-bottom: 0px !important;
+}
+.conceptpercentbg {
+    text-align: center;
+    background-image: url(../img/circle_percent_holder.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    padding-top: 31% !important;
+    font-size: 1.1em !important;
+    padding-bottom: 31% !important;
+    @media screen and (max-width: $break-small) {
+        padding-top: 27% !important;
+        font-size: 0.8em !important;
+    }
+    @media screen and (max-width: $break-tiny) {
+        padding-top: 27% !important;
+        font-size: 0.8em !important;
+        margin-top: 30%;
+    }
+}
+.conceptdiv {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    @media screen and (max-width: $break-small) {}
+    @media screen and (max-width: $break-tiny) {
+        width: initial;
+    }
+}
+.concepttitle {
+    text-align: left;
+    font-size: 1.8em;
+    padding-bottom: 1% !important;
+    padding-top: 1% !important;
+    @media screen and (max-width: $break-small) {
+        font-size: 1.2em;
+    }
+}
+.conceptbuttons {
+    font-size: 1.2em;
+    font-weight: 300;
+    @media screen and (max-width: $break-small) {
+        font-size: 1.1em;
+    }
+    @media screen and (max-width: $break-tiny) {
+        font-size: 1em;
+    }
+}
+.conceptcompletionline {
+    background-color: $primary-color;
+    height: 3px;
+    float: left;
+    margin-top: 6px !important;
+    border-radius: 2px;
+}
+.conceptdot {
+    background-color: $primary-color;
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    margin-left: 2%;
+    @media screen and (max-width: $break-small) {
+        height: 8px;
+        width: 8px;
+        margin-top: -4px;
+        margin-left: 0%;
+    }
+    @media screen and (max-width: $break-tiny) {
+        height: 6px;
+        width: 6px;
+        margin-top: -3px;
+        margin-left: -1%;
+    }
+}
+.circledotanimation {
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes neon2 {
+    from {
+        box-shadow: 0 0 2px $primary-color, 0 0 4px $primary-color, 0 0 6px $primary-color, 0 0 8px $primary-color, 0 0 10px $primary-color, 0 0 12px $primary-color, 0 0 14px $primary-color, 0 0 16px $primary-color;
+    }
+    to {
+        box-shadow: 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color;
+    }
+}
+
+/*testsresutls*/
+.testbg {
+    background-color: $primary-color;
+    height: auto;
+    margin-top: -90px;
+}
+.testtext{
+    padding-top: 6vh;
+    text-align: center ;
+    font-family: ceraB; 
+    color: white;
+}
+.congratstext{
+        color: #EEFF41 ;
+}
+.scoretext{
+    font-size: 30px;
+}
+.score{
+    font-size: 20px;
+}
+.resulttext{
+    color: white;
 }
