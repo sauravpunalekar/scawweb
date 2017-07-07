@@ -1,23 +1,41 @@
 <div class="testbg">
     <div class="container">
-    <div class="row testtext">
-        <div class="col s4 l4">
-            <img src="img/astro.png">
+        <div class="row testtext">
+            <div class="col s4 l4">
+                <img src="img/astro.png">
+            </div>
+            <div class="col s8 l4">
+                <div class="congratstext animated fadeIn">Better Luck Next Time!
+                    <!--satisfactory,you are amazing, better luck next time-->
+                </div>
+                <div class="scoretext">You scored
+                </div>
+                <div class="score animated zoomIn "><b>9/20</b>
+                </div>
+            </div>
+            <div class="col  l4 hidediv">
+                <img src="img/astro2.png">
+            </div>
         </div>
-        <div class="col s8 l8">
-            <div class="congratstext"><h2>Nice Work! </h2><!--satisfactory,you are amazing, better luck next time-->
-            </div>
-            <div class="scoretext">You scored 
-            </div>
-            <div class="score">9/20
-            </div>
+        <div class="row textcenter resulttext">
+            <div class="col s4 l4 "><i class="material-icons faceicon animated jello">tag_faces</i><span class="resulthead">Correct</span>
+                <br><span class="resultscore">8</span> </div>
+            <div class="col s4 l4 "><i class="material-icons faceicon animated jello">tag_faces</i><span class="resulthead">Incorrect</span>
+                <br><span class="resultscore">8</span></div>
+            <div class="col s4 l4 "><i class="material-icons faceicon animated jello">tag_faces</i><span class="resulthead">Unanswered</span>
+                <br><span class="resultscore">8</span></div>
         </div>
-    </div>
-    <div class="row textcenter resulttext">
-        <div class="col s4 l4 ">
-        <i class="material-icons">tag_faces</i>Correct <h4>9</h4> </div>
-        <div class="col s4 l4 "><i class="material-icons">tag_faces</i>Incorrect <h4>5</h4> </div>
-        <div class="col s4 l4 "><i class="material-icons">tag_faces</i>Unanswered <h4>9</h4></div>
     </div>
 </div>
+<div class="container">
+    <div class="testconcept ">Your Report is ready! Concepts Tested : </div>
+    <div ng-repeat='s in [1,2,3,4]'>
+        <div class="testconcepthead">Optics</div>
+        <div class="col s12 m12 margin0 padding0 conceptstestedline" ng-style="{width:conceptwidth+'%'}"></div>
+      
+
+
+    </div>
+
+
 </div>

@@ -105,7 +105,7 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
             $location.path('/subjects');
         }
   }]);
-inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope','$interval',
+inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$interval',
   function ($scope, TemplateService, NavigationService, $rootScope, $interval) {
 
         $scope.title = "ConceptCards";
@@ -172,6 +172,8 @@ inqcontroller.controller('testresultsCtrl', ['$scope', 'TemplateService', 'Navig
         $scope.title = "testresults";
         $scope.template = TemplateService;
         TemplateService.content = "views/testresults.html";
+      $scope.conceptwidth=70;
+
 
 
 
