@@ -30,7 +30,7 @@ inq.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'testsCtrl'
         }).
-        when('/concepts', {
+        when('/concepts/:chapterid', {
             templateUrl: 'views/template.html',
             controller: 'conceptsCtrl'
         }).
@@ -42,7 +42,7 @@ inq.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'chaptersCtrl'
         }).
-        when('/conceptcards', {
+        when('/conceptcards/:conceptid', {
             templateUrl: 'views/template.html',
             controller: 'conceptcardsCtrl'
         }).

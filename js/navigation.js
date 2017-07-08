@@ -3,7 +3,7 @@ var navigationservice = angular.module('navigationservice', [])
     .factory('NavigationService', function ($http) {
 
         //MACBOOK AND HOME LAPTOP
-        var adminurl = "http://192.168.0.103/rest/rest/index.php/";
+        var adminurl = "http://192.168.0.101/rest/rest/index.php/";
         //PC
         //var adminurl = "http://localhost/inqrest/rest/index.php/";
         //SERVER
@@ -82,6 +82,22 @@ var navigationservice = angular.module('navigationservice', [])
                     params: {
                         field: 'board_id',
                         value: id
+                    }
+                })
+            },
+            
+            getconceptsbychapterid: function (uid, chptid) {
+                return $http.get(adminurl + 'concepts/getconceptsbychapterid', {
+                    params: {
+                        userid: uid,
+                        chapterid: chptid                        
+                    }
+                })
+            },
+            getcardsbyconceptid: function(id){
+                 return $http.get(adminurl + 'concepts/getcardsbyconceptid', {
+                    params: {
+                        conceptid: id
                     }
                 })
             },
