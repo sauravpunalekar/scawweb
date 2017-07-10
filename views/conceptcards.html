@@ -1,7 +1,10 @@
-<div class="container">
+<div class="bg">
+
+</div>
+   <div class="container" style="margin-top:-35vh;">
     <div class="row">
         <div class="col s12 m2 l2"></div>
-        <div class="col  s12 m8 l8 textcenter">
+        <div class="col  s12 m8 l8 ">
             <div class="cardbox">
                 <div class="cardspage">
                     <div class="concepthead">
@@ -19,8 +22,9 @@
                             </div>
                         </div>
                     </div>
-                    <div ng-bind-html="conceptcards[cardindex].conceptdata"></div>
+                    <div class="scrollbar conceptcontent" id="style-4" ng-bind-html="conceptcards[cardindex].conceptdata"></div>
                 </div>
+                
 
             </div>
 

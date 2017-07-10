@@ -152,10 +152,13 @@ li.search {
 .subbox2 {
     background-color: white;
     height: 190px;
-    width: 70%;
+    width: auto;
     -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+   /* @media screen and (max-width: $break-small) {
+      
+    }*/
 }
 .subbox3 {
     text-align: center;
@@ -182,7 +185,7 @@ li.search {
    */
 }
 .contentdiv {
-    padding-left: 300px;
+    padding-left: 350px;
     @media screen and (max-width: $break-medium) {
         padding-left: 0px;
     }
@@ -195,7 +198,7 @@ li.search {
 }
 .chapterlist {
     background-color: white;
-    height: 110px;
+    height: auto;
     width: 90%;
     -webkit-box-shadow: 0px 1px 6px 0px #4f4d4f;
     -moz-box-shadow: 0px 1px 6px 0px #4f4d4f;
@@ -208,17 +211,20 @@ li.search {
 }
 .chapdivider {
     height: 1.5px !important;
-    width: 106% !important;
+    width: 100% !important;
     margin-left: -11px !important;
 }
 .chaptext {
     text-align: -webkit-left !important;
-    font-size: 26px !important;
+    font-size: 25px !important;
     margin-top: 14px !important;
     margin-bottom: 11px !important;
     margin-left: 12px;
     color: #191a19 !important;
     line-height: 26px;
+    @media screen and (max-width: $break-small) {
+        font-size: 20px !important;
+    }
 }
 .chapconcept {
     text-align: left !important;
@@ -230,13 +236,26 @@ li.search {
 }
 .chapicon {
     position: absolute;
-    color: #84a098 !important;
+    color: $grey-text !important;
     margin-left: 4px;
+    
+}
+.chapicon:hover {
+    color: $primary-color !important;
+}
+.chapbuttons a{
+    color: $grey-text !important;
 }
 .chapbuttons {
     margin-top: 7px !important;
-    color: #84a098 !important;
+    color: $grey-text !important;
     font-weight: 800;
+   
+}
+.concepthide{
+     @media screen and (max-width: $break-small) {
+       display: none;
+    }
 }
 .chapheight {
     margin-top: 6px !important;
@@ -252,22 +271,37 @@ li.search {
 .loginlogo {
     background-color: $primary-color;
     height: 480px;
+     @media screen and (max-width: $break-small) {
+       height: 17vh;
+    }
 }
 
 /*STandard */
 
 .standardtext {
-    font-size: 28px;
+    font-size: 7em;
     text-align: center;
-    margin-top: 45px !important;
+     @media screen and (max-width: $break-small) {
+       font-size: 5em;
+    text-align: center;
+    margin-top: 3vh !important;
+    }
+    
+    /*margin-top: 1vh !important;*/
 }
 .standardbox {
     background-color: white;
     height: 190px;
     padding: 14px;
+    font-family: ceraB;
+    color: $primary-color;
     -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
+     @media screen and (max-width: $break-small) {
+       padding: 7px;
+         
+    }
 }
 
 /*card*/
@@ -287,21 +321,28 @@ li.search {
     background-size: 100% 70vh;
     height: 70vh;
     padding-top: 6%;
-    @media screen and (max-width: $break-tiny) {
-        padding-top: 11%;
+    @media screen and (max-width: $break-small) {
+        padding-top: 7%;
+        width: 112%;
+    margin-left: -6%;
     }
 }
 .cardspage {
     height: 64vh;
     width: 84%;
-    margin-top: -11px;
+   /* margin-top: -11px;*/
+    margin-top: -1vh;
     padding-right: 10px;
     padding-top: 10px;
     padding-left: 10px;
-    margin-left: -18px;
+    margin-left: 5vh;
     border-radius: 6px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 1px 6px 0px rgba(55, 45, 59, 0.16);
+    @media screen and (max-width: $break-small) {
+       margin-left: 3vh;
+    }
+    
 }
 .concepthead {
     background-color: #dae8ea !important;
@@ -439,6 +480,14 @@ li.search {
         font-size: 14px;
     }
 }
+.conceptcontent{
+     height: 84%;
+    width: 100%;
+    font-family: ceraB !important;
+}
+.conceptcontent img{
+    max-width: 100%;
+}
 .concepticon {
     font-size: 19px;
     padding-top: 4px;
@@ -456,6 +505,7 @@ li.search {
 .round-button-circle {
     width: 75%;
     height: 0;
+    cursor: pointer;
     padding-bottom: 75%;
     border-radius: 50%;
     /* border: 10px solid #cfdcec; */
