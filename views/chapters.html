@@ -1,7 +1,12 @@
 <div class="bg">
-    <p class="bgtext">What do you want to learn today ?</p>
-</div>
+        <div class="moon animated fadeIn">
+        <img src="img/moon.png" width="100%">
+    </div>
 
+    <div  class="astro animated fadeIn">
+        <img src="img/astroman.png" width="100%">
+    </div>
+</div>
 <div class="row subbox3 animated fadeInLeft" style="text-align:center;" ng-repeat="c in chapters" ng-click="gotoconcepts(c.id)" ng-style="{animationDelay:$index*0.2+'s'}">
 
     <div class="grid-example col s12 chapbox">
