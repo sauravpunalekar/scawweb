@@ -94,12 +94,30 @@ var navigationservice = angular.module('navigationservice', [])
                     }
                 })
             },
-            getcardsbyconceptid: function(id){
+            getcardsbyconceptid: function(id,userid){
                  return $http.get(adminurl + 'concepts/getcardsbyconceptid', {
                     params: {
-                        conceptid: id
+                        conceptid: id,
+                        userid: userid
+                        
                     }
                 })
             },
+            readcardbyuserid: function(uid,cid){
+                return $http.get(adminurl+'concepts/readcardbyuserid',{
+                    params:{
+                        userid:uid,
+                        cardid: cid
+                    }
+                })
+            },
+            getconceptname: function(id){
+                return $http.get(adminurl+'concepts/getbyid',{
+                    params:{
+                        id:id
+                    }
+                    })
+                },
+            
         }
     });

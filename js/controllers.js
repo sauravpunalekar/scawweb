@@ -112,6 +112,7 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
         $scope.template = TemplateService;
         TemplateService.content = "views/conceptcards.html";
         $scope.conceptid = $routeParams.conceptid;
+
         var cw = $('.cardbut').width();
         $('.cardbut').css({
             'height': cw + 'px'
@@ -132,21 +133,42 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
 
             _.forEach($scope.conceptcards, function (value) {
                 value.conceptdata = $sce.trustAsHtml(value.conceptdata);
+
             });
+            if (response.data.length > 0) {
+                readcardbyuserid(0);
+            }
 
         };
         var getcarderror = function (response) {
             console.log(response.data);
         };
+      
         /*function*/
-        NavigationService.getcardsbyconceptid($scope.conceptid).then(getcardsuccess, getcarderror);
-
+        NavigationService.getcardsbyconceptid($scope.conceptid, $.jStorage.get("user").id).then(getcardsuccess, getcarderror);
+        var readcardbyuserid = function (cid) {
+              if ($scope.conceptcards[cid].cardread == 0) {
+            NavigationService.readcardbyuserid($.jStorage.get("user").id, $scope.conceptcards[cid].id);
+                  console.log("CALLING STATEMENT");
+              }
+        };
+            var getconceptnamesuccess = function(response){
+                console.log(response.data);
+                $scope.conceptdata = response.data;
+            }
+             var getconceptnameerror = function(response){
+                console.log(response.data);
+            }
+            NavigationService.getconceptname($scope.conceptid).then(getconceptnamesuccess,getconceptnameerror);
         // routing
         $scope.changecardindex = function (index) {
             if ($scope.cardindex == 0 && index == -1) {
 
             } else if ($scope.cardindex == $scope.conceptcards.length - 1 && index == 1) {} else if ($scope.cardindex >= 0 && $scope.cardindex < $scope.conceptcards.length) {
                 $scope.cardindex += index;
+              
+                    readcardbyuserid($scope.cardindex);
+                
             }
         }
   }]);
@@ -181,10 +203,12 @@ inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'Navigati
         var getconceptsbychapteridsuccess = function (response) {
             $scope.concepts = response.data;
             console.log(response.data);
+
         };
         var getconceptsbychapteriderror = function (response) {
             console.log(response.data);
         };
+
         /*function*/
         NavigationService.getconceptsbychapterid($.jStorage.get('user').id, $scope.chapterid).then(getconceptsbychapteridsuccess, getconceptsbychapteriderror);
 
@@ -208,7 +232,7 @@ inqcontroller.controller('testresultsCtrl', ['$scope', 'TemplateService', 'Navig
         //INITIALIZATIONS
 
         /*function*/
-
+        
 
         // routing
 
