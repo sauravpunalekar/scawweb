@@ -10,43 +10,51 @@ $break-tiny: 300px;
 $break-small: 601px;
 $break-medium: 992px;
 $break-large: 1200px;
-
 /*Reusables*/
 
 .margin0 {
     margin: 0px 0px 0px 0px !important;
 }
+
 .padding0 {
     padding: 0px 0px 0px 0px !important;
 }
+
 .textleft {
     text-align: left !important;
 }
+
 .textcenter {
     text-align: center !important;
 }
+
 .textright {
     text-align: right !important;
 }
+
 .white {
     color: white !important;
 }
-
 /*font*/
 
 @font-face {
     font-family: ceraL;
     src: url("../fonts/Cera GR Light.otf")format("opentype");
 }
+
 @font-face {
     font-family: ceraM;
     src: url("../fonts/Cera GR Medium.otf")format("opentype");
 }
+
 @font-face {
     font-family: ceraB;
     src: url("../fonts/Cera GR.otf")format("opentype");
 }
-
+@font-face {
+    font-family: congrats;
+    src: url("../fonts/congrats.otf")format("opentype");
+}
 /*sass*/
 
 .searchbox {
@@ -58,10 +66,12 @@ $break-large: 1200px;
     padding: 1px 0 0 0;
     z-index: 2;
 }
+
 li.search .search-wrapper {
     margin: 0 0px;
     transition: margin .25s ease;
 }
+
 li.search {
     position: absolute;
     left: 0;
@@ -71,13 +81,14 @@ li.search {
     padding: 1px 0 0 0;
     z-index: 2;
 }
+
 #search:focus {
     width: 100%;
 }
+
 #search:focus + searchicon {
     right: 2px;
 }
-
 /*#search:focus + #b {
     background: #ccc
 }*/
@@ -91,53 +102,85 @@ li.search {
     margin: 0 0 0px 0 !important;
     padding: 0 45px 0 15px !important;
 }
+
 .searchicon {
     position: absolute;
     right: 10px;
     top: 10px;
     cursor: pointer;
 }
+
 .logobox {
     background-color: $secondary-color !important;
-    height: 59px;
+   
 }
+.loginimg{
+    text-align: center;
+   
+}
+.loginimg2{
+        width: 40%;
+    padding-top: 50%;
+    @media screen and (max-width: $break-small){
+        width: 11%;
+    padding-top: 2%;
+    }
+}
+
 .menubg {
     background-color: $secondary-light !important;
+}
+.standardnumber{
+    background-color: $primary-color;
+    margin: 10px;
+        padding-left: 12vh !important;
+    font-size: 16px !important;
+    font-weight: 700;
+    color: white !important;
 }
 .side-nav li > a:hover {
     color: white !important;
     margin: 3px;
     background-color: $primary-color !important;
 }
+
 .dividerline {
     margin-left: 20px !important;
     margin-right: 20px !important;
     margin-top: -10px !important;
 }
+
 .side-nav li > a {
     font-size: 16px !important;
     color: $grey-text !important;
 }
+
 .side-nav .subheader {
     color: $light-text !important;
     font-size: 12px !important;
 }
+
 .icons {
     position: absolute;
 }
+
 .menulist {
     display: inline;
     margin-left: 32px;
 }
+
 .menutext {
     top: 4px;
 }
+
 .dropdownsub {}
+
 .bg {
     background-color: $primary-color;
-    height: 320px;
+    height: 35vh;
     margin-top: -90px;
 }
+
 .bgtext {
     text-align: -webkit-center;
     padding-top: 85px;
@@ -145,10 +188,12 @@ li.search {
     font-size: 37px;
     font-weight: 900;
 }
+
 .subbox {
     text-align: -webkit-center;
     margin-top: 30px;
 }
+
 .subbox2 {
     background-color: white;
     height: 190px;
@@ -156,10 +201,11 @@ li.search {
     -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
-   /* @media screen and (max-width: $break-small) {
+    /* @media screen and (max-width: $break-small) {
       
     }*/
 }
+
 .subbox3 {
     text-align: center;
     margin-top: -83px;
@@ -169,21 +215,25 @@ li.search {
     padding-top:270px;
     padding-bottom: 50px;*/
 }
+
 .subicons {
     width: 79px;
     margin-top: 38px;
 }
+
 .sublist {
     padding-top: 5px;
     font-family: ceraM;
     font-size: 18px;
 }
+
 .subbox4 {
     text-align: center;
     /* padding-left:150px;
     padding-right:150px;
    */
 }
+
 .contentdiv {
     padding-left: 350px;
     @media screen and (max-width: $break-medium) {
@@ -191,11 +241,13 @@ li.search {
     }
     @media screen and (min-width: $break-large) {}
 }
+
 .menuicon {
     color: white;
     font-size: 30px !important;
     margin-left: 10px;
 }
+
 .chapterlist {
     background-color: white;
     height: auto;
@@ -204,16 +256,19 @@ li.search {
     -moz-box-shadow: 0px 1px 6px 0px #4f4d4f;
     box-shadow: 0px 1px 6px 0px #4f4d4f;
 }
+
 .chapbox {
     text-align: -webkit-center;
     margin-top: 30px;
     cursor: pointer;
 }
+
 .chapdivider {
     height: 1.5px !important;
     width: 100% !important;
     margin-left: -11px !important;
 }
+
 .chaptext {
     text-align: -webkit-left !important;
     font-size: 25px !important;
@@ -226,6 +281,7 @@ li.search {
         font-size: 20px !important;
     }
 }
+
 .chapconcept {
     text-align: left !important;
     margin-top: 7px;
@@ -234,76 +290,80 @@ li.search {
     margin-left: 12px;
     font-weight: 800;
 }
+
 .chapicon {
     position: absolute;
     color: $grey-text !important;
     margin-left: 4px;
-    
 }
+
 .chapicon:hover {
     color: $primary-color !important;
 }
-.chapbuttons a{
+
+.chapbuttons a {
     color: $grey-text !important;
 }
+
 .chapbuttons {
     margin-top: 7px !important;
     color: $grey-text !important;
     font-weight: 800;
-   
 }
-.concepthide{
-     @media screen and (max-width: $break-small) {
-       display: none;
+
+.concepthide {
+    @media screen and (max-width: $break-medium) {
+        display: none !important;
     }
+    
+    
 }
+
 .chapheight {
     margin-top: 6px !important;
     font-size: 14px;
 }
-
 /*Login box*/
 
 .logintext {
     background-color: $secondary-color;
     height: 480px;
 }
+
 .loginlogo {
     background-color: $primary-color;
     height: 480px;
-     @media screen and (max-width: $break-small) {
-       height: 17vh;
+    @media screen and (max-width: $break-small) {
+        height: 17vh;
     }
 }
-
 /*STandard */
 
 .standardtext {
     font-size: 7em;
     text-align: center;
-     @media screen and (max-width: $break-small) {
-       font-size: 5em;
-    text-align: center;
-    margin-top: 3vh !important;
-    }
     
-    /*margin-top: 1vh !important;*/
+    @media screen and (max-width: $break-small) {
+        font-size: 5em;
+        text-align: center;
+        margin-top: 3vh !important;
+    }
+  
 }
+
 .standardbox {
     background-color: white;
     height: 190px;
     padding: 14px;
-    font-family: ceraB;
+    
     color: $primary-color;
     -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
-     @media screen and (max-width: $break-small) {
-       padding: 7px;
-         
+    @media screen and (max-width: $break-small) {
+        padding: 7px;
     }
 }
-
 /*card*/
 
 .cardbox {
@@ -316,21 +376,25 @@ li.search {
     -webkit-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     -moz-box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);
     box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);*/
+    
     background-image: url(../img/cards_UI.png);
     background-repeat: no-repeat;
     background-size: 100% 70vh;
     height: 70vh;
     padding-top: 6%;
+   
     @media screen and (max-width: $break-small) {
         padding-top: 7%;
         width: 112%;
-    margin-left: -6%;
+        margin-left: -6%;
     }
 }
+
 .cardspage {
     height: 64vh;
     width: 84%;
-   /* margin-top: -11px;*/
+    /* margin-top: -11px;*/
+    
     margin-top: -1vh;
     padding-right: 10px;
     padding-top: 10px;
@@ -340,10 +404,10 @@ li.search {
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 1px 6px 0px rgba(55, 45, 59, 0.16);
     @media screen and (max-width: $break-small) {
-       margin-left: 3vh;
+        margin-left: 3vh;
     }
-    
 }
+
 .concepthead {
     background-color: #dae8ea !important;
     height: 6vh;
@@ -358,32 +422,36 @@ li.search {
         padding-top: 4%;
     }
 }
+
 .cardbut {
     background-color: white !important;
     border: 1px solid $primary-color !important;
     width: 100% !important;
 }
+
 .cardicon {
     color: $primary-color !important;
     font-size: 50px !important;
     text-align: -webkit-center;
 }
+
 .iconrow {
     padding-left: 30px !important;
     padding-right: 30px !important;
 }
+
 .starbut {
     background-color: white !important;
     border: 1px solid $primary-color !important;
     width: 100% !important;
 }
+
 .staricon {
     color: $primary-color !important;
     font-size: 57px !important;
     text-align: -webkit-center;
     margin-top: 6px;
 }
-
 /*mcq page*/
 
 .mcqhead {
@@ -399,6 +467,7 @@ li.search {
         font-size: 14px;
     }
 }
+
 .testbox {
     background-color: white;
     height: 70vh;
@@ -416,28 +485,32 @@ li.search {
         margin-left: -10%;
     }
 }
-
 /*scroll bar*/
 
 .scrollbar {
     overflow-y: scroll;
 }
+
 .force-overflow {
     min-height: 450px;
 }
+
 #style-4::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
     background-color: #FFF;
     border-radius: 10px;
 }
+
 #style-4::-webkit-scrollbar {
     width: 6px;
     background-color: #F5F5F5;
 }
+
 #style-4::-webkit-scrollbar-thumb {
     background-color: $primary-color;
     border: 1px solid $primary-color;
 }
+
 .concepttext {
     font-size: 20px;
     margin-top: 2vh;
@@ -445,6 +518,7 @@ li.search {
         font-size: 14px;
     }
 }
+
 .optiontext {
     border: solid 2px #0ed5ca;
     padding: 18px;
@@ -456,17 +530,20 @@ li.search {
         font-size: 14px;
     }
 }
+
 .optionbox {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 3vh;
 }
+
 .mcqcontent {
     overflow-x: hidden;
     overflow-y: scroll;
     height: 90%;
     width: 100%;
 }
+
 .concepthead {
     background-color: #dae8ea !important;
     height: 6vh;
@@ -480,28 +557,32 @@ li.search {
         font-size: 14px;
     }
 }
-.conceptcontent{
-     height: 84%;
+
+.conceptcontent {
+    height: 84%;
     width: 100%;
     font-family: ceraB !important;
 }
-.conceptcontent img{
+
+.conceptcontent img {
     max-width: 100%;
 }
+
 .concepticon {
     font-size: 19px;
     padding-top: 4px;
     float: inherit;
 }
-
 /*button*/
 
 .featured-image {
     max-width: 270px;
 }
+
 .round-button {
     width: 100%;
 }
+
 .round-button-circle {
     width: 75%;
     height: 0;
@@ -509,6 +590,7 @@ li.search {
     padding-bottom: 75%;
     border-radius: 50%;
     /* border: 10px solid #cfdcec; */
+    
     overflow: hidden;
     border: 1px solid #03bdd6;
     box-shadow: 0 0 1px grey;
@@ -517,9 +599,11 @@ li.search {
          padding-bottom: 75%;
     }*/
 }
+
 .round-button-circle:hover {
     background: #03bdd6;
 }
+
 .round-button i {
     display: block;
     float: left;
@@ -532,16 +616,17 @@ li.search {
     font-size: 35px !important;
     text-align: -webkit-center;
 }
+
 .round-button:hover {
     color: white !important;
 }
-
 /*CONCEPTS TIMELINE*/
 
 .conceptpercentouterdiv {
     padding: 2% !important;
     padding-bottom: 0px !important;
 }
+
 .conceptpercentbg {
     text-align: center;
     background-image: url(../img/circle_percent_holder.png);
@@ -561,6 +646,7 @@ li.search {
         margin-top: 30%;
     }
 }
+
 .conceptdiv {
     position: relative;
     width: 100%;
@@ -571,6 +657,7 @@ li.search {
         width: initial;
     }
 }
+
 .concepttitle {
     text-align: left;
     font-size: 1.8em;
@@ -580,6 +667,7 @@ li.search {
         font-size: 1.2em;
     }
 }
+
 .conceptbuttons {
     font-size: 1.2em;
     font-weight: 300;
@@ -590,6 +678,7 @@ li.search {
         font-size: 1em;
     }
 }
+
 .conceptcompletionline {
     background-color: $primary-color;
     height: 3px;
@@ -597,6 +686,7 @@ li.search {
     margin-top: 6px !important;
     border-radius: 2px;
 }
+
 .conceptdot {
     background-color: $primary-color;
     height: 12px;
@@ -619,6 +709,7 @@ li.search {
         margin-left: -1%;
     }
 }
+
 .circledotanimation {
     text-decoration: none;
     -webkit-transition: all 0.5s;
@@ -628,6 +719,7 @@ li.search {
     -moz-animation: neon2 1.5s ease-in-out infinite alternate;
     animation: neon2 1.5s ease-in-out infinite alternate;
 }
+
 @-webkit-keyframes neon2 {
     from {
         box-shadow: 0 0 2px $primary-color, 0 0 4px $primary-color, 0 0 6px $primary-color, 0 0 8px $primary-color, 0 0 10px $primary-color, 0 0 12px $primary-color, 0 0 14px $primary-color, 0 0 16px $primary-color;
@@ -636,7 +728,6 @@ li.search {
         box-shadow: 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color;
     }
 }
-
 /*testsresutls*/
 
 .testbg {
@@ -644,18 +735,22 @@ li.search {
     height: auto;
     margin-top: -90px;
 }
+
 .testtext {
     padding-top: 6vh;
     text-align: center;
     font-family: ceraB;
     color: white;
 }
+
 .congratstext {
-    color: #EEFF41;
+    color: #f9ff00;
     font-size: 30px;
     font-weight: 900;
     margin-top: 20px;
+    font-family: congrats;
 }
+
 .scoretext {
     font-size: 15px;
     margin-top: 8px;
@@ -663,48 +758,58 @@ li.search {
         font-size: 15px;
     }
 }
+
 .score {
     font-size: 40px;
     border: 1px solid;
+    font-family: monospace;
     margin-top: 10px;
-  -webkit-box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 9px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 9px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 9px -4px rgba(0, 0, 0, 0.75);
 }
+
 .resulttext {
     color: white;
     text-indent: 7px;
 }
+
 .faceicon {
     display: block;
     margin-right: 10px;
 }
+
 .resultscore {
     font-size: 40px;
     font-weight: 500;
     font-family: monospace;
 }
+
 .resulthead {
     font-size: 15px;
     font-weight: 400;
 }
+
 .testconcept {
     font-size: 17px;
     color: #abaaaa;
     font-family: ceraB;
     position: absolute;
 }
+
 .testconcepthead {
     padding-top: 5vh;
     font-size: 19px;
     color: $grey-text;
 }
+
 .conceptstestedline {
     background-color: $primary-color;
     height: 21px;
     float: left;
     border-radius: 2px;
 }
+
 .hidediv {
     @media screen and (max-width: $break-medium) {
         display: none;
