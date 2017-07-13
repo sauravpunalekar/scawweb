@@ -53,23 +53,23 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
             password: ""
         };
         var loginsuccess = function (response) {
-            if (response.data == 'false') {
-                console.log('Login error');
-                $scope.error = true;
+                if (response.data == 'false') {
+                    console.log('Login error');
+                    $scope.error = true;
 
 
-            } else {
-                $scope.error = false;
-                console.log(response.data);
-                $.jStorage.set('user', response.data);
-                if ($.jStorage.get('user').access_id != 3) {
-                    $location.path('/subjects');
                 } else {
-                    $location.path('/standards');
+                    $scope.error = false;
+                    console.log(response.data);
+                    $.jStorage.set('user', response.data);
+                    if ($.jStorage.get('user').access_id != 3) {
+                        $location.path('/subjects');
+                    } else {
+                        $location.path('/standards');
+                    }
                 }
             }
-        }
-        /*function*/
+            /*function*/
         $scope.dologin = function () {
             $scope.error = false;
             console.log($scope.logindata);
@@ -92,11 +92,11 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
             $scope.standards = response.data;
         }
         var getstandarderror = function (response) {
-            console.log(response.data);
-        }
-        //INITIALIZATIONS
+                console.log(response.data);
+            }
+            //INITIALIZATIONS
         NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess, getstandarderror)
-        /*function*/
+            /*function*/
 
 
         // routing
@@ -143,32 +143,32 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
         var getcarderror = function (response) {
             console.log(response.data);
         };
-      
+
         /*function*/
         NavigationService.getcardsbyconceptid($scope.conceptid, $.jStorage.get("user").id).then(getcardsuccess, getcarderror);
         var readcardbyuserid = function (cid) {
-              if ($scope.conceptcards[cid].cardread == 0) {
-            NavigationService.readcardbyuserid($.jStorage.get("user").id, $scope.conceptcards[cid].id);
-                  console.log("CALLING STATEMENT");
-              }
+            if ($scope.conceptcards[cid].cardread == 0) {
+                NavigationService.readcardbyuserid($.jStorage.get("user").id, $scope.conceptcards[cid].id);
+                console.log("CALLING STATEMENT");
+            }
         };
-            var getconceptnamesuccess = function(response){
-                console.log(response.data);
-                $scope.conceptdata = response.data;
-            }
-             var getconceptnameerror = function(response){
-                console.log(response.data);
-            }
-            NavigationService.getconceptname($scope.conceptid).then(getconceptnamesuccess,getconceptnameerror);
+        var getconceptnamesuccess = function (response) {
+            console.log(response.data);
+            $scope.conceptdata = response.data;
+        }
+        var getconceptnameerror = function (response) {
+            console.log(response.data);
+        }
+        NavigationService.getconceptname($scope.conceptid).then(getconceptnamesuccess, getconceptnameerror);
         // routing
         $scope.changecardindex = function (index) {
             if ($scope.cardindex == 0 && index == -1) {
 
             } else if ($scope.cardindex == $scope.conceptcards.length - 1 && index == 1) {} else if ($scope.cardindex >= 0 && $scope.cardindex < $scope.conceptcards.length) {
                 $scope.cardindex += index;
-              
-                    readcardbyuserid($scope.cardindex);
-                
+
+                readcardbyuserid($scope.cardindex);
+
             }
         }
   }]);
@@ -189,8 +189,8 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
         // routing
 
   }]);
-inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$routeParams', '$location',
-  function ($scope, TemplateService, NavigationService, $rootScope, $routeParams, $location) {
+inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$routeParams', '$location','$interval',
+  function ($scope, TemplateService, NavigationService, $rootScope, $routeParams, $location,$interval) {
 
         $scope.title = "Concepts";
         $scope.template = TemplateService;
@@ -203,6 +203,17 @@ inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'Navigati
         var getconceptsbychapteridsuccess = function (response) {
             $scope.concepts = response.data;
             console.log(response.data);
+            
+               //STYLING
+            $interval(function () {
+                var height = $('.conceptdiv').height();
+                height = height / 2;
+                $scope.negativemargin = height + 15;
+
+                console.log($scope.negativemargin);
+            }, 100, 1);
+
+
 
         };
         var getconceptsbychapteriderror = function (response) {
@@ -232,7 +243,7 @@ inqcontroller.controller('testresultsCtrl', ['$scope', 'TemplateService', 'Navig
         //INITIALIZATIONS
 
         /*function*/
-        
+
 
         // routing
 
@@ -266,17 +277,35 @@ inqcontroller.controller('subjectsCtrl', ['$scope', 'TemplateService', 'Navigati
 
   }]);
 
-inqcontroller.controller('chaptersCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$routeParams', '$location',
-  function ($scope, TemplateService, NavigationService, $rootScope, $routeParams, $location) {
+inqcontroller.controller('chaptersCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$routeParams', '$location', '$interval',
+  function ($scope, TemplateService, NavigationService, $rootScope, $routeParams, $location, $interval) {
         $scope.template = TemplateService;
         TemplateService.content = "views/chapters.html";
         $scope.navigation = NavigationService.getnav();
+
+        //STYLING
+        $interval(function () {
+
+        }, 500, 1);
+
+
 
         //INITIALIZATIONS
         $scope.subjectid = $routeParams.subjectid;
         var getchaptersbysubjectidsuccess = function (response) {
             console.log(response.data);
             $scope.chapters = response.data;
+            //STYLING
+            $interval(function () {
+                var height = $('.chapterlist').height();
+                height = height / 2;
+                $scope.negativemargin = height + 15;
+
+                console.log($scope.negativemargin);
+            }, 100, 1);
+
+
+
 
         };
         var getchaptersbysubjectiderror = function (response) {

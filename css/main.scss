@@ -141,11 +141,10 @@ li.search {
     color: white !important;
 }
 
-.side-nav li > a:hover {
-    color: white !important;
-    margin: 3px;
-    background-color: $primary-color !important;
-}
+/*.side-nav li > a:hover {
+   
+    
+}*/
 .dividerline {
     margin-left: 20px !important;
     margin-right: 20px !important;
@@ -155,6 +154,18 @@ li.search {
 .side-nav li > a {
     font-size: 16px !important;
     color: $grey-text !important;
+    .menuicons{
+    color: grey;
+       
+    }
+     &:hover{
+        color: white !important;
+    margin: 3px;
+    background-color: $primary-color !important;
+         .menuicons{
+             color: white !important;
+         }
+        }
 }
 
 .side-nav .subheader {
@@ -164,15 +175,19 @@ li.search {
 
 .icons {
     position: absolute;
+    
 }
 .menulist {
     display: inline;
-    margin-left: 32px;
+   
 }
 
 .menutext {
     top: 4px;
+  
 }
+
+
 
 .dropdownsub {}
 
@@ -207,7 +222,7 @@ li.search {
 
 .subbox {
     text-align: -webkit-center;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .subbox2 {
@@ -224,7 +239,6 @@ li.search {
 
 .subbox3 {
     text-align: center;
-    margin-top: -83px;
     cursor: pointer;
     /* padding-left:50px;
     padding-right:50px;
@@ -275,7 +289,7 @@ li.search {
 
 .chapbox {
     text-align: -webkit-center;
-    margin-top: 30px;
+    margin-top: 15px;
     cursor: pointer;
 }
 
@@ -334,7 +348,7 @@ li.search {
 }
 
 .chapheight {
-    margin-top: 6px !important;
+    padding-bottom: 1.5% !important;
     font-size: 14px;
 }
 /*Login box*/
@@ -361,6 +375,11 @@ li.search {
         text-align: center;
         margin-top: 3vh !important;
     }
+}
+.standbox {
+    text-align: center;
+    cursor: pointer;
+    margin-top: -90px;
 }
 
 .standardbox {
