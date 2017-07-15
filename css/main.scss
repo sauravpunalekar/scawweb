@@ -140,11 +140,11 @@ li.search {
     font-weight: 700;
     color: white !important;
 }
-
 /*.side-nav li > a:hover {
    
     
 }*/
+
 .dividerline {
     margin-left: 20px !important;
     margin-right: 20px !important;
@@ -154,18 +154,17 @@ li.search {
 .side-nav li > a {
     font-size: 16px !important;
     color: $grey-text !important;
-    .menuicons{
-    color: grey;
-       
+    .menuicons {
+        color: grey;
     }
-     &:hover{
+    &:hover {
         color: white !important;
-    margin: 3px;
-    background-color: $primary-color !important;
-         .menuicons{
-             color: white !important;
-         }
+        margin: 3px;
+        background-color: $primary-color !important;
+        .menuicons {
+            color: white !important;
         }
+    }
 }
 
 .side-nav .subheader {
@@ -175,19 +174,15 @@ li.search {
 
 .icons {
     position: absolute;
-    
 }
+
 .menulist {
     display: inline;
-   
 }
 
 .menutext {
     top: 4px;
-  
 }
-
-
 
 .dropdownsub {}
 
@@ -199,19 +194,21 @@ li.search {
 }
 
 .moon {
-        display: inline-block;
+    display: inline-block;
     position: absolute;
     width: 14vh;
     top: 9vh;
     margin-left: 5vh;
-
 }
-.astro{    display: inline-block;
+
+.astro {
+    display: inline-block;
     position: absolute;
     width: 13vh;
     top: 4%;
     margin-left: 50%;
 }
+
 .bgtext {
     text-align: -webkit-center;
     padding-top: 85px;
@@ -376,6 +373,7 @@ li.search {
         margin-top: 3vh !important;
     }
 }
+
 .standbox {
     text-align: center;
     cursor: pointer;
@@ -843,4 +841,50 @@ li.search {
     @media screen and (max-width: $break-medium) {
         display: none;
     }
+}
+/*TEST PAGE*/
+
+.upperdiv {
+    background-color: $primary-color;
+    color: white;
+    height: auto;
+    padding: 2%;
+    margin-top: -7%;
+}
+
+.lowerdiv {
+    transition: 1s all;
+}
+
+.bottomnav {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    background-color: white;
+    @extend .optioninnerpadding; 
+}
+
+.testques {
+    font-size: 1.4em;
+    line-height: 1.2em;
+    padding: 2%;
+}
+
+.optiondiv {
+    width: 90% !important;
+    height: auto;
+    background-color: white;
+}
+
+.optionsr {
+    @extend .textcenter;
+    border-right: 1px solid $grey-text;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: $grey-text;
+}
+
+.optioninnerpadding {
+    padding-top: 2% !important;
+    padding-bottom: 2% !important;
 }

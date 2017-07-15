@@ -13,7 +13,7 @@
   text-align: left !important; }
 
 /* line 27, C:/xampp/htdocs/scawweb/css/main.scss */
-.textcenter {
+.textcenter, .optionsr {
   text-align: center !important; }
 
 /* line 31, C:/xampp/htdocs/scawweb/css/main.scss */
@@ -143,40 +143,40 @@ li.search {
   /* line 157, C:/xampp/htdocs/scawweb/css/main.scss */
   .side-nav li > a .menuicons {
     color: grey; }
-  /* line 161, C:/xampp/htdocs/scawweb/css/main.scss */
+  /* line 160, C:/xampp/htdocs/scawweb/css/main.scss */
   .side-nav li > a:hover {
     color: white !important;
     margin: 3px;
     background-color: #03bdd6 !important; }
-    /* line 165, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 164, C:/xampp/htdocs/scawweb/css/main.scss */
     .side-nav li > a:hover .menuicons {
       color: white !important; }
 
-/* line 171, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 170, C:/xampp/htdocs/scawweb/css/main.scss */
 .side-nav .subheader {
   color: #d3d1d1 !important;
   font-size: 12px !important; }
 
-/* line 176, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 175, C:/xampp/htdocs/scawweb/css/main.scss */
 .icons {
   position: absolute; }
 
-/* line 180, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 179, C:/xampp/htdocs/scawweb/css/main.scss */
 .menulist {
   display: inline; }
 
-/* line 185, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 183, C:/xampp/htdocs/scawweb/css/main.scss */
 .menutext {
   top: 4px; }
 
-/* line 194, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 189, C:/xampp/htdocs/scawweb/css/main.scss */
 .bg {
   height: 45vh;
   margin-top: -90px;
   background-image: url(../img/galaxy_bg.jpg);
   background-size: 100%; }
 
-/* line 201, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 196, C:/xampp/htdocs/scawweb/css/main.scss */
 .moon {
   display: inline-block;
   position: absolute;
@@ -184,7 +184,7 @@ li.search {
   top: 9vh;
   margin-left: 5vh; }
 
-/* line 209, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 204, C:/xampp/htdocs/scawweb/css/main.scss */
 .astro {
   display: inline-block;
   position: absolute;
@@ -192,7 +192,7 @@ li.search {
   top: 4%;
   margin-left: 50%; }
 
-/* line 215, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 212, C:/xampp/htdocs/scawweb/css/main.scss */
 .bgtext {
   text-align: -webkit-center;
   padding-top: 85px;
@@ -200,12 +200,12 @@ li.search {
   font-size: 37px;
   font-weight: 900; }
 
-/* line 223, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 220, C:/xampp/htdocs/scawweb/css/main.scss */
 .subbox {
   text-align: -webkit-center;
   margin-top: 15px; }
 
-/* line 228, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 225, C:/xampp/htdocs/scawweb/css/main.scss */
 .subbox2 {
   background-color: white;
   height: 190px;
@@ -217,7 +217,7 @@ li.search {
       
     }*/ }
 
-/* line 240, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 237, C:/xampp/htdocs/scawweb/css/main.scss */
 .subbox3 {
   text-align: center;
   cursor: pointer;
@@ -226,39 +226,39 @@ li.search {
     padding-top:270px;
     padding-bottom: 50px;*/ }
 
-/* line 249, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 246, C:/xampp/htdocs/scawweb/css/main.scss */
 .subicons {
   width: 79px;
   margin-top: 38px; }
 
-/* line 254, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 251, C:/xampp/htdocs/scawweb/css/main.scss */
 .sublist {
   padding-top: 5px;
   font-family: ceraM;
   font-size: 18px; }
 
-/* line 260, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 257, C:/xampp/htdocs/scawweb/css/main.scss */
 .subbox4 {
   text-align: center;
   /* padding-left:150px;
     padding-right:150px;
    */ }
 
-/* line 267, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 264, C:/xampp/htdocs/scawweb/css/main.scss */
 .contentdiv {
   padding-left: 350px; }
   @media screen and (max-width: 992px) {
-    /* line 267, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 264, C:/xampp/htdocs/scawweb/css/main.scss */
     .contentdiv {
       padding-left: 0px; } }
 
-/* line 275, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 272, C:/xampp/htdocs/scawweb/css/main.scss */
 .menuicon {
   color: white;
   font-size: 30px !important;
   margin-left: 10px; }
 
-/* line 281, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 278, C:/xampp/htdocs/scawweb/css/main.scss */
 .chapterlist {
   background-color: white;
   height: auto;
@@ -267,19 +267,19 @@ li.search {
   -moz-box-shadow: 0px 1px 6px 0px #4f4d4f;
   box-shadow: 0px 1px 6px 0px #4f4d4f; }
 
-/* line 290, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 287, C:/xampp/htdocs/scawweb/css/main.scss */
 .chapbox {
   text-align: -webkit-center;
   margin-top: 15px;
   cursor: pointer; }
 
-/* line 296, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 293, C:/xampp/htdocs/scawweb/css/main.scss */
 .chapdivider {
   height: 1.5px !important;
   width: 100% !important;
   margin-left: -11px !important; }
 
-/* line 302, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 299, C:/xampp/htdocs/scawweb/css/main.scss */
 .chaptext {
   text-align: -webkit-left !important;
   font-size: 25px !important;
@@ -289,11 +289,11 @@ li.search {
   color: #191a19 !important;
   line-height: 26px; }
   @media screen and (max-width: 601px) {
-    /* line 302, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 299, C:/xampp/htdocs/scawweb/css/main.scss */
     .chaptext {
       font-size: 20px !important; } }
 
-/* line 315, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 312, C:/xampp/htdocs/scawweb/css/main.scss */
 .chapconcept {
   text-align: left !important;
   margin-top: 7px;
@@ -302,70 +302,70 @@ li.search {
   margin-left: 12px;
   font-weight: 800; }
 
-/* line 324, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 321, C:/xampp/htdocs/scawweb/css/main.scss */
 .chapicon {
   position: absolute;
   color: #636363 !important;
   margin-left: 4px; }
 
-/* line 330, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 327, C:/xampp/htdocs/scawweb/css/main.scss */
 .chapicon:hover {
   color: #03bdd6 !important; }
 
-/* line 334, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 331, C:/xampp/htdocs/scawweb/css/main.scss */
 .chapbuttons a {
   color: #636363 !important; }
 
-/* line 338, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 335, C:/xampp/htdocs/scawweb/css/main.scss */
 .chapbuttons {
   margin-top: 7px !important;
   color: #636363 !important;
   font-weight: 800; }
 
 @media screen and (max-width: 992px) {
-  /* line 344, C:/xampp/htdocs/scawweb/css/main.scss */
+  /* line 341, C:/xampp/htdocs/scawweb/css/main.scss */
   .concepthide {
     display: none !important; } }
 
-/* line 350, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 347, C:/xampp/htdocs/scawweb/css/main.scss */
 .chapheight {
   padding-bottom: 1.5% !important;
   font-size: 14px; }
 
 /*Login box*/
-/* line 356, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 353, C:/xampp/htdocs/scawweb/css/main.scss */
 .logintext {
   background-color: #ebebeb;
   height: 480px; }
 
-/* line 361, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 358, C:/xampp/htdocs/scawweb/css/main.scss */
 .loginlogo {
   background-color: #03bdd6;
   height: 480px; }
   @media screen and (max-width: 601px) {
-    /* line 361, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 358, C:/xampp/htdocs/scawweb/css/main.scss */
     .loginlogo {
       height: 17vh; } }
 
 /*STandard */
-/* line 370, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 367, C:/xampp/htdocs/scawweb/css/main.scss */
 .standardtext {
   font-size: 7em;
   text-align: center; }
   @media screen and (max-width: 601px) {
-    /* line 370, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 367, C:/xampp/htdocs/scawweb/css/main.scss */
     .standardtext {
       font-size: 5em;
       text-align: center;
       margin-top: 3vh !important; } }
 
-/* line 379, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 377, C:/xampp/htdocs/scawweb/css/main.scss */
 .standbox {
   text-align: center;
   cursor: pointer;
   margin-top: -90px; }
 
-/* line 385, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 383, C:/xampp/htdocs/scawweb/css/main.scss */
 .standardbox {
   background-color: white;
   height: 190px;
@@ -375,12 +375,12 @@ li.search {
   -moz-box-shadow: 0px 1px 6px 0px #4f4d4f;
   box-shadow: 0px 1px 6px 0px #4f4d4f; }
   @media screen and (max-width: 601px) {
-    /* line 385, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 383, C:/xampp/htdocs/scawweb/css/main.scss */
     .standardbox {
       padding: 7px; } }
 
 /*card*/
-/* line 399, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 397, C:/xampp/htdocs/scawweb/css/main.scss */
 .cardbox {
   /* background-color: white;
     height: 70vh;
@@ -397,13 +397,13 @@ li.search {
   height: 70vh;
   padding-top: 6%; }
   @media screen and (max-width: 601px) {
-    /* line 399, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 397, C:/xampp/htdocs/scawweb/css/main.scss */
     .cardbox {
       padding-top: 7%;
       width: 112%;
       margin-left: -6%; } }
 
-/* line 422, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 420, C:/xampp/htdocs/scawweb/css/main.scss */
 .cardspage {
   height: 64vh;
   width: 84%;
@@ -417,11 +417,11 @@ li.search {
   background-color: white;
   box-shadow: 0px 1px 6px 0px rgba(55, 45, 59, 0.16); }
   @media screen and (max-width: 601px) {
-    /* line 422, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 420, C:/xampp/htdocs/scawweb/css/main.scss */
     .cardspage {
       margin-left: 3vh; } }
 
-/* line 440, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 438, C:/xampp/htdocs/scawweb/css/main.scss */
 .concepthead {
   background-color: #dae8ea !important;
   height: 6vh;
@@ -432,35 +432,35 @@ li.search {
   padding-right: 20px;
   font-family: ceraB; }
   @media screen and (max-width: 601px) {
-    /* line 440, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 438, C:/xampp/htdocs/scawweb/css/main.scss */
     .concepthead {
       font-size: 11px;
       padding-top: 4%; } }
 
-/* line 455, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 453, C:/xampp/htdocs/scawweb/css/main.scss */
 .cardbut {
   background-color: white !important;
   border: 1px solid #03bdd6 !important;
   width: 100% !important; }
 
-/* line 461, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 459, C:/xampp/htdocs/scawweb/css/main.scss */
 .cardicon {
   color: #03bdd6 !important;
   font-size: 50px !important;
   text-align: -webkit-center; }
 
-/* line 467, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 465, C:/xampp/htdocs/scawweb/css/main.scss */
 .iconrow {
   padding-left: 30px !important;
   padding-right: 30px !important; }
 
-/* line 472, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 470, C:/xampp/htdocs/scawweb/css/main.scss */
 .starbut {
   background-color: white !important;
   border: 1px solid #03bdd6 !important;
   width: 100% !important; }
 
-/* line 478, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 476, C:/xampp/htdocs/scawweb/css/main.scss */
 .staricon {
   color: #03bdd6 !important;
   font-size: 57px !important;
@@ -468,7 +468,7 @@ li.search {
   margin-top: 6px; }
 
 /*mcq page*/
-/* line 486, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 484, C:/xampp/htdocs/scawweb/css/main.scss */
 .mcqhead {
   background-color: #dae8ea;
   height: 6vh;
@@ -479,11 +479,11 @@ li.search {
   padding-right: 20px;
   font-family: ceraB; }
   @media screen and (max-width: 601px) {
-    /* line 486, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 484, C:/xampp/htdocs/scawweb/css/main.scss */
     .mcqhead {
       font-size: 14px; } }
 
-/* line 500, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 498, C:/xampp/htdocs/scawweb/css/main.scss */
 .testbox {
   background-color: white;
   height: 70vh;
@@ -497,46 +497,46 @@ li.search {
   box-shadow: 0px 1px 6px 0px #4f4d4f;
   margin-top: -26vh; }
   @media screen and (max-width: 601px) {
-    /* line 500, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 498, C:/xampp/htdocs/scawweb/css/main.scss */
     .testbox {
       width: 120%;
       margin-left: -10%; } }
 
 /*scroll bar*/
-/* line 519, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 517, C:/xampp/htdocs/scawweb/css/main.scss */
 .scrollbar {
   overflow-y: scroll; }
 
-/* line 523, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 521, C:/xampp/htdocs/scawweb/css/main.scss */
 .force-overflow {
   min-height: 450px; }
 
-/* line 527, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 525, C:/xampp/htdocs/scawweb/css/main.scss */
 #style-4::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 0px transparent;
   background-color: #FFF;
   border-radius: 10px; }
 
-/* line 533, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 531, C:/xampp/htdocs/scawweb/css/main.scss */
 #style-4::-webkit-scrollbar {
   width: 6px;
   background-color: #F5F5F5; }
 
-/* line 538, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 536, C:/xampp/htdocs/scawweb/css/main.scss */
 #style-4::-webkit-scrollbar-thumb {
   background-color: #03bdd6;
   border: 1px solid #03bdd6; }
 
-/* line 543, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 541, C:/xampp/htdocs/scawweb/css/main.scss */
 .concepttext {
   font-size: 20px;
   margin-top: 2vh; }
   @media screen and (max-width: 601px) {
-    /* line 543, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 541, C:/xampp/htdocs/scawweb/css/main.scss */
     .concepttext {
       font-size: 14px; } }
 
-/* line 551, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 549, C:/xampp/htdocs/scawweb/css/main.scss */
 .optiontext {
   border: solid 2px #0ed5ca;
   padding: 18px;
@@ -544,25 +544,25 @@ li.search {
   font-size: 18px;
   border-radius: 6px; }
   @media screen and (max-width: 601px) {
-    /* line 551, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 549, C:/xampp/htdocs/scawweb/css/main.scss */
     .optiontext {
       padding: 6px;
       font-size: 14px; } }
 
-/* line 563, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 561, C:/xampp/htdocs/scawweb/css/main.scss */
 .optionbox {
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 3vh; }
 
-/* line 569, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 567, C:/xampp/htdocs/scawweb/css/main.scss */
 .mcqcontent {
   overflow-x: hidden;
   overflow-y: scroll;
   height: 90%;
   width: 100%; }
 
-/* line 576, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 574, C:/xampp/htdocs/scawweb/css/main.scss */
 .concepthead {
   background-color: #dae8ea !important;
   height: 6vh;
@@ -573,36 +573,36 @@ li.search {
   padding-right: 20px;
   font-family: ceraB; }
   @media screen and (max-width: 601px) {
-    /* line 576, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 574, C:/xampp/htdocs/scawweb/css/main.scss */
     .concepthead {
       font-size: 14px; } }
 
-/* line 590, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 588, C:/xampp/htdocs/scawweb/css/main.scss */
 .conceptcontent {
   height: 84%;
   width: 100%;
   font-family: ceraB !important; }
 
-/* line 596, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 594, C:/xampp/htdocs/scawweb/css/main.scss */
 .conceptcontent img {
   max-width: 100%; }
 
-/* line 600, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 598, C:/xampp/htdocs/scawweb/css/main.scss */
 .concepticon {
   font-size: 19px;
   padding-top: 4px;
   float: inherit; }
 
 /*button*/
-/* line 607, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 605, C:/xampp/htdocs/scawweb/css/main.scss */
 .featured-image {
   max-width: 270px; }
 
-/* line 611, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 609, C:/xampp/htdocs/scawweb/css/main.scss */
 .round-button {
   width: 100%; }
 
-/* line 615, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 613, C:/xampp/htdocs/scawweb/css/main.scss */
 .round-button-circle {
   width: 75%;
   height: 0;
@@ -618,11 +618,11 @@ li.search {
          padding-bottom: 75%;
     }*/ }
 
-/* line 632, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 630, C:/xampp/htdocs/scawweb/css/main.scss */
 .round-button-circle:hover {
   background: #03bdd6; }
 
-/* line 636, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 634, C:/xampp/htdocs/scawweb/css/main.scss */
 .round-button i {
   display: block;
   float: left;
@@ -635,17 +635,17 @@ li.search {
   font-size: 35px !important;
   text-align: -webkit-center; }
 
-/* line 649, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 647, C:/xampp/htdocs/scawweb/css/main.scss */
 .round-button:hover {
   color: white !important; }
 
 /*CONCEPTS TIMELINE*/
-/* line 654, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 652, C:/xampp/htdocs/scawweb/css/main.scss */
 .conceptpercentouterdiv {
   padding: 2% !important;
   padding-bottom: 0px !important; }
 
-/* line 659, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 657, C:/xampp/htdocs/scawweb/css/main.scss */
 .conceptpercentbg {
   text-align: center;
   background-image: url(../img/circle_percent_holder.png);
@@ -656,53 +656,53 @@ li.search {
   font-size: 1.1em !important;
   padding-bottom: 31% !important; }
   @media screen and (max-width: 601px) {
-    /* line 659, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 657, C:/xampp/htdocs/scawweb/css/main.scss */
     .conceptpercentbg {
       padding-top: 27% !important;
       font-size: 0.8em !important; } }
   @media screen and (max-width: 300px) {
-    /* line 659, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 657, C:/xampp/htdocs/scawweb/css/main.scss */
     .conceptpercentbg {
       padding-top: 27% !important;
       font-size: 0.8em !important;
       margin-top: 30%; } }
 
-/* line 679, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 677, C:/xampp/htdocs/scawweb/css/main.scss */
 .conceptdiv {
   position: relative;
   width: 100%;
   background-color: white;
   border-radius: 2px; }
   @media screen and (max-width: 300px) {
-    /* line 679, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 677, C:/xampp/htdocs/scawweb/css/main.scss */
     .conceptdiv {
       width: initial; } }
 
-/* line 690, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 688, C:/xampp/htdocs/scawweb/css/main.scss */
 .concepttitle {
   text-align: left;
   font-size: 1.8em;
   padding-bottom: 1% !important;
   padding-top: 1% !important; }
   @media screen and (max-width: 601px) {
-    /* line 690, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 688, C:/xampp/htdocs/scawweb/css/main.scss */
     .concepttitle {
       font-size: 1.2em; } }
 
-/* line 700, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 698, C:/xampp/htdocs/scawweb/css/main.scss */
 .conceptbuttons {
   font-size: 1.2em;
   font-weight: 300; }
   @media screen and (max-width: 601px) {
-    /* line 700, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 698, C:/xampp/htdocs/scawweb/css/main.scss */
     .conceptbuttons {
       font-size: 1.1em; } }
   @media screen and (max-width: 300px) {
-    /* line 700, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 698, C:/xampp/htdocs/scawweb/css/main.scss */
     .conceptbuttons {
       font-size: 1em; } }
 
-/* line 711, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 709, C:/xampp/htdocs/scawweb/css/main.scss */
 .conceptcompletionline {
   background-color: #03bdd6;
   height: 3px;
@@ -710,7 +710,7 @@ li.search {
   margin-top: 6px !important;
   border-radius: 2px; }
 
-/* line 719, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 717, C:/xampp/htdocs/scawweb/css/main.scss */
 .conceptdot {
   background-color: #03bdd6;
   height: 12px;
@@ -721,21 +721,21 @@ li.search {
   margin-top: -6px;
   margin-left: 2%; }
   @media screen and (max-width: 601px) {
-    /* line 719, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 717, C:/xampp/htdocs/scawweb/css/main.scss */
     .conceptdot {
       height: 8px;
       width: 8px;
       margin-top: -4px;
       margin-left: 0%; } }
   @media screen and (max-width: 300px) {
-    /* line 719, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 717, C:/xampp/htdocs/scawweb/css/main.scss */
     .conceptdot {
       height: 6px;
       width: 6px;
       margin-top: -3px;
       margin-left: -1%; } }
 
-/* line 742, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 740, C:/xampp/htdocs/scawweb/css/main.scss */
 .circledotanimation {
   text-decoration: none;
   -webkit-transition: all 0.5s;
@@ -752,20 +752,20 @@ li.search {
     box-shadow: 0 0 2px #03bdd6, 0 0 2px #03bdd6, 0 0 2px #03bdd6, 0 0 2px #03bdd6, 0 0 2px #03bdd6, 0 0 2px #03bdd6, 0 0 2px #03bdd6, 0 0 2px #03bdd6; } }
 
 /*testsresutls*/
-/* line 762, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 760, C:/xampp/htdocs/scawweb/css/main.scss */
 .testbg {
   background-color: #03bdd6;
   height: auto;
   margin-top: -90px; }
 
-/* line 768, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 766, C:/xampp/htdocs/scawweb/css/main.scss */
 .testtext {
   padding-top: 6vh;
   text-align: center;
   font-family: ceraB;
   color: white; }
 
-/* line 775, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 773, C:/xampp/htdocs/scawweb/css/main.scss */
 .congratstext {
   color: #f9ff00;
   font-size: 30px;
@@ -773,16 +773,16 @@ li.search {
   margin-top: 20px;
   font-family: congrats; }
 
-/* line 783, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 781, C:/xampp/htdocs/scawweb/css/main.scss */
 .scoretext {
   font-size: 15px;
   margin-top: 8px; }
   @media screen and (max-width: 601px) {
-    /* line 783, C:/xampp/htdocs/scawweb/css/main.scss */
+    /* line 781, C:/xampp/htdocs/scawweb/css/main.scss */
     .scoretext {
       font-size: 15px; } }
 
-/* line 791, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 789, C:/xampp/htdocs/scawweb/css/main.scss */
 .score {
   font-size: 40px;
   border: 1px solid;
@@ -792,41 +792,41 @@ li.search {
   -moz-box-shadow: 0px 0px 9px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 9px -4px rgba(0, 0, 0, 0.75); }
 
-/* line 801, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 799, C:/xampp/htdocs/scawweb/css/main.scss */
 .resulttext {
   color: white;
   text-indent: 7px; }
 
-/* line 806, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 804, C:/xampp/htdocs/scawweb/css/main.scss */
 .faceicon {
   display: block;
   margin-right: 10px; }
 
-/* line 811, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 809, C:/xampp/htdocs/scawweb/css/main.scss */
 .resultscore {
   font-size: 40px;
   font-weight: 500;
   font-family: monospace; }
 
-/* line 817, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 815, C:/xampp/htdocs/scawweb/css/main.scss */
 .resulthead {
   font-size: 15px;
   font-weight: 400; }
 
-/* line 822, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 820, C:/xampp/htdocs/scawweb/css/main.scss */
 .testconcept {
   font-size: 17px;
   color: #abaaaa;
   font-family: ceraB;
   position: absolute; }
 
-/* line 829, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 827, C:/xampp/htdocs/scawweb/css/main.scss */
 .testconcepthead {
   padding-top: 5vh;
   font-size: 19px;
   color: #636363; }
 
-/* line 835, C:/xampp/htdocs/scawweb/css/main.scss */
+/* line 833, C:/xampp/htdocs/scawweb/css/main.scss */
 .conceptstestedline {
   background-color: #03bdd6;
   height: 21px;
@@ -834,8 +834,52 @@ li.search {
   border-radius: 2px; }
 
 @media screen and (max-width: 992px) {
-  /* line 842, C:/xampp/htdocs/scawweb/css/main.scss */
+  /* line 840, C:/xampp/htdocs/scawweb/css/main.scss */
   .hidediv {
     display: none; } }
+
+/*TEST PAGE*/
+/* line 847, C:/xampp/htdocs/scawweb/css/main.scss */
+.upperdiv {
+  background-color: #03bdd6;
+  color: white;
+  height: auto;
+  padding: 2%;
+  margin-top: -7%; }
+
+/* line 855, C:/xampp/htdocs/scawweb/css/main.scss */
+.lowerdiv {
+  transition: 1s all; }
+
+/* line 859, C:/xampp/htdocs/scawweb/css/main.scss */
+.bottomnav {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  background-color: white; }
+
+/* line 867, C:/xampp/htdocs/scawweb/css/main.scss */
+.testques {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  padding: 2%; }
+
+/* line 873, C:/xampp/htdocs/scawweb/css/main.scss */
+.optiondiv {
+  width: 90% !important;
+  height: auto;
+  background-color: white; }
+
+/* line 879, C:/xampp/htdocs/scawweb/css/main.scss */
+.optionsr {
+  border-right: 1px solid #636363;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #636363; }
+
+/* line 887, C:/xampp/htdocs/scawweb/css/main.scss */
+.optioninnerpadding, .bottomnav {
+  padding-top: 2% !important;
+  padding-bottom: 2% !important; }
 
 /*# sourceMappingURL=main.css.map */

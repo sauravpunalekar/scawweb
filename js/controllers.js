@@ -35,7 +35,7 @@ inqcontroller.controller('home', ['$scope', 'TemplateService', 'NavigationServic
 
         /*function*/
 
-        
+
         // routing
 
   }]);
@@ -97,9 +97,9 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
             //INITIALIZATIONS
         NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess, getstandarderror)
         $.jStorage.get("user").standard_id = 0;
-        
+
         $.jStorage.get("user").standard_name = "No";
-            /*function*/
+        /*function*/
 
 
         // routing
@@ -148,8 +148,8 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
         var getcarderror = function (response) {
             console.log(response.data);
         };
-      
-        var readcardsuccess = function (response){
+
+        var readcardsuccess = function (response) {
             console.log(response.data);
             $scope.conceptcards[$scope.cardindex].cardread = 1;
         }
@@ -158,7 +158,7 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
         NavigationService.getcardsbyconceptid($scope.conceptid, $.jStorage.get("user").id).then(getcardsuccess, getcarderror);
         var readcardbyuserid = function (cid) {
             if ($scope.conceptcards[cid].cardread == 0) {
-                NavigationService.readcardbyuserid($.jStorage.get("user").id, $scope.conceptcards[cid].id).then(readcardsuccess,readcarderror);
+                NavigationService.readcardbyuserid($.jStorage.get("user").id, $scope.conceptcards[cid].id).then(readcardsuccess, readcarderror);
                 console.log("CALLING STATEMENT");
             }
         };
@@ -182,8 +182,8 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
             }
         }
   }]);
-inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
-  function ($scope, TemplateService, NavigationService, $rootScope) {
+inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$interval',
+  function ($scope, TemplateService, NavigationService, $rootScope, $interval) {
 
         $scope.title = "Tests";
         $scope.template = TemplateService;
@@ -193,14 +193,25 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
 
         //INITIALIZATIONS
 
+        //STYLING
+        $interval(function () {
+            var height = $('.optiondiv').height();
+            height = height / 2;
+            $scope.negativemargin = height;
+
+            $('.bottomnav').width($('.upperdiv').width());
+
+            console.log($scope.negativemargin);
+        }, 100, 1);
+
         /*function*/
 
 
         // routing
 
   }]);
-inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$routeParams', '$location','$interval',
-  function ($scope, TemplateService, NavigationService, $rootScope, $routeParams, $location,$interval) {
+inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$routeParams', '$location', '$interval',
+  function ($scope, TemplateService, NavigationService, $rootScope, $routeParams, $location, $interval) {
 
         $scope.title = "Concepts";
         $scope.template = TemplateService;
@@ -213,8 +224,8 @@ inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'Navigati
         var getconceptsbychapteridsuccess = function (response) {
             $scope.concepts = response.data;
             console.log(response.data);
-            
-               //STYLING
+
+            //STYLING
             $interval(function () {
                 var height = $('.conceptdiv').height();
                 height = height / 2;
@@ -336,7 +347,7 @@ inqcontroller.controller('chaptersCtrl', ['$scope', 'TemplateService', 'Navigati
 inqcontroller.controller('menuCtrl', ['$scope', 'TemplateService', '$location', '$rootScope', 'NavigationService', '$route',
  function ($scope, TemplateService, $location, $rootScope, NavigationService, $route) {
         $scope.template = TemplateService;
-        
+
         /*INITIALIZATIONS*/
         $scope.user = $.jStorage.get("user");
 
@@ -347,9 +358,9 @@ inqcontroller.controller('menuCtrl', ['$scope', 'TemplateService', '$location', 
             draggable: true // Choose whether you can drag to open on touch screens,
 
         });
-     
+
         /*Reload controller*/
-        $rootScope.reloadpage = function(){
+        $rootScope.reloadpage = function () {
             $rootScope.errormsg = '';
             $route.reload();
         };

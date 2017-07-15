@@ -112,3 +112,10 @@ inq.directive('ngEnter', function () {
         });
     };
 });
+
+inq.filter('letterFromCode', function() {
+  return function(input) {
+    var code = input % 26;
+    return String.fromCharCode(65 + code);
+  };
+});
