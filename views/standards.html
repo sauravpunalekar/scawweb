@@ -1,29 +1,43 @@
 <div class="bg">
-        <div class="moon animated fadeIn">
+    <div class="moon animated fadeIn">
         <img src="img/moon.png" width="100%">
     </div>
 
-    <div  class="astro animated fadeIn">
+    <div class="astro animated fadeIn">
         <img src="img/astroman.png" width="100%">
     </div>
 </div>
 
 <div class="container">
-<div class="standbox">
-    <div class="row " style="text-align:center;">
+    <div ng-show="loadingdiv">
+        <img src="img/astroman.png">
+    </div>
+    <div ng-hide="loadingdiv">
+        <div ng-if="errormsg!=''">
+            {{errormsg}}
+            <button ng-click="reloadpage()">Retry</button>
+        </div>
+        <div ng-if="errormsg==''">
+            <div class="standbox" ng-if="standards.length>0">
+                <div class="row " style="text-align:center;">
 
-        <div class="col  s6 m4 l4 subbox" ng-repeat='s in standards' ng-click="gotosubjects($index)" ng-if="standards.length >0">
-            <div class="standardbox">
-                <div class="standardtext">{{s.name.substring(0,s.name.length-2)}}<span style="font-size:xx-large;">th</span></div>
+                    <div class="col  s6 m4 l4 subbox" ng-repeat='s in standards' ng-click="gotosubjects($index)" ng-if="standards.length >0">
+                        <div class="standardbox">
+                            <div class="standardtext">{{s.name.substring(0,s.name.length-2)}}<span style="font-size:xx-large;">th</span></div>
+
+                        </div>
+
+                    </div>
+                    <div ng-if="standards.length == 0">
+                        <h4>No standards retrived</h4>
+                    </div>
+
+                </div>
 
             </div>
-  
+            <div ng-if="standards.length==0">
+                No standards fetched
+            </div>
         </div>
-        <div ng-if="standards.length == 0">
-            <h4>No standards retrived</h4>
-        </div>
-
     </div>
-    
-</div>
 </div>

@@ -12,6 +12,7 @@ inq.run(function ($rootScope, $location, $route, $interval) {
         //show loading gif
         console.log("Shoe GIF");
         $rootScope.loadingdiv = true;
+        $rootScope.errormsg = '';
 
     });
     $rootScope.$on('$routeChangeSuccess', function () {

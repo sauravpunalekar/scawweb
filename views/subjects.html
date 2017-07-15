@@ -1,41 +1,52 @@
 <div class="bg">
-        <div class="moon animated fadeIn">
+    <div class="moon animated fadeIn">
         <img src="img/moon.png" width="100%">
     </div>
 
-    <div  class="astro animated fadeIn">
+    <div class="astro animated fadeIn">
         <img src="img/astroman.png" width="100%">
     </div>
 </div>
 <div class="container">
-<div class="standbox">
-<div class="row subbox3 " style="text-align:center;" >
+    <div ng-show="loadingdiv">
+        <img src="img/astroman.png">
+    </div>
+    <div ng-hide="loadingdiv">
+        <div ng-if="errormsg!=''">
+            {{errormsg}}
+            <button ng-click="reloadpage()">Retry</button>
+        </div>
+        <div class="standbox" ng-if="errormsg==''">
+            <div class="row subbox3 " style="text-align:center;" ng-if="subjects.length>0">
 
-    <div class="col s6 m4 l4 subbox" ng-repeat='s in subjects' ng-click='gotochapters(s.id)'>
-        <div class="subbox2">
-            <img src="img/calculator-active.png" class="subicons">
-            <div class="sublist">{{ s.name | uppercase}}
+                <div class="col s6 m4 l4 subbox" ng-repeat='s in subjects' ng-click='gotochapters(s.id)'>
+                    <div class="subbox2">
+                        <img src="img/calculator-active.png" class="subicons">
+                        <div class="sublist">{{ s.name | uppercase}}
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col  s6 m4 l4 subbox">
+                    <div class="subbox2">
+                        <img src="img/play.png" class="subicons">
+                        <div class="sublist">RESUME</div>
+
+                    </div>
+                </div>
+                <div class="col  s6 m4 l4 subbox">
+                    <div class="subbox2">
+                        <img src="img/question-mark.png" class="subicons">
+                        <div class="sublist">DOUBTS</div>
+
+                    </div>
+                </div>
+
             </div>
-
+            <div ng-if="subjects.length==0">
+                No subjects fetched
+            </div>
         </div>
     </div>
-    
-    <div class="col  s6 m4 l4 subbox">
-        <div class="subbox2">
-            <img src="img/play.png" class="subicons">
-            <div class="sublist">RESUME</div>
-
-        </div>
-    </div>
-    <div class="col  s6 m4 l4 subbox">
-        <div class="subbox2">
-            <img src="img/question-mark.png" class="subicons">
-            <div class="sublist">DOUBTS</div>
-
-        </div>
-    </div>
-
 </div>
-</div>
-</div>
-

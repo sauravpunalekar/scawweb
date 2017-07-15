@@ -333,10 +333,10 @@ inqcontroller.controller('chaptersCtrl', ['$scope', 'TemplateService', 'Navigati
 
   }]);
 
-inqcontroller.controller('menuCtrl', ['$scope', 'TemplateService', '$location', '$rootScope', 'NavigationService',
- function ($scope, TemplateService, $location, $rootScope, NavigationService) {
+inqcontroller.controller('menuCtrl', ['$scope', 'TemplateService', '$location', '$rootScope', 'NavigationService', '$route',
+ function ($scope, TemplateService, $location, $rootScope, NavigationService, $route) {
         $scope.template = TemplateService;
-
+        
         /*INITIALIZATIONS*/
         $scope.user = $.jStorage.get("user");
 
@@ -347,6 +347,12 @@ inqcontroller.controller('menuCtrl', ['$scope', 'TemplateService', '$location', 
             draggable: true // Choose whether you can drag to open on touch screens,
 
         });
+     
+        /*Reload controller*/
+        $rootScope.reloadpage = function(){
+            $rootScope.errormsg = '';
+            $route.reload();
+        };
 
         $scope.logout = function () {
             $location.path('/login');

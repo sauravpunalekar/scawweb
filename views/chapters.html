@@ -7,39 +7,50 @@
         <img src="img/astroman.png" width="100%">
     </div>
 </div>
+<div ng-show="loadingdiv">
+    <img src="img/astroman.png">
+</div>
+<div ng-hide="loadingdiv">
+    <div ng-if="errormsg!=''">
+        {{errormsg}}
+        <button ng-click="reloadpage()">Retry</button>
+    </div>
+    <div class="subbox3" ng-style="{marginTop: -negativemargin+'px'}" ng-if="errormsg==''">
+        <div class="row animated fadeInLeft margin0" style="text-align:center;" ng-repeat="c in chapters" ng-click="gotoconcepts(c.id)" ng-style="{animationDelay:$index*0.2+'s'}" ng-if="chapters.length>0">
+            <div class="col s12 m2 l2 margin0"></div>
 
-<div class="subbox3" ng-style="{marginTop: -negativemargin+'px'}">
-    <div class="row animated fadeInLeft margin0" style="text-align:center;" ng-repeat="c in chapters" ng-click="gotoconcepts(c.id)" ng-style="{animationDelay:$index*0.2+'s'}">
-        <div class="col s12 m2 l2 margin0"></div>
 
+            <div class="grid-example col s12 m8 l8 chapbox">
+                <div class="chapterlist grid-example row">
+                    <div class="col s12">
+                        <div class="chaptext">{{c.name}}</div>
+                        <div class="divider chapdivider"></div>
+                        <div class="row chapheight margin0">
+                            <div class="col s4 m4 l4 xl4 chapconcept">{{c.conceptscount}} Concepts</div>
+                            <div class="col s12 l4 xl4 concepthide"></div>
 
-        <div class="grid-example col s12 m8 l8 chapbox">
-            <div class="chapterlist grid-example row">
-                <div class="col s12">
-                    <div class="chaptext">{{c.name}}</div>
-                    <div class="divider chapdivider"></div>
-                    <div class="row chapheight margin0">
-                        <div class="col s4 m4 l4 xl4 chapconcept">{{c.conceptscount}} Concepts</div>
-                        <div class="col s12 l4 xl4 concepthide"></div>
+                            <div class="col s4 m4 l2 xl2 chapbuttons">Doubts <i class="material-icons chapicon">forum</i>
+                            </div>
+                            <div class="col s4 m4 l2 xl2 chapbuttons"><a class='dropdown-button ' data-activates='dropdown1'>Test</a> <i class="material-icons chapicon">local_library</i>
+                                <ul id='dropdown1' class='dropdown-content'>
+                                    <li><a href="#!">one</a>
+                                    </li>
+                                    <li><a href="#!">two</a>
+                                    </li>
 
-                        <div class="col s4 m4 l2 xl2 chapbuttons">Doubts <i class="material-icons chapicon">forum</i>
-                        </div>
-                        <div class="col s4 m4 l2 xl2 chapbuttons"><a class='dropdown-button ' data-activates='dropdown1'>Test</a> <i class="material-icons chapicon">local_library</i>
-                            <ul id='dropdown1' class='dropdown-content'>
-                                <li><a href="#!">one</a>
-                                </li>
-                                <li><a href="#!">two</a>
-                                </li>
-
-                            </ul>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="col s12 m2 l2 margin0"></div>
+        </div>
+        <div ng-if="chapters.length==0">
+            No chapters fetched
         </div>
 
-        <div class="col s12 m2 l2 margin0"></div>
+
     </div>
-
-
 </div>
