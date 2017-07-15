@@ -1,20 +1,43 @@
 <div style="height:100vh; width:100%">
     <div class="upperdiv">
         <div class="testnav row">
-            <div class="col l4 m4 s4 textleft">Back</div>
-            <div class="col l4 m4 s4 textcenter">4</div>
-            <div class="col l4 m4 s4 textright">Done</div>
+            <div class="col l4 m4 s4 textleft">
+                <button class="waves-effect waves-light btn primarybg">Back</button>
+            </div>
+            <div class="col l4 m4 s4 textcenter">
+                <a class='dropdown-button questionnumber' data-activates='dropdown1'>
+                    4
+                <div class="downarrow"></div>
+                </a>
+
+
+                <!-- Dropdown Structure -->
+                <div id='dropdown1' class='dropdown-content textcenter row'>
+                    <div class="arrow"></div>
+                    <div class="dropnodiv"></div>
+                    <div class="col l12 m12 s12 row margin0 qndiv">
+                        <div class="col l2 m2 s2 qnbox" ng-class="{qnattempted:$index%2 == 0, qnunattempted: $index%2 != 0}" ng-repeat="a in [1,2,3,4,5]">{{$index}}</div>
+                    </div>
+                    <div class="col l12 m12 s12 row margin0 qndiv">
+                        <div class="col l2 m2 s2 qnbox" ng-class="{qnattempted:$index%2 != 0, qnunattempted: $index%2 == 0}" ng-repeat="a in [1,2,3,4,5]">{{$index}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 m4 s4 textright">
+                <button class="waves-effect waves-light btn primarybg">Done</button>
+            </div>
         </div>
         <div class="textcenter">
             <h4 class="testques" ng-style="{marginBottom: negativemargin+'px'}">What is the relative speed of a car moving at 30km/hr , that is travelling next to a train that is moving at 60km/hr. Also what is the relative speed of the person driving the car ?</h4>
         </div>
     </div>
     <div class="lowerdiv" ng-style="{marginTop: '-'+negativemargin+'px'}">
-        <div class="row optiondiv z-depth-1" ng-repeat="option in [1,2,3,4]">
-            <div class="col optionsr optioninnerpadding m1 ">
-                {{$index | letterFromCode}}
+        <div class="row optiondiv z-depth-1" ng-repeat="option in [1,2,3,4]" style="position: relative;">
+            <div class="col optionsr optioninnerpadding m1 " style="height: 100%;
+    position: absolute;line-height: 100%;">
+                    {{$index | letterFromCode}}
             </div>
-            <div class="col optioninnerpadding m11">Option {{$index | letterFromCode}} </div>
+            <div class="col optioninnerpadding m11" style="margin-left: 8.333333%;">The best way to use these icons on the web is with our icon web font. It's lightweight, easy to use, and hosted by Google Web Fonts. Learn how to use font-based icons in our developer guide. A variety of sizes and densities can be downloaded from this site. Our icon set is also available as a git repository, making it even easier for developers to customize, share, and re-use. </div>
         </div>
     </div>
 
@@ -28,3 +51,8 @@
         </div>
     </div>
 </div>
+
+<script>
+
+
+</script>

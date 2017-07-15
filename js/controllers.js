@@ -53,23 +53,23 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
             password: ""
         };
         var loginsuccess = function (response) {
-                if (response.data == 'false') {
-                    console.log('Login error');
-                    $scope.error = true;
+            if (response.data == 'false') {
+                console.log('Login error');
+                $scope.error = true;
 
 
+            } else {
+                $scope.error = false;
+                console.log(response.data);
+                $.jStorage.set('user', response.data);
+                if ($.jStorage.get('user').access_id != 3) {
+                    $location.path('/subjects');
                 } else {
-                    $scope.error = false;
-                    console.log(response.data);
-                    $.jStorage.set('user', response.data);
-                    if ($.jStorage.get('user').access_id != 3) {
-                        $location.path('/subjects');
-                    } else {
-                        $location.path('/standards');
-                    }
+                    $location.path('/standards');
                 }
             }
-            /*function*/
+        }
+        /*function*/
         $scope.dologin = function () {
             $scope.error = false;
             console.log($scope.logindata);
@@ -92,9 +92,9 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
             $scope.standards = response.data;
         }
         var getstandarderror = function (response) {
-                console.log(response.data);
-            }
-            //INITIALIZATIONS
+            console.log(response.data);
+        }
+        //INITIALIZATIONS
         NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess, getstandarderror)
         $.jStorage.get("user").standard_id = 0;
 
@@ -200,9 +200,23 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
             $scope.negativemargin = height;
 
             $('.bottomnav').width($('.upperdiv').width());
+            $('.testnav').width($('.upperdiv').width());
+
+            $('.dropdown-button').dropdown({
+                inDuration: 300,
+                outDuration: 225,
+                constrainWidth: false, // Does not change width of dropdown to that of the activator
+                hover: true, // Activate on hover
+                gutter: 0, // Spacing from edge
+                belowOrigin: false, // Displays dropdown below the button
+                alignment: 'left', // Displays dropdown with edge aligned to the left of button
+                stopPropagation: false // Stops event propagation
+            });
+            
+            $('.dropdown1').height($('.qndiv').height());
 
             console.log($scope.negativemargin);
-        }, 100, 1);
+        }, 200, 1);
 
         /*function*/
 
