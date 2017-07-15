@@ -29,10 +29,10 @@
                 </div>
             </li>
 -->
-            <li>
+            <li ng-if="user.access_id == 3">
 
                 <a class="waves-effect menutext standardnumber" href="#/standards" >
-                   <p class="menulist" style="color:white;margin-left:32px;">8th Standard </p></a>
+                   <p class="menulist" style="color:white;margin-left:32px;">{{user.standard_name}} Standard </p></a>
             </li>
             <li><a class="subheader">STUDY</a></li>
             <li>

@@ -35,7 +35,7 @@ inqcontroller.controller('home', ['$scope', 'TemplateService', 'NavigationServic
 
         /*function*/
 
-
+        
         // routing
 
   }]);
@@ -96,12 +96,17 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
             }
             //INITIALIZATIONS
         NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess, getstandarderror)
+        $.jStorage.get("user").standard_id = 0;
+        
+        $.jStorage.get("user").standard_name = "No";
             /*function*/
 
 
         // routing
-        $scope.gotosubjects = function (standardid) {
-            $.jStorage.get('user').standard_id = standardid;
+        $scope.gotosubjects = function (index) {
+            $.jStorage.get('user').standard_id = $scope.standards[index].id;
+            var name = $scope.standards[index].name;
+            $.jStorage.get('user').standard_name = name;
             $location.path('/subjects');
         }
   }]);
@@ -143,12 +148,17 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
         var getcarderror = function (response) {
             console.log(response.data);
         };
+      
+        var readcardsuccess = function (response){
+            console.log(response.data);
+            $scope.conceptcards[$scope.cardindex].cardread = 1;
+        }
 
         /*function*/
         NavigationService.getcardsbyconceptid($scope.conceptid, $.jStorage.get("user").id).then(getcardsuccess, getcarderror);
         var readcardbyuserid = function (cid) {
             if ($scope.conceptcards[cid].cardread == 0) {
-                NavigationService.readcardbyuserid($.jStorage.get("user").id, $scope.conceptcards[cid].id);
+                NavigationService.readcardbyuserid($.jStorage.get("user").id, $scope.conceptcards[cid].id).then(readcardsuccess,readcarderror);
                 console.log("CALLING STATEMENT");
             }
         };
@@ -328,7 +338,7 @@ inqcontroller.controller('menuCtrl', ['$scope', 'TemplateService', '$location', 
         $scope.template = TemplateService;
 
         /*INITIALIZATIONS*/
-
+        $scope.user = $.jStorage.get("user");
 
         $('.button-collapse').sideNav({
             menuWidth: 350, // Default is 300

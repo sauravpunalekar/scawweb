@@ -12,7 +12,7 @@
 <div class="standbox">
     <div class="row " style="text-align:center;">
 
-        <div class="col  s6 m4 l4 subbox" ng-repeat='s in standards' ng-click="gotosubjects(s.id)" ng-if="standards.length >0">
+        <div class="col  s6 m4 l4 subbox" ng-repeat='s in standards' ng-click="gotosubjects($index)" ng-if="standards.length >0">
             <div class="standardbox">
                 <div class="standardtext">{{s.name.substring(0,s.name.length-2)}}<span style="font-size:xx-large;">th</span></div>
 
