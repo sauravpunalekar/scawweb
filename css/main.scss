@@ -880,12 +880,14 @@ li.search {
     background-color: $primary-color;
     color: white;
     height: auto;
-    padding: 2%;
+    padding: 20px 2% 0% 2%;
     margin-top: -7%;
+    position: fixed;
 }
 
 .lowerdiv {
     transition: 1s all;
+    position: absolute;
 }
 
 .bottomnav {
@@ -893,7 +895,6 @@ li.search {
     width: 100%;
     bottom: 0px;
     background-color: white;
-    @extend .optioninnerpadding;
 }
 
 .testques {
@@ -931,13 +932,68 @@ li.search {
 }
 
 #dropdown1 {
-    position: inherit !important;
+    position: initial !important;
+    box-shadow: 0 0 0 black !important;
+    background-color: white !important;
     width: 208px;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
-    margin-top: 10px;
+    margin-top: 13px;
+    position: initial !important;
+}
+
+.downarrow {
+    border: solid transparent;
+    content: " ";
+    /* height: 0; */
+    width: 0;
+    /* pointer-events: none; */
+    /* border-color: rgba(245, 245, 245, 0); */
+    border-top-color: #6b6969;
+    border-width: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5px;
+}
+
+.arrow {
+    border: solid transparent;
+    content: " ";
+    /* height: 0; */
+    width: 0;
+    /* pointer-events: none; */
+    /* border-color: rgba(245, 245, 245, 0); */
+    border-bottom-color: #ffffff;
+    border-width: 10px;
+    position: absolute;
+    margin-top: -22px;
+    left: 49%;
+}
+
+.questionnumber {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.dropnodiv {
+    width: 50% !important;
+    border: solid transparent;
+    content: " ";
+    /* height: 0; */
+    width: 0;
+    /* pointer-events: none; */
+    /* border-color: rgba(245, 245, 245, 0); */
+    border-bottom-color: rgba(245, 245, 245, 0);
+    border-width: 10px;
+    position: absolute;
+    margin-top: -22px;
+}
+
+.qndiv {
+    position: initial !important;
 }
 
 .qnbox {
@@ -951,6 +1007,16 @@ li.search {
     margin-top: 5px;
     margin-bottom: 5px !important;
     margin-left: 5px !important;
+}
+
+.quesh5 {
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: #636363;
+    /*position: absolute;*/
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .qnattempted {
