@@ -129,6 +129,12 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
             $('.starbut').css('height', '104px');
         }, 1);
 
+        $rootScope.$watch(function () {
+            var math = document.getElementById("carddata");
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub], math);
+            return true;
+        });
+
 
         //INITIALIZATIONS
         $scope.cardindex = 0;
@@ -200,9 +206,9 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
             var topheight = $('.testnav').height();
             var upperheight = $('.upperdiv').height();
             console.log(upperheight);
-            
+
             $scope.negativemargin = (upperheight - topheight) - (height / 2) + 5 + (height / 2);
-            
+
 
             $('.bottomnav').width($('.upperdiv').width());
             $('.testnav').width($('.upperdiv').width());
