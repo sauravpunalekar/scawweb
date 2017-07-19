@@ -256,10 +256,10 @@ inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'Navigati
             $interval(function () {
                 var height = $('.conceptdiv').height();
                 height = height / 2;
-                $scope.negativemargin = height + 15;
+                $scope.negativemargin = height;
 
                 console.log($scope.negativemargin);
-            }, 100, 1);
+            }, 1000, 1);
 
 
 
@@ -345,12 +345,12 @@ inqcontroller.controller('chaptersCtrl', ['$scope', 'TemplateService', 'Navigati
             $scope.chapters = response.data;
             //STYLING
             $interval(function () {
-                var height = $('.chapterlist').height();
+                var height = $('.chaprow').height();
                 height = height / 2;
-                $scope.negativemargin = height + 15;
+                $scope.negativemargin = height;
 
                 console.log($scope.negativemargin);
-            }, 100, 1);
+            }, 1000, 1);
 
 
 
