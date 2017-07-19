@@ -53,23 +53,23 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
             password: ""
         };
         var loginsuccess = function (response) {
-                if (response.data == 'false') {
-                    console.log('Login error');
-                    $scope.error = true;
+            if (response.data == 'false') {
+                console.log('Login error');
+                $scope.error = true;
 
 
+            } else {
+                $scope.error = false;
+                console.log(response.data);
+                $.jStorage.set('user', response.data);
+                if ($.jStorage.get('user').access_id != 3) {
+                    $location.path('/subjects');
                 } else {
-                    $scope.error = false;
-                    console.log(response.data);
-                    $.jStorage.set('user', response.data);
-                    if ($.jStorage.get('user').access_id != 3) {
-                        $location.path('/subjects');
-                    } else {
-                        $location.path('/standards');
-                    }
+                    $location.path('/standards');
                 }
             }
-            /*function*/
+        }
+        /*function*/
         $scope.dologin = function () {
             $scope.error = false;
             console.log($scope.logindata);
@@ -92,9 +92,9 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
             $scope.standards = response.data;
         }
         var getstandarderror = function (response) {
-                console.log(response.data);
-            }
-            //INITIALIZATIONS
+            console.log(response.data);
+        }
+        //INITIALIZATIONS
         NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess, getstandarderror)
         $.jStorage.get("user").standard_id = 0;
 
@@ -202,22 +202,25 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
         //STYLING
         $interval(function () {
             var height = $('.optiondiv').height();
-            $scope.questionmargin = height / 2;
-            var topheight = $('.testnav').height();
-            var upperheight = $('.upperdiv').height();
-            console.log(upperheight);
+            $scope.upperpadding = height / 2;
 
-            $scope.negativemargin = (upperheight - topheight) - (height / 2) + 5 + (height / 2);
+            $interval(function () {
+                var upperheight = $('.upperdiv').outerHeight();
+                console.log(upperheight);
+                $scope.optionmargin = upperheight - 52 - (height / 2);
+
+                console.log($scope.optionmargin);
+            }, 200, 1);
 
 
-            $('.bottomnav').width($('.upperdiv').width());
-            $('.testnav').width($('.upperdiv').width());
+
+            $('.bottomnav').width($('.bd').width());
 
             $('.dropdown-button').dropdown({
                 inDuration: 300,
                 outDuration: 225,
                 constrainWidth: false, // Does not change width of dropdown to that of the activator
-                hover: true, // Activate on hover
+                hover: false, // Activate on hover
                 gutter: 0, // Spacing from edge
                 belowOrigin: false, // Displays dropdown below the button
                 alignment: 'left', // Displays dropdown with edge aligned to the left of button
@@ -226,7 +229,6 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
 
             $('.dropdown1').height($('.qndiv').height());
 
-            console.log($scope.negativemargin);
         }, 200, 1);
 
         /*function*/

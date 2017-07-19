@@ -1,6 +1,6 @@
 <div style="height:100vh; width:100%">
-    <div class="upperdiv"   ng-style="{paddingBottom: questionmargin+'px'}">
-        <div class="testnav row">
+    <div class="upperdiv"   ng-style="{paddingBottom: upperpadding+'px'}">
+        <div class="testnav row margin0">
             <div class="col l4 m4 s4 textleft">
                 <button class="waves-effect waves-light btn primarybg">Back</button>
             </div>
@@ -31,23 +31,23 @@
             <h4 class="testques">What is the relative speed of a car moving at 30km/hr , that is travelling next to a train that is moving at 60km/hr. Also what is the relative speed of the person driving the car ?</h4>
         </div>
     </div>
-    <div class="lowerdiv" ng-style="{marginTop: negativemargin+'px'}">
+    <div class="lowerdiv fadeInUp" ng-style="{marginTop: optionmargin+'px'}">
         <div class="row optiondiv z-depth-1" ng-repeat="option in [1,2,3,4]" style="position: relative;">
             <div class="col optionsr optioninnerpadding m1 " style="height: 100%;
     position: absolute;line-height: 100%;">
                     {{$index | letterFromCode}}
             </div>
-            <div class="col optioninnerpadding m11" style="margin-left: 8.333333%;">The best way to use these icons on the web is with our icon web font. It's lightweight, easy to use, andustomize, share, and re-use.  best way to use these icons on the web is with our icon web font. It's lightweight, easy to use, andustomize, sh </div>
+            <div class="col optioninnerpadding m11" style="margin-left: 8.333333%;">The best way to use these icons onweight, eas  best way to use these icons on the web is with our icon web font. It's lightweight, easy to use, andustomize, share, and re-use.  best way to use these icons on the web is with our icon web font. It's  ght, eas  best way to use these icons on the web is with our icon web font. It's lightweight, easy to use, andustomize, share, and re-use.  best way to use these icons on the web is with our icon web font. It's  ght, eas  best way to use these icons on the web is with our icon web font. It's lightweight, easy to use, andustomize, share, and re-use.  best way to use these icons on the web is with our icon web font. It's  lightweight, eas </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="bottomnav z-depth-4 col l12 m12">
-            <div class="col l4 m4 textcenter">Left</div>
-            <div class="col l4 m4 textcenter">
-                <button>Pause</button>
+    <div class="row bd">
+        <div class="bottomnav z-depth-4 col l12 m12 padding0">
+            <div class="col l4 m4 textcenter waves-effect waves-light pausediv arrowdiv"><i class="material-icons testarrow">arrow_back</i></div>
+            <div class="col l4 m4 textcenter pausediv padding0">
+                <button class="waves-effect waves-light btn pausebtn"><span class="badge pausebadge">4</span>Pause</button>
             </div>
-            <div class="col l4 m4 textcenter">Right</div>
+            <div class="col l4 m4 textcenter waves-effect waves-light pausediv arrowdiv"><i class="material-icons testarrow">arrow_forward</i></div>
         </div>
     </div>
 </div>

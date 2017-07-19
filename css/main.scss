@@ -1,9 +1,10 @@
 /*COLOUR VARIABLES*/
 
-$primary-color: #03bdd6;
+$primary-color: #00BCD4;
 $primary-dark:#0a9dc7;
 $secondary-color:#ebebeb;
 $secondary-light:#f8f8f8;
+$pink-color: #E91E63;
 $grey-text:#636363;
 $light-text:#d3d1d1;
 $break-tiny: 300px;
@@ -45,7 +46,7 @@ $break-large: 1200px;
     color: white !important;
 }
 
-.MJXc-display{
+.MJXc-display {
     text-align: left !important;
 }
 
@@ -884,28 +885,61 @@ li.search {
     background-color: $primary-color;
     color: white;
     height: auto;
-    padding: 20px 2% 0% 2%;
-    margin-top: -7%;
+    padding: 10px 2% 50px 2%;
     position: fixed;
+    margin-top: -52px;
 }
 
 .lowerdiv {
     transition: 1s all;
     position: absolute;
+    margin-top: 500px;
 }
 
 .bottomnav {
     position: fixed;
     width: 100%;
     bottom: 0px;
+    height: 8vh;
+    background-color: #E91E63;
+    color: white;
+}
+
+.pausediv {
+    position: relative;
+    height: 100%;
+}
+
+.arrowdiv {
+    background-color: #E91E63 !important;
+}
+
+.pausebtn {
+    height: 100% !important;
+    width: 100%;
+    font-size: 1.3em !important;
+    font-weight: 500;
+    background-color: $primary-color !important;
+}
+
+.pausebadge {
     background-color: white;
+    height: 40px !important;
+    width: 40px;
+    font-size: 25px !important;
+    line-height: 40px !important;
+    border-radius: 40%;
+}
+
+.testarrow {
+    font-size: 6vh;
+    padding: 3%;
 }
 
 .testques {
     font-size: 1.4em;
     line-height: 1.2em;
     padding: 2%;
-    margin-top: 10%;
 }
 
 .optiondiv {
@@ -920,6 +954,9 @@ li.search {
     font-size: 1.5em;
     font-weight: bolder;
     color: $grey-text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .optioninnerpadding {
@@ -928,7 +965,6 @@ li.search {
 }
 
 .testnav {
-    position: fixed;
     width: 100%;
     top: 0px;
     padding-top: 1%;
@@ -936,16 +972,16 @@ li.search {
 }
 
 #dropdown1 {
-    position: initial !important;
     box-shadow: 0 0 0 black !important;
     background-color: white !important;
     width: 208px;
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
-    padding: 1%;
-    margin-top: 13px;
-    position: initial !important;
+    margin-top: 43px;
+    overflow-y: inherit;
+    left: 0 !important;
+    right: 0 !important;
 }
 
 .downarrow {
@@ -971,15 +1007,16 @@ li.search {
     /* border-color: rgba(245, 245, 245, 0); */
     border-bottom-color: #ffffff;
     border-width: 10px;
-    position: absolute;
-    margin-top: -22px;
-    left: 49%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
 }
 
 .questionnumber {
     color: white;
     font-size: 1.5em;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .dropnodiv {
@@ -1011,6 +1048,13 @@ li.search {
     margin-top: 5px;
     margin-bottom: 5px !important;
     margin-left: 5px !important;
+    cursor: pointer;
+}
+
+.qnbox:hover {
+    background-color: #3e3a3a !important;
+    color: #ffffff !important;
+    border: 1px solid #3e3a3a !important;
 }
 
 .quesh5 {
