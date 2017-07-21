@@ -7,9 +7,13 @@
         <img src="img/astroman.png" width="100%">
     </div>
 </div>
-<div ng-show="loadingdiv">
-    <img src="img/astroman.png">
+
+<!--LOADING DIV-->
+<div ng-show="loadingdiv" class="loadingdiv">
+    <img src="img/booksFallingLoading.gif">
 </div>
+
+<!--DIV AFTER LOADING PAGE-->
 <div ng-hide="loadingdiv">
     <div ng-if="errormsg!=''">
         {{errormsg}}

@@ -53,23 +53,23 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
             password: ""
         };
         var loginsuccess = function (response) {
-            if (response.data == 'false') {
-                console.log('Login error');
-                $scope.error = true;
+                if (response.data == 'false') {
+                    console.log('Login error');
+                    $scope.error = true;
 
 
-            } else {
-                $scope.error = false;
-                console.log(response.data);
-                $.jStorage.set('user', response.data);
-                if ($.jStorage.get('user').access_id != 3) {
-                    $location.path('/subjects');
                 } else {
-                    $location.path('/standards');
+                    $scope.error = false;
+                    console.log(response.data);
+                    $.jStorage.set('user', response.data);
+                    if ($.jStorage.get('user').access_id != 3) {
+                        $location.path('/subjects');
+                    } else {
+                        $location.path('/standards');
+                    }
                 }
             }
-        }
-        /*function*/
+            /*function*/
         $scope.dologin = function () {
             $scope.error = false;
             console.log($scope.logindata);
@@ -80,6 +80,7 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
         // routing
 
   }]);
+
 inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$location',
   function ($scope, TemplateService, NavigationService, $rootScope, $location) {
 
@@ -90,12 +91,16 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
         var getstandardsuccess = function (response) {
             console.log(response.data);
             $scope.standards = response.data;
-        }
+            $rootScope.loadingdiv = false;
+        };
         var getstandarderror = function (response) {
             console.log(response.data);
-        }
+        };
+
         //INITIALIZATIONS
-        NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess, getstandarderror)
+        $rootScope.loadingdiv = true;
+        console.log($rootScope.loadingdiv);
+        NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess, getstandarderror);
         $.jStorage.get("user").standard_id = 0;
 
         $.jStorage.get("user").standard_name = "No";
@@ -108,8 +113,9 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
             var name = $scope.standards[index].name;
             $.jStorage.get('user').standard_name = name;
             $location.path('/subjects');
-        }
+        };
   }]);
+
 inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$interval', '$routeParams', '$sce',
   function ($scope, TemplateService, NavigationService, $rootScope, $interval, $routeParams, $sce) {
 
@@ -250,16 +256,24 @@ inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'Navigati
 
         var getconceptsbychapteridsuccess = function (response) {
             $scope.concepts = response.data;
+            $rootScope.loadingdiv = false;
             console.log(response.data);
 
             //STYLING
-            $interval(function () {
+            var stylepage = function () {
                 var height = $('.conceptdiv').height();
                 height = height / 2;
                 $scope.negativemargin = height;
+            };
+            var style = $interval(function () {
+                console.log("TRYING");
+                if ($('.conceptdiv').height() == 0) {
 
-                console.log($scope.negativemargin);
-            }, 1000, 1);
+                } else {
+                    stylepage();
+                    $interval.cancel(style);
+                };
+            }, 50, 0);
 
 
 
@@ -269,6 +283,7 @@ inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'Navigati
         };
 
         /*function*/
+        $rootScope.loadingdiv = true;
         NavigationService.getconceptsbychapterid($.jStorage.get('user').id, $scope.chapterid).then(getconceptsbychapteridsuccess, getconceptsbychapteriderror);
 
 
@@ -307,11 +322,12 @@ inqcontroller.controller('subjectsCtrl', ['$scope', 'TemplateService', 'Navigati
         var getsubjectsbyuseridsuccess = function (response) {
             console.log(response.data);
             $scope.subjects = response.data;
-
+            $rootScope.loadingdiv = false;
         };
         var getsubjectsbyuseriderror = function (response) {
             console.log(response.data);
         };
+        $rootScope.loadingdiv = true;
         NavigationService.getsubjectsbyuserid($.jStorage.get('user').standard_id).then(getsubjectsbyuseridsuccess, getsubjectsbyuseriderror);
 
         /*function*/
@@ -332,9 +348,6 @@ inqcontroller.controller('chaptersCtrl', ['$scope', 'TemplateService', 'Navigati
         $scope.navigation = NavigationService.getnav();
 
         //STYLING
-        $interval(function () {
-
-        }, 500, 1);
 
 
 
@@ -343,14 +356,23 @@ inqcontroller.controller('chaptersCtrl', ['$scope', 'TemplateService', 'Navigati
         var getchaptersbysubjectidsuccess = function (response) {
             console.log(response.data);
             $scope.chapters = response.data;
+            $rootScope.loadingdiv = false;
             //STYLING
-            $interval(function () {
+            var stylepage = function () {
                 var height = $('.chaprow').height();
                 height = height / 2;
                 $scope.negativemargin = height;
+            };
+            var style = $interval(function () {
+                console.log("TRYING");
+                if ($('.chaprow').height() == 0) {
 
-                console.log($scope.negativemargin);
-            }, 1000, 1);
+                } else {
+                    stylepage();
+                    $interval.cancel(style);
+                };
+
+            }, 50, 0);
 
 
 
@@ -359,6 +381,7 @@ inqcontroller.controller('chaptersCtrl', ['$scope', 'TemplateService', 'Navigati
         var getchaptersbysubjectiderror = function (response) {
             console.log(response.data);
         };
+        $rootScope.loadingdiv = true;
         NavigationService.getchaptersbysubjectid($scope.subjectid).then(getchaptersbysubjectidsuccess, getchaptersbysubjectiderror);
 
 

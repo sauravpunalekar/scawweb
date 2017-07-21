@@ -57,8 +57,30 @@
   font-family: congrats;
   src: url("../fonts/congrats.otf") format("opentype"); }
 
+/* line 66, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+.loadingdiv {
+  height: 300px;
+  text-align: center; }
+  /* line 69, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+  .loadingdiv img {
+    width: 25%;
+    margin-top: 15%; }
+    @media screen and (max-width: 601px) {
+      /* line 69, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+      .loadingdiv img {
+        width: 30%; } }
+    @media screen and (max-width: 300px) {
+      /* line 69, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+      .loadingdiv img {
+        width: 62%; } }
+
+/*REUSE*/
+/* line 83, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+.relativediv {
+  position: relative; }
+
 /*sass*/
-/* line 69, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 89, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .searchbox {
   position: absolute;
   left: 0;
@@ -68,12 +90,12 @@
   padding: 1px 0 0 0;
   z-index: 2; }
 
-/* line 78, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 98, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 li.search .search-wrapper {
   margin: 0 0px;
   transition: margin .25s ease; }
 
-/* line 82, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 102, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 li.search {
   position: absolute;
   left: 0;
@@ -83,18 +105,18 @@ li.search {
   padding: 1px 0 0 0;
   z-index: 2; }
 
-/* line 91, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 111, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 #search:focus {
   width: 100%; }
 
-/* line 94, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 114, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 #search:focus + searchicon {
   right: 2px; }
 
 /*#search:focus + #b {
     background: #ccc
 }*/
-/* line 102, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 122, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 #search {
   width: 80% !important;
   background-color: white !important;
@@ -104,36 +126,36 @@ li.search {
   margin: 0 0 0px 0 !important;
   padding: 0 45px 0 15px !important; }
 
-/* line 111, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 131, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .searchicon {
   position: absolute;
   right: 10px;
   top: 10px;
   cursor: pointer; }
 
-/* line 117, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 137, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .logobox {
   background-color: #ebebeb !important; }
 
-/* line 120, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 140, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .loginimg {
   text-align: center; }
 
-/* line 123, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 143, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .loginimg2 {
   width: 40%;
   padding-top: 50%; }
   @media screen and (max-width: 601px) {
-    /* line 123, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 143, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .loginimg2 {
       width: 11%;
       padding-top: 2%; } }
 
-/* line 131, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 151, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .menubg {
   background-color: #f8f8f8 !important; }
 
-/* line 134, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 154, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .standardnumber {
   background-color: #00BCD4;
   margin: 10px;
@@ -146,53 +168,53 @@ li.search {
    
     
 }*/
-/* line 148, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 168, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .dividerline {
   margin-left: 20px !important;
   margin-right: 20px !important;
   margin-top: -10px !important; }
 
-/* line 153, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 173, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .side-nav li > a {
   font-size: 16px !important;
   color: #636363 !important; }
-  /* line 156, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+  /* line 176, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
   .side-nav li > a .menuicons {
     color: grey; }
-  /* line 159, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+  /* line 179, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
   .side-nav li > a:hover {
     color: white !important;
     margin: 3px;
     background-color: #00BCD4 !important; }
-    /* line 163, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 183, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .side-nav li > a:hover .menuicons {
       color: white !important; }
 
-/* line 168, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 188, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .side-nav .subheader {
   color: #d3d1d1 !important;
   font-size: 12px !important; }
 
-/* line 172, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 192, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .icons {
   position: absolute; }
 
-/* line 175, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 195, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .menulist {
   display: inline; }
 
-/* line 178, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 198, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .menutext {
   top: 4px; }
 
-/* line 182, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 202, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .bg {
   height: 45vh;
   margin-top: -52px;
   background-image: url(../img/galaxy_bg.jpg);
   background-size: 100%; }
 
-/* line 188, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 208, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .moon {
   display: inline-block;
   position: absolute;
@@ -200,7 +222,7 @@ li.search {
   top: 9vh;
   margin-left: 5vh; }
 
-/* line 195, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 215, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .astro {
   display: inline-block;
   position: absolute;
@@ -208,7 +230,7 @@ li.search {
   top: 4%;
   margin-left: 50%; }
 
-/* line 202, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 222, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .bgtext {
   text-align: -webkit-center;
   padding-top: 85px;
@@ -216,38 +238,38 @@ li.search {
   font-size: 37px;
   font-weight: 900; }
 
-/* line 209, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 229, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .subbox {
   text-align: -webkit-center;
   margin-bottom: 25px; }
 
-/* line 213, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 233, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .subbox2 {
   background-color: white;
   height: 15vw;
   width: 15vw;
   padding: 3vw; }
-  /* line 218, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+  /* line 238, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
   .subbox2 i {
     font-size: 9vw; }
   @media screen and (max-width: 992px) {
-    /* line 213, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 233, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .subbox2 {
       height: 30vw;
       width: 30vw; }
-      /* line 224, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+      /* line 244, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
       .subbox2 i {
         font-size: 21vw; } }
   @media screen and (max-width: 601px) {
-    /* line 213, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 233, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .subbox2 {
       height: 80vw;
       width: 80vw; }
-      /* line 231, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+      /* line 251, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
       .subbox2 i {
         font-size: 64vw; } }
 
-/* line 236, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 256, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .subbox3 {
   text-align: center;
   cursor: pointer;
@@ -256,39 +278,39 @@ li.search {
     padding-top:270px;
     padding-bottom: 50px;*/ }
 
-/* line 244, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 264, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .subicons {
   width: 80%;
   margin-bottom: 10px; }
 
-/* line 248, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 268, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .sublist {
   padding-top: 5px;
   font-family: ceraM;
   font-size: 18px; }
 
-/* line 253, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 273, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .subbox4 {
   text-align: center;
   /* padding-left:150px;
     padding-right:150px;
    */ }
 
-/* line 259, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 279, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .contentdiv {
   padding-left: 350px; }
   @media screen and (max-width: 992px) {
-    /* line 259, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 279, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .contentdiv {
       padding-left: 0px; } }
 
-/* line 266, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 286, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .menuicon {
   color: white;
   font-size: 30px !important;
   margin-left: 10px; }
 
-/* line 271, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 291, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .chapterlist {
   background-color: white;
   height: auto;
@@ -297,19 +319,19 @@ li.search {
   -moz-box-shadow: 0px 1px 6px 0px #4f4d4f;
   box-shadow: 0px 1px 6px 0px #4f4d4f; }
 
-/* line 279, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 299, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .chapbox {
   text-align: -webkit-center;
   margin-top: 15px;
   cursor: pointer; }
 
-/* line 284, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 304, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .chapdivider {
   height: 1.5px !important;
   width: 100% !important;
   margin-left: -11px !important; }
 
-/* line 289, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 309, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .chaptext {
   text-align: -webkit-left !important;
   font-size: 25px !important;
@@ -319,11 +341,11 @@ li.search {
   color: #191a19 !important;
   line-height: 26px; }
   @media screen and (max-width: 601px) {
-    /* line 289, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 309, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .chaptext {
       font-size: 20px !important; } }
 
-/* line 301, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 321, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .chapconcept {
   text-align: left !important;
   margin-top: 7px;
@@ -332,69 +354,69 @@ li.search {
   margin-left: 12px;
   font-weight: 800; }
 
-/* line 309, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 329, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .chapicon {
   position: absolute;
   color: #636363 !important;
   margin-left: 4px; }
 
-/* line 314, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 334, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .chapicon:hover {
   color: #00BCD4 !important; }
 
-/* line 317, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 337, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .chapbuttons a {
   color: #636363 !important; }
 
-/* line 320, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 340, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .chapbuttons {
   margin-top: 7px !important;
   color: #636363 !important;
   font-weight: 800; }
-  /* line 324, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+  /* line 344, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
   .chapbuttons:hover {
     color: #00BCD4 !important; }
-    /* line 326, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 346, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .chapbuttons:hover .chapicon {
       color: #00BCD4 !important; }
 
 @media screen and (max-width: 992px) {
-  /* line 331, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+  /* line 351, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
   .concepthide {
     display: none !important; } }
 
-/* line 336, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 356, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .chapheight {
   padding-bottom: 1.5% !important;
   font-size: 14px; }
 
 /*Login box*/
-/* line 343, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 363, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .logintext {
   background-color: #ebebeb;
   height: 480px; }
 
-/* line 347, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 367, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .loginlogo {
   background-color: #00BCD4;
   height: 480px; }
   @media screen and (max-width: 601px) {
-    /* line 347, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 367, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .loginlogo {
       height: 17vh; } }
 
 /*STandard */
-/* line 357, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 377, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .standardtext {
   text-align: center; }
 
-/* line 360, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 380, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .standbox {
   text-align: center;
   cursor: pointer;
   margin-top: -90px; }
 
-/* line 365, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 385, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .standardbox {
   background-color: white;
   height: 15vw;
@@ -404,20 +426,20 @@ li.search {
   color: #00BCD4;
   text-align: center; }
   @media screen and (max-width: 992px) {
-    /* line 365, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 385, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .standardbox {
       height: 35vw;
       width: 35vw;
       font-size: 20vw; } }
   @media screen and (max-width: 601px) {
-    /* line 365, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 385, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .standardbox {
       height: 80vw;
       width: 80vw;
       font-size: 50vw; } }
 
 /*card*/
-/* line 387, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 407, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .cardbox {
   /* background-color: white;
     height: 70vh;
@@ -430,19 +452,19 @@ li.search {
     box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);*/
   background-image: url(../img/cards_UI.png);
   background-repeat: no-repeat;
-  background-size: 100% 70vh;
-  height: 70vh;
+  background-size: 100% 83vh;
+  height: 81vh;
   padding-top: 6%; }
   @media screen and (max-width: 601px) {
-    /* line 387, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 407, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .cardbox {
       padding-top: 7%;
       width: 112%;
       margin-left: -6%; } }
 
-/* line 408, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 428, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .cardspage {
-  height: 64vh;
+  height: 74vh;
   width: 84%;
   /* margin-top: -11px;*/
   margin-top: -1vh;
@@ -454,11 +476,11 @@ li.search {
   background-color: white;
   box-shadow: 0px 1px 6px 0px rgba(55, 45, 59, 0.16); }
   @media screen and (max-width: 601px) {
-    /* line 408, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 428, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .cardspage {
       margin-left: 3vh; } }
 
-/* line 424, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 444, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .concepthead {
   background-color: #dae8ea !important;
   height: 6vh;
@@ -469,35 +491,35 @@ li.search {
   padding-right: 20px;
   font-family: ceraB; }
   @media screen and (max-width: 601px) {
-    /* line 424, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 444, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .concepthead {
       font-size: 11px;
       padding-top: 4%; } }
 
-/* line 438, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 458, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .cardbut {
   background-color: white !important;
   border: 1px solid #00BCD4 !important;
   width: 100% !important; }
 
-/* line 443, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 463, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .cardicon {
   color: #00BCD4 !important;
   font-size: 50px !important;
   text-align: -webkit-center; }
 
-/* line 448, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 468, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .iconrow {
   padding-left: 30px !important;
   padding-right: 30px !important; }
 
-/* line 452, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 472, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .starbut {
   background-color: white !important;
   border: 1px solid #00BCD4 !important;
   width: 100% !important; }
 
-/* line 457, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 477, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .staricon {
   color: #00BCD4 !important;
   font-size: 57px !important;
@@ -505,7 +527,7 @@ li.search {
   margin-top: 6px; }
 
 /*mcq page*/
-/* line 466, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 486, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .mcqhead {
   background-color: #dae8ea;
   height: 6vh;
@@ -516,11 +538,11 @@ li.search {
   padding-right: 20px;
   font-family: ceraB; }
   @media screen and (max-width: 601px) {
-    /* line 466, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 486, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .mcqhead {
       font-size: 14px; } }
 
-/* line 479, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 499, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .testbox {
   background-color: white;
   height: 70vh;
@@ -534,46 +556,46 @@ li.search {
   box-shadow: 0px 1px 6px 0px #4f4d4f;
   margin-top: -26vh; }
   @media screen and (max-width: 601px) {
-    /* line 479, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 499, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .testbox {
       width: 120%;
       margin-left: -10%; } }
 
 /*scroll bar*/
-/* line 499, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 519, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .scrollbar {
   overflow-y: scroll; }
 
-/* line 502, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 522, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .force-overflow {
   min-height: 450px; }
 
-/* line 505, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 525, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 #style-4::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 0px transparent;
   background-color: #FFF;
   border-radius: 10px; }
 
-/* line 510, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 530, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 #style-4::-webkit-scrollbar {
   width: 6px;
   background-color: #F5F5F5; }
 
-/* line 514, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 534, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 #style-4::-webkit-scrollbar-thumb {
   background-color: #00BCD4;
   border: 1px solid #00BCD4; }
 
-/* line 518, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 538, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .concepttext {
   font-size: 20px;
   margin-top: 2vh; }
   @media screen and (max-width: 601px) {
-    /* line 518, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 538, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .concepttext {
       font-size: 14px; } }
 
-/* line 525, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 545, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .optiontext {
   border: solid 2px #0ed5ca;
   padding: 18px;
@@ -581,25 +603,25 @@ li.search {
   font-size: 18px;
   border-radius: 6px; }
   @media screen and (max-width: 601px) {
-    /* line 525, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 545, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .optiontext {
       padding: 6px;
       font-size: 14px; } }
 
-/* line 536, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 556, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .optionbox {
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 3vh; }
 
-/* line 541, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 561, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .mcqcontent {
   overflow-x: hidden;
   overflow-y: scroll;
   height: 90%;
   width: 100%; }
 
-/* line 547, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 567, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .concepthead {
   background-color: #dae8ea !important;
   height: 6vh;
@@ -610,36 +632,36 @@ li.search {
   padding-right: 20px;
   font-family: ceraB; }
   @media screen and (max-width: 601px) {
-    /* line 547, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 567, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .concepthead {
       font-size: 14px; } }
 
-/* line 560, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 580, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .conceptcontent {
   height: 84%;
   width: 100%;
   font-family: ceraB !important; }
 
-/* line 565, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 585, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .conceptcontent img {
   max-width: 100%; }
 
-/* line 568, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 588, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .concepticon {
   font-size: 19px;
   padding-top: 4px;
   float: inherit; }
 
 /*button*/
-/* line 576, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 596, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .featured-image {
   max-width: 270px; }
 
-/* line 579, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 599, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .round-button {
   width: 100%; }
 
-/* line 582, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 602, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .round-button-circle {
   width: 75%;
   height: 0;
@@ -655,11 +677,11 @@ li.search {
          padding-bottom: 75%;
     }*/ }
 
-/* line 597, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 617, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .round-button-circle:hover {
   background: #03bdd6; }
 
-/* line 600, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 620, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .round-button i {
   display: block;
   float: left;
@@ -672,17 +694,17 @@ li.search {
   font-size: 35px !important;
   text-align: -webkit-center; }
 
-/* line 612, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 632, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .round-button:hover {
   color: white !important; }
 
 /*CONCEPTS TIMELINE*/
-/* line 618, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 638, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .conceptpercentouterdiv {
   padding: 2% !important;
   padding-bottom: 0px !important; }
 
-/* line 622, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 642, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .conceptpercentbg {
   text-align: center;
   background-image: url(../img/circle_percent_holder.png);
@@ -693,53 +715,61 @@ li.search {
   font-size: 1.1em !important;
   padding-bottom: 31% !important; }
   @media screen and (max-width: 601px) {
-    /* line 622, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 642, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .conceptpercentbg {
       padding-top: 27% !important;
       font-size: 0.8em !important; } }
   @media screen and (max-width: 300px) {
-    /* line 622, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 642, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .conceptpercentbg {
       padding-top: 27% !important;
       font-size: 0.8em !important;
       margin-top: 30%; } }
 
-/* line 641, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 661, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .conceptdiv {
   position: relative;
   width: 100%;
   background-color: white;
   border-radius: 2px; }
   @media screen and (max-width: 300px) {
-    /* line 641, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 661, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .conceptdiv {
       width: initial; } }
 
-/* line 651, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 671, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+.conceptdotdiv {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+/* line 678, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .concepttitle {
   text-align: left;
   font-size: 1.8em;
   padding-bottom: 1% !important;
   padding-top: 1% !important; }
   @media screen and (max-width: 601px) {
-    /* line 651, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 678, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .concepttitle {
       font-size: 1.2em; } }
 
-/* line 660, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 687, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .conceptbuttons {
   font-size: 1.2em;
   font-weight: 300; }
   @media screen and (max-width: 601px) {
-    /* line 660, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 687, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .conceptbuttons {
       font-size: 1.1em; } }
   @media screen and (max-width: 300px) {
-    /* line 660, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 687, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .conceptbuttons {
       font-size: 1em; } }
 
-/* line 670, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 697, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .conceptcompletionline {
   background-color: #00BCD4;
   height: 3px;
@@ -747,32 +777,23 @@ li.search {
   margin-top: 6px !important;
   border-radius: 2px; }
 
-/* line 677, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 704, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .conceptdot {
-  background-color: #00BCD4;
-  height: 12px;
-  width: 12px;
-  border-radius: 100%;
-  position: absolute;
-  top: 50%;
-  margin-top: -6px;
-  margin-left: 2%; }
+  width: 20px !important;
+  height: 20px !important;
+  background-color: #00BCD4 !important; }
   @media screen and (max-width: 601px) {
-    /* line 677, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 704, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .conceptdot {
-      height: 8px;
-      width: 8px;
-      margin-top: -4px;
-      margin-left: 0%; } }
+      height: 8px !important;
+      width: 8px !important; } }
   @media screen and (max-width: 300px) {
-    /* line 677, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 704, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .conceptdot {
-      height: 6px;
-      width: 6px;
-      margin-top: -3px;
-      margin-left: -1%; } }
+      height: 6px !important;
+      width: 6px !important; } }
 
-/* line 699, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 717, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .circledotanimation {
   text-decoration: none;
   -webkit-transition: all 0.5s;
@@ -789,20 +810,20 @@ li.search {
     box-shadow: 0 0 2px #00BCD4, 0 0 2px #00BCD4, 0 0 2px #00BCD4, 0 0 2px #00BCD4, 0 0 2px #00BCD4, 0 0 2px #00BCD4, 0 0 2px #00BCD4, 0 0 2px #00BCD4; } }
 
 /*testsresutls*/
-/* line 719, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 737, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .testbg {
   background-color: #00BCD4;
   height: auto;
   margin-top: -90px; }
 
-/* line 724, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 742, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .testtext {
   padding-top: 6vh;
   text-align: center;
   font-family: ceraB;
   color: white; }
 
-/* line 730, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 748, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .congratstext {
   color: #f9ff00;
   font-size: 30px;
@@ -810,16 +831,16 @@ li.search {
   margin-top: 20px;
   font-family: congrats; }
 
-/* line 737, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 755, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .scoretext {
   font-size: 15px;
   margin-top: 8px; }
   @media screen and (max-width: 601px) {
-    /* line 737, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+    /* line 755, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
     .scoretext {
       font-size: 15px; } }
 
-/* line 744, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 762, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .score {
   font-size: 40px;
   border: 1px solid;
@@ -829,41 +850,41 @@ li.search {
   -moz-box-shadow: 0px 0px 9px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 9px -4px rgba(0, 0, 0, 0.75); }
 
-/* line 753, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 771, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .resulttext {
   color: white;
   text-indent: 7px; }
 
-/* line 757, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 775, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .faceicon {
   display: block;
   margin-right: 10px; }
 
-/* line 761, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 779, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .resultscore {
   font-size: 40px;
   font-weight: 500;
   font-family: monospace; }
 
-/* line 766, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 784, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .resulthead {
   font-size: 15px;
   font-weight: 400; }
 
-/* line 770, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 788, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .testconcept {
   font-size: 17px;
   color: #abaaaa;
   font-family: ceraB;
   position: absolute; }
 
-/* line 776, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 794, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .testconcepthead {
   padding-top: 5vh;
   font-size: 19px;
   color: #636363; }
 
-/* line 781, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 799, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .conceptstestedline {
   background-color: #00BCD4;
   height: 21px;
@@ -871,12 +892,12 @@ li.search {
   border-radius: 2px; }
 
 @media screen and (max-width: 992px) {
-  /* line 787, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+  /* line 805, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
   .hidediv {
     display: none; } }
 
 /*TEST PAGE*/
-/* line 795, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 813, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .upperdiv {
   background-color: #00BCD4;
   color: white;
@@ -885,13 +906,13 @@ li.search {
   position: fixed;
   margin-top: -52px; }
 
-/* line 803, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 821, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .lowerdiv {
   transition: 1s all;
   position: absolute;
   margin-top: 500px; }
 
-/* line 808, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 826, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .bottomnav {
   position: fixed;
   width: 100%;
@@ -900,16 +921,16 @@ li.search {
   background-color: #E91E63;
   color: white; }
 
-/* line 816, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 834, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .pausediv {
   position: relative;
   height: 100%; }
 
-/* line 820, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 838, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .arrowdiv {
   background-color: #E91E63 !important; }
 
-/* line 823, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 841, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .pausebtn {
   height: 100% !important;
   width: 100%;
@@ -917,7 +938,7 @@ li.search {
   font-weight: 500;
   background-color: #00BCD4 !important; }
 
-/* line 830, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 848, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .pausebadge {
   background-color: white;
   height: 40px !important;
@@ -926,24 +947,24 @@ li.search {
   line-height: 40px !important;
   border-radius: 40%; }
 
-/* line 838, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 856, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .testarrow {
   font-size: 6vh;
   padding: 3%; }
 
-/* line 842, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 860, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .testques {
   font-size: 1.4em;
   line-height: 1.2em;
   padding: 2%; }
 
-/* line 847, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 865, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .optiondiv {
   width: 90% !important;
   height: auto;
   background-color: white; }
 
-/* line 852, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 870, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .optionsr {
   border-right: 1px solid #636363;
   font-size: 1.5em;
@@ -953,19 +974,19 @@ li.search {
   flex-direction: column;
   justify-content: center; }
 
-/* line 862, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 880, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .optioninnerpadding {
   padding-top: 2% !important;
   padding-bottom: 2% !important; }
 
-/* line 866, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 884, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .testnav {
   width: 100%;
   top: 0px;
   padding-top: 1%;
   padding-bottom: 1%; }
 
-/* line 872, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 890, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 #dropdown1 {
   box-shadow: 0 0 0 black !important;
   background-color: white !important;
@@ -978,7 +999,7 @@ li.search {
   left: 0 !important;
   right: 0 !important; }
 
-/* line 884, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 902, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .downarrow {
   border: solid transparent;
   content: " ";
@@ -992,7 +1013,7 @@ li.search {
   margin-right: auto;
   margin-top: -5px; }
 
-/* line 897, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 915, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .arrow {
   border: solid transparent;
   content: " ";
@@ -1006,14 +1027,14 @@ li.search {
   margin-right: auto;
   margin-top: -20px; }
 
-/* line 910, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 928, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .questionnumber {
   color: white;
   font-size: 1.5em;
   font-weight: 600;
   cursor: pointer; }
 
-/* line 916, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 934, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .dropnodiv {
   width: 50% !important;
   border: solid transparent;
@@ -1027,11 +1048,11 @@ li.search {
   position: absolute;
   margin-top: -22px; }
 
-/* line 929, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 947, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .qndiv {
   position: initial !important; }
 
-/* line 932, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 950, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .qnbox {
   border: 1px solid #00BCD4;
   width: 30px !important;
@@ -1045,13 +1066,13 @@ li.search {
   margin-left: 5px !important;
   cursor: pointer; }
 
-/* line 945, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 963, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .qnbox:hover {
   background-color: #3e3a3a !important;
   color: #ffffff !important;
   border: 1px solid #3e3a3a !important; }
 
-/* line 950, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 968, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .quesh5 {
   font-size: 1.5em;
   font-weight: bolder;
@@ -1061,12 +1082,12 @@ li.search {
   left: 50%;
   transform: translate(-50%, -50%); }
 
-/* line 959, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 977, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .qnattempted {
   background-color: #00BCD4 !important;
   color: white; }
 
-/* line 963, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
+/* line 981, /Applications/XAMPP/xamppfiles/htdocs/scawweb/css/main.scss */
 .qnunattempted {
   background-color: white;
   color: #00BCD4; }

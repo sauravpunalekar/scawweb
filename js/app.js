@@ -7,21 +7,23 @@ Client ID : 951565546728-s8mpt0u6nblg7qv6mpom6arvqm2o7qp8.apps.googleusercontent
 Client Secret ID: qVyozubT7R6e2R3opkQq1Rhv
 */
 inq.run(function ($rootScope, $location, $route, $interval) {
+
     $rootScope.$on('$routeChangeStart', function () {
 
         //show loading gif
-        console.log("Shoe GIF");
-        $rootScope.loadingdiv = true;
+        //$rootScope.loadingdiv = true;
+        console.log("APP MADE TRUE");
         $rootScope.errormsg = '';
 
     });
     $rootScope.$on('$routeChangeSuccess', function () {
 
         //hide loading gif
-        $interval(function(){
+        /*$interval(function () {
+            console.log("APP MADE FALSE");
             $rootScope.loadingdiv = false;
-        }, 1000, 1);
-        
+        }, 1000, 1);*/
+
 
     });
     $rootScope.$on('$routeChangeError', function () {
@@ -113,9 +115,9 @@ inq.directive('ngEnter', function () {
     };
 });
 
-inq.filter('letterFromCode', function() {
-  return function(input) {
-    var code = input % 26;
-    return String.fromCharCode(65 + code);
-  };
+inq.filter('letterFromCode', function () {
+    return function (input) {
+        var code = input % 26;
+        return String.fromCharCode(65 + code);
+    };
 });

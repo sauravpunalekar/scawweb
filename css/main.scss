@@ -63,6 +63,26 @@ $break-large: 1200px;
     font-family: congrats;
     src: url("../fonts/congrats.otf")format("opentype");
 }
+.loadingdiv {
+    height: 300px;
+    text-align: center;
+    img {
+        width: 25%;
+        margin-top: 15%;
+        @media screen and (max-width: $break-small) {
+            width: 30%;
+        }
+        @media screen and (max-width: $break-tiny) {
+            width: 62%;
+        }
+    }
+}
+
+/*REUSE*/
+
+.relativediv {
+    position: relative;
+}
 
 /*sass*/
 
@@ -396,8 +416,8 @@ li.search {
     box-shadow: 0px 1px 6px 0px rgba(79, 77, 79, 1);*/
     background-image: url(../img/cards_UI.png);
     background-repeat: no-repeat;
-    background-size: 100% 70vh;
-    height: 70vh;
+    background-size: 100% 83vh;
+    height: 81vh;
     padding-top: 6%;
     @media screen and (max-width: $break-small) {
         padding-top: 7%;
@@ -406,7 +426,7 @@ li.search {
     }
 }
 .cardspage {
-    height: 64vh;
+    height: 74vh;
     width: 84%;
     /* margin-top: -11px;*/
     margin-top: -1vh;
@@ -648,6 +668,13 @@ li.search {
         width: initial;
     }
 }
+.conceptdotdiv {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .concepttitle {
     text-align: left;
     font-size: 1.8em;
@@ -675,25 +702,16 @@ li.search {
     border-radius: 2px;
 }
 .conceptdot {
-    background-color: $primary-color;
-    height: 12px;
-    width: 12px;
-    border-radius: 100%;
-    position: absolute;
-    top: 50%;
-    margin-top: -6px;
-    margin-left: 2%;
+    width: 20px !important;
+    height: 20px !important;
+    background-color: $primary-color !important;
     @media screen and (max-width: $break-small) {
-        height: 8px;
-        width: 8px;
-        margin-top: -4px;
-        margin-left: 0%;
+        height: 8px !important;
+        width: 8px !important;
     }
     @media screen and (max-width: $break-tiny) {
-        height: 6px;
-        width: 6px;
-        margin-top: -3px;
-        margin-left: -1%;
+        height: 6px !important;
+        width: 6px !important;
     }
 }
 .circledotanimation {
