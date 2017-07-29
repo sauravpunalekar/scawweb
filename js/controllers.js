@@ -53,23 +53,23 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
             password: ""
         };
         var loginsuccess = function (response) {
-                if (response.data == 'false') {
-                    console.log('Login error');
-                    $scope.error = true;
+            if (response.data == 'false') {
+                console.log('Login error');
+                $scope.error = true;
 
 
+            } else {
+                $scope.error = false;
+                console.log(response.data);
+                $.jStorage.set('user', response.data);
+                if ($.jStorage.get('user').access_id != 3) {
+                    $location.path('/subjects');
                 } else {
-                    $scope.error = false;
-                    console.log(response.data);
-                    $.jStorage.set('user', response.data);
-                    if ($.jStorage.get('user').access_id != 3) {
-                        $location.path('/subjects');
-                    } else {
-                        $location.path('/standards');
-                    }
+                    $location.path('/standards');
                 }
             }
-            /*function*/
+        }
+        /*function*/
         $scope.dologin = function () {
             $scope.error = false;
             console.log($scope.logindata);
@@ -143,11 +143,14 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
 
 
         //INITIALIZATIONS
-        $scope.cardindex = 0;
+        $scope.cardindex = -1;
         var getcardsuccess = function (response) {
+
             console.log(response.data);
             $scope.conceptcards = response.data;
-
+            if (response.data.length > 0) {
+                $scope.cardindex = 0;
+            }
             _.forEach($scope.conceptcards, function (value) {
                 value.conceptdata = $sce.trustAsHtml(value.conceptdata);
 
@@ -164,6 +167,9 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
         var readcardsuccess = function (response) {
             console.log(response.data);
             $scope.conceptcards[$scope.cardindex].cardread = 1;
+        }
+        var readcarderror = function (response) {
+            console.log(response.data);
         }
 
         /*function*/
@@ -192,6 +198,15 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
                 readcardbyuserid($scope.cardindex);
 
             }
+        }
+        $scope.addcustomusercard = function () {
+
+            $scope.conceptcards.splice($scope.cardindex+1, 0, {
+                user_id: $.jStorage.get("user").id,
+                cardnumber: $scope.conceptcards[$scope.cardindex].cardnumber,
+                conceptdata: "" 
+            });
+            $scope.changecardindex(1);
         }
   }]);
 inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$interval',
