@@ -43,6 +43,13 @@
 @font-face {
   font-family: congrats;
   src: url("../fonts/congrats.otf") format("opentype"); }
+@font-face {
+  font-family: numberfont;
+  src: url("../fonts/MathJax_Main-Regular.woff") format("woff");
+  unicode-range: U+30-39; }
+.cerafont, .concepthead, .mcqhead, .conceptcontent, .testtext, .testconcept {
+  font-family: numberfont, ceraB !important; }
+
 .loadingdiv {
   height: 300px;
   text-align: center; }
@@ -402,8 +409,7 @@ li.search {
   padding-top: 1% !important;
   font-size: 18px !important;
   padding-left: 10px;
-  padding-right: 20px;
-  font-family: ceraB; }
+  padding-right: 20px; }
   @media screen and (max-width: 601px) {
     .concepthead {
       font-size: 11px;
@@ -442,8 +448,7 @@ li.search {
   padding-top: 1.5vh;
   font-size: 20px;
   padding-left: 10px;
-  padding-right: 10px;
-  font-family: ceraB; }
+  padding-right: 10px; }
   @media screen and (max-width: 601px) {
     .mcqhead {
       font-size: 14px; } }
@@ -521,8 +526,7 @@ li.search {
   padding-top: 1.5vh;
   font-size: 20px;
   padding-left: 10px;
-  padding-right: 10px;
-  font-family: ceraB; }
+  padding-right: 10px; }
   @media screen and (max-width: 601px) {
     .concepthead {
       font-size: 14px; } }
@@ -530,7 +534,6 @@ li.search {
 .conceptcontent {
   height: 84%;
   width: 100%;
-  font-family: ceraB !important;
   padding: 4%; }
 
 .conceptcontent img {
@@ -683,7 +686,6 @@ li.search {
 .testtext {
   padding-top: 6vh;
   text-align: center;
-  font-family: ceraB;
   color: white; }
 
 .congratstext {
@@ -729,7 +731,6 @@ li.search {
 .testconcept {
   font-size: 17px;
   color: #abaaaa;
-  font-family: ceraB;
   position: absolute; }
 
 .testconcepthead {
