@@ -85,39 +85,51 @@ var navigationservice = angular.module('navigationservice', [])
                     }
                 })
             },
-            
+
             getconceptsbychapterid: function (uid, chptid) {
                 return $http.get(adminurl + 'concepts/getconceptsbychapterid', {
                     params: {
                         userid: uid,
-                        chapterid: chptid                        
+                        chapterid: chptid
                     }
                 })
             },
-            getcardsbyconceptid: function(id,userid){
-                 return $http.get(adminurl + 'concepts/getcardsbyconceptid', {
+            getcardsbyconceptid: function (id, userid) {
+                return $http.get(adminurl + 'concepts/getcardsbyconceptid', {
                     params: {
                         conceptid: id,
                         userid: userid
-                        
+
                     }
                 })
             },
-            readcardbyuserid: function(uid,cid){
-                return $http.get(adminurl+'concepts/readcardbyuserid',{
-                    params:{
-                        userid:uid,
+            readcardbyuserid: function (uid, cid) {
+                return $http.get(adminurl + 'concepts/readcardbyuserid', {
+                    params: {
+                        userid: uid,
                         cardid: cid
                     }
                 })
             },
-            getconceptname: function(id){
-                return $http.get(adminurl+'concepts/getbyid',{
-                    params:{
-                        id:id
+            getconceptname: function (id) {
+                return $http.get(adminurl + 'concepts/getbyid', {
+                    params: {
+                        id: id
                     }
-                    })
-                },
-            
+                })
+            },
+            savecustomcards: function (card) {
+                return $http.get(adminurl + 'concepts/savecustomcard', {
+                    params: {
+                        user_id: card.user_id,
+                        cardnumber: card.cardnumber,
+                        concept_id: card.concept_id,
+                        conceptdata: card.conceptdata,
+                        id: card.id
+                    }
+                })
+            },
+
+
         }
     });

@@ -26,8 +26,8 @@ var usertypes = [
 inqcontroller.controller('home', ['$scope', 'TemplateService', 'NavigationService', '$rootScope',
   function ($scope, TemplateService, NavigationService, $rootScope) {
 
-        $scope.template = TemplateService;                // loading the TemplateService
-        TemplateService.content = "views/content.html";   // setting the content of the page as content.html
+        $scope.template = TemplateService; // loading the TemplateService
+        TemplateService.content = "views/content.html"; // setting the content of the page as content.html
         $scope.title = "Home";
         $scope.navigation = NavigationService.getnav();
         $rootScope.loginpage = false;
@@ -60,9 +60,9 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
                 $scope.error = false;
                 console.log(response.data);
                 $.jStorage.set('user', response.data);
-                if ($.jStorage.get('user').access_id != 3) {  // if teacher or in-house stud
+                if ($.jStorage.get('user').access_id != 3) { // if teacher or in-house stud
                     $location.path('/subjects');
-                } else {  // if non in-house person
+                } else { // if non in-house person
                     $location.path('/standards');
                 }
             }
@@ -99,9 +99,9 @@ inqcontroller.controller('standardsCtrl', ['$scope', 'TemplateService', 'Navigat
         //INITIALIZATIONS
         $rootScope.loadingdiv = true;
         console.log($rootScope.loadingdiv);
-        NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess, getstandarderror);  // get the standards related to user's board_id
-        $.jStorage.get("user").standard_id = 0;       // setting the default when no standards are selected
-        $.jStorage.get("user").standard_name = "No";  // Initially the standard will appear as no standard
+        NavigationService.getstandardsbyboardid($.jStorage.get('user').board_id).then(getstandardsuccess, getstandarderror); // get the standards related to user's board_id
+        $.jStorage.get("user").standard_id = 0; // setting the default when no standards are selected
+        $.jStorage.get("user").standard_name = "No"; // Initially the standard will appear as no standard
 
         /*function*/
 
@@ -142,6 +142,7 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
 
         //INITIALIZATIONS
         $scope.cardindex = -1; // Initially set the cardindex to -1 so if there are no cards it appeards 0/0 cards
+        $scope.user = $.jStorage.get("user");
 
         var getcardsuccess = function (response) {
 
@@ -153,7 +154,9 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
             }
 
             _.forEach($scope.conceptcards, function (value) {
-                value.conceptdata = $sce.trustAsHtml(value.conceptdata);
+                if (value.user_id == 0) {
+                    value.conceptdata = $sce.trustAsHtml(value.conceptdata);
+                }
             });
 
             if (response.data.length > 0) {
@@ -197,24 +200,53 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
 
         // routing
         $scope.changecardindex = function (index) {
-            if ($scope.cardindex == 0 && index == -1) {
+            if ($scope.conceptcards[$scope.cardindex].user_id == $scope.user.id && $scope.conceptcards[$scope.cardindex].editmode == true) {
+                alert("Card not saved");
+            } else if ($scope.cardindex == 0 && index == -1) {
 
             } else if ($scope.cardindex == $scope.conceptcards.length - 1 && index == 1) {
 
             } else if ($scope.cardindex >= 0 && $scope.cardindex < $scope.conceptcards.length) {
-                $scope.cardindex += index;  // keep changing the index, +1 for next and -1 for previous
+                $scope.cardindex += index; // keep changing the index, +1 for next and -1 for previous
                 readcardbyuserid($scope.cardindex);
             }
         };
 
         $scope.addcustomusercard = function () {
 
-            $scope.conceptcards.splice($scope.cardindex+1, 0, { // add the card such that when we click on + the new card is added next to the current card and the index is same as current card's index
+            $scope.conceptcards.splice($scope.cardindex + 1, 0, { // add the card such that when we click on + the new card is added next to the current card and the index is same as current card's index
                 user_id: $.jStorage.get("user").id,
                 cardnumber: $scope.conceptcards[$scope.cardindex].cardnumber,
-                conceptdata: ""
+                conceptdata: "",
+                editmode: true,
+                concept_id: $scope.conceptid,
+                id: 0
             });
             $scope.changecardindex(1);
+        };
+
+        var savecustomcardssuccess = function (response) {
+            console.log(response.data);
+            console.log($scope.conceptcards[$scope.cardindex]);
+            if (response.data != "false") {
+                $scope.conceptcards[$scope.cardindex].editmode = false;
+
+                if (response.data != "true") {
+                    $scope.conceptcards[$scope.cardindex].id = response.data;
+                }
+            }
+
+        };
+        var savecustomcardserror = function (response) {
+            console.log(response.data);
+        };
+
+        $scope.savecustomusercard = function () {
+            console.log($scope.conceptcards[$scope.cardindex]);
+            NavigationService.savecustomcards($scope.conceptcards[$scope.cardindex]).then(savecustomcardssuccess, savecustomcardserror);
+        };
+        $scope.editcustomusercard = function () {
+            $scope.conceptcards[$scope.cardindex].editmode = true;
         };
 
   }]);
@@ -437,5 +469,5 @@ inqcontroller.controller('menuCtrl', ['$scope', 'TemplateService', '$location', 
         $scope.logout = function () {
             $location.path('/login');
         };
-        
+
   }]);
