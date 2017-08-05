@@ -25,20 +25,18 @@
 
                         </div>
                     </div>
+                <div class="scrollbar conceptcontent" id="carddata" ng-bind-html="conceptcards[cardindex].conceptdata" ng-if="!conceptcards[cardindex].editmode && conceptcards[cardindex].user_id==0">
+                </div>
+                <div class="scrollbar conceptcontent" id="carddata" ng-bind="conceptcards[cardindex].conceptdata" ng-if="!conceptcards[cardindex].editmode && conceptcards[cardindex].user_id!=0">
+                </div>
+                <div ng-if="conceptcards[cardindex].editmode">
+                    <input type="textarea" ng-model="conceptcards[cardindex].conceptdata">
                 </div>
             </div>
-            <div class="scrollbar conceptcontent" id="carddata" ng-bind-html="conceptcards[cardindex].conceptdata" ng-if="!conceptcards[cardindex].editmode && conceptcards[cardindex].user_id==0">
-            </div>
-            <div class="scrollbar conceptcontent" id="carddata" ng-bind="conceptcards[cardindex].conceptdata" ng-if="!conceptcards[cardindex].editmode && conceptcards[cardindex].user_id!=0">
-            </div>
-            <div ng-if="conceptcards[cardindex].editmode">
-                <input type="textarea" ng-model="conceptcards[cardindex].conceptdata">
-            </div>
         </div>
-    </div>
 
-</div>
-<div class="col s12 m2 l2"></div>
+    </div>
+    <div class="col s12 m2 l2"></div>
 </div>
 <div class="row">
     <div class="col s12 m3 l2 xl3"></div>
