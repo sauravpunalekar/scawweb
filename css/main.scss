@@ -246,7 +246,6 @@ li.search {
 
 .bg {
     height: 45vh;
-    margin-top: -52px;
     background-image: url(../img/galaxy_bg.jpg);
     background-size: 100%;
 }
@@ -1130,4 +1129,22 @@ li.search {
 .qnunattempted {
     background-color: white;
     color: $primary-color;
+}
+
+.controtate {
+    margin-left: 430px;
+    display: inline-block;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

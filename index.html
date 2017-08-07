@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
 
     <link rel="stylesheet" type="text/css" href="css/materialize.css" />
-    
+
     <link rel="stylesheet" type="text/css" href="lib/css/ionicons.min.css">
 
 
@@ -50,8 +50,8 @@
     <script src="assets/js/sortable.js"></script>
     <script src="lib/js/jStorage.min.js"></script>
     <script src="js/materialize.js"></script>
-    
-   
+
+
 
 
 
@@ -87,8 +87,8 @@
     <script src="js/controllers.js"></script>
     <script src="js/templateservice.js"></script>
     <script src="js/navigation.js"></script>
-    
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.5/angular-sanitize.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.5/angular-sanitize.js"></script>
 
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
 
@@ -99,12 +99,43 @@
 </head>
 
 <body>
+    <div class="wrapper row margin0">
+        <div ng-include="'views/menu.html'">
+
+        </div>
+        <div class="contentdiv" ng-include="'views/navigation.html'" style="margin-top: -52px;">
+
+        </div>
+        <div class="contentdiv" ng-include="'views/background.html'">
+
+        </div>
+
+        <!--<div ng-include="'views/background2.html'" ng-if="background2div">
+
+        </div>-->
 
 
-    <div class="repeated-item" ng-view>
 
     </div>
+
+
+
+
+
 </body>
+
+<script type="text/javascript">
+    console.log("INITIALIZE");
+    $('.button-collapse').sideNav({
+        menuWidth: 300, // Default is 300
+        edge: 'right', // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true // Choose whether you can drag to open on touch screens,
+
+    });
+
+</script>
+
 
 <script>
     var user = $.jStorage.get("user");
