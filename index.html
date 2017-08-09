@@ -99,29 +99,31 @@
 </head>
 
 <body>
-    <div class="wrapper row margin0" ng-if="showmenu">
-        <div ng-include="'views/menu.html'">
+    <div ng-controller="appCtrl">
+        <div class="wrapper row margin0" ng-if="showmenu">
+            <div ng-include="'views/menu.html'">
 
-        </div>
-        <div class="contentdiv" ng-include="'views/navigation.html'" style="margin-top: -52px;">
+            </div>
+            <div class="contentdiv" ng-include="'views/navigation.html'" style="margin-top: -52px;">
 
-        </div>
-        <div class="contentdiv" ng-include="'views/background.html'">
+            </div>
+            <div class="contentdiv" ng-include="'views/background.html'">
 
-        </div>
+            </div>
 
-        <!--<div ng-include="'views/background2.html'" ng-if="background2div">
+            <!--<div ng-include="'views/background2.html'" ng-if="background2div">
 
         </div>-->
 
 
 
-    </div>
+        </div>
 
-    <div class="wrapper row margin0" ng-if="!showmenu">
-        <div class="repeated-item" ng-view>
+        <div class="wrapper row margin0" ng-if="!showmenu">
+            <div class="repeated-item" ng-view>
 
 
+            </div>
         </div>
     </div>
 

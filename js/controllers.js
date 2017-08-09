@@ -450,11 +450,13 @@ inqcontroller.controller('chaptersCtrl', ['$scope', 'TemplateService', 'Navigati
 inqcontroller.controller('menuCtrl', ['$scope', 'TemplateService', '$location', '$rootScope', 'NavigationService', '$route',
  function ($scope, TemplateService, $location, $rootScope, NavigationService, $route) {
 
+
+
         $scope.template = TemplateService;
 
         /*INITIALIZATIONS*/
         $scope.user = $.jStorage.get("user");
-        $rootScope.showmenu = true;
+
 
         $('.button-collapse').sideNav({
             menuWidth: 350, // Default is 300
@@ -475,3 +477,10 @@ inqcontroller.controller('menuCtrl', ['$scope', 'TemplateService', '$location', 
         };
 
   }]);
+
+inqcontroller.controller('appCtrl', ['$scope', 'TemplateService', '$location', '$rootScope', 'NavigationService', '$route',
+ function ($scope, TemplateService, $location, $rootScope, NavigationService, $route) {
+
+        $rootScope.showmenu = true;
+
+ }]);
