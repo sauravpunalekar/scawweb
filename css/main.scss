@@ -85,8 +85,6 @@ $break-large: 1200px;
         }
     }
 }
-
-
 .navmargin {
     margin-top: 6px;
     margin-bottom: 6px;
@@ -122,6 +120,20 @@ $break-large: 1200px;
     z-index: 2;
     /* outline: thick solid #fff; */
     box-shadow: 2px -2px 0px 1px white;
+}
+.navyou {
+    display: inline;
+    font-size: 20px;
+    color: $primary-color;
+}
+.navarehere {
+    display: inline;
+    font-size: 11px;
+    color: $primary-color;
+    position: absolute;
+    /* left: 55px; */
+    margin-left: -6px;
+    margin-top: 0px;
 }
 
 /*REUSE*/
@@ -207,6 +219,17 @@ li.search {
     font-size: 16px !important;
     font-weight: 700;
     color: white !important;
+}
+.menuprofilepic {
+    border: 1.5px solid $primary-color;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 30% !important;
+    height: 30% !important;
+}
+.menuprofilename {
+    margin-top: 4px !important;
+    font-size: 1.1em !important;
 }
 
 /*.side-nav li > a:hover {
