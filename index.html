@@ -99,7 +99,7 @@
 </head>
 
 <body>
-    <div class="wrapper row margin0">
+    <div class="wrapper row margin0" ng-if="showmenu">
         <div ng-include="'views/menu.html'">
 
         </div>
@@ -116,6 +116,13 @@
 
 
 
+    </div>
+
+    <div class="wrapper row margin0" ng-if="!showmenu">
+        <div class="repeated-item" ng-view>
+
+
+        </div>
     </div>
 
 

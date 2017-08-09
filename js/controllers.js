@@ -52,6 +52,8 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
             password: ""
         };
 
+        $rootScope.showmenu = false;
+
         var loginsuccess = function (response) {
             if (response.data == 'false') { // if login fails i.e. no data received
                 console.log('Login error');
@@ -60,6 +62,7 @@ inqcontroller.controller('loginCtrl', ['$scope', 'TemplateService', 'NavigationS
                 $scope.error = false;
                 console.log(response.data);
                 $.jStorage.set('user', response.data);
+                $rootScope.showmenu = true;
                 if ($.jStorage.get('user').access_id != 3) { // if teacher or in-house stud
                     $location.path('/subjects');
                 } else { // if non in-house person
@@ -451,6 +454,7 @@ inqcontroller.controller('menuCtrl', ['$scope', 'TemplateService', '$location', 
 
         /*INITIALIZATIONS*/
         $scope.user = $.jStorage.get("user");
+        $rootScope.showmenu = true;
 
         $('.button-collapse').sideNav({
             menuWidth: 350, // Default is 300
