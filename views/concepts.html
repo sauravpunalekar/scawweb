@@ -1,12 +1,3 @@
-<div class="bg">
-    <div class="moon animated fadeIn">
-        <img src="img/moon.png" width="100%">
-    </div>
-
-    <div class="astro animated fadeIn">
-        <img src="img/astroman.png" width="100%">
-    </div>
-</div>
 <div class="container">
 
     <!--LOADING DIV-->
@@ -16,7 +7,7 @@
 
     <!--DIV AFTER LOADING-->
     <div ng-hide="loadingdiv">
-        <div class="subbox3" ng-style="{marginTop: -negativemargin+'px'}" ng-if="errormsg==''">
+        <div class="subbox3" ng-if="errormsg==''">
             <div ng-if="errormsg!=''">
                 {{errormsg}}
                 <button ng-click="reloadpage()">Retry</button>

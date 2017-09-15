@@ -78,6 +78,22 @@ inq.config(['$routeProvider',
             templateUrl: 'views/template.html',
             controller: 'practiceCtrl'
         }).
+        when('/profile', {
+            templateUrl: 'views/template.html',
+            controller: 'profileCtrl'
+        }).
+        when('/dashboard', {
+            templateUrl: 'views/template.html',
+            controller: 'dashboardCtrl'
+        }).
+        when('/starred', {
+            templateUrl: 'views/template.html',
+            controller: 'starredCtrl'
+        }).
+        when('/leaderboard', {
+            templateUrl: 'views/template.html',
+            controller: 'leaderboardCtrl'
+        }).
 
         otherwise({
             redirectTo: '/home'
