@@ -55,6 +55,19 @@ $break-large: 1200px;
 }
 
 
+/*BUTTONS*/
+
+.whitebutton {
+    background: white !important;
+    border: 1px $primary-color solid !important;
+    color: $primary-color !important;
+}
+
+.bluebotton {
+    background: $primary-color !important;
+}
+
+
 /*font*/
 
 @font-face {
@@ -284,10 +297,9 @@ li.search {
 /*BACKGROUND*/
 
 .inqbg {
-    background-image: url(../img/inq_bg_image.png);
+    background: url(../img/inq_bg_image.png) center top no-repeat;
     height: 94vh;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .inqbgtop {

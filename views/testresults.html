@@ -42,17 +42,20 @@
             </div>
 
             <div class="testconcept ">Your Report is ready! Concepts Tested : </div>
-            <div ng-repeat='s in [1,2,3,4]'>
+
+            <div class="row" ng-repeat='s in [1,2,3,4]'>
                 <div class="testconcepthead">Optics</div>
                 <div class="col s12 m12 margin0 padding0 conceptstestedline" ng-style="{width:conceptwidth+'%'}"></div>
-
-
-
             </div>
 
-            <div>
-                <button class="">Review Test</button>
-                <button class="">Go Back to Chapter</button>
+
+            <div class="row">
+                <div class="col l4 m4 s4">
+                    <button class="waves-effect waves-dark btn whitebutton">Review Test</button>
+                </div>
+                <div class="col l4 m4 s4">
+                    <button class="waves-effect waves-light btn bluebotton">Go Back to Chapter</button>
+                </div>
             </div>
 
         </div>
