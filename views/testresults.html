@@ -1,5 +1,6 @@
-<div class="testbg">
-    <div class="container">
+<div>
+    <div class="inqbgtop">
+
         <div class="row testtext">
             <div class="col s4 l4">
                 <img src="img/astro.png">
@@ -17,25 +18,44 @@
                 <img src="img/astro2.png">
             </div>
         </div>
-        <div class="row textcenter resulttext">
-            <div class="col s4 l4 "><i class="material-icons faceicon animated jello">tag_faces</i><span class="resulthead">Correct</span>
-                <br><span class="resultscore">8</span> </div>
-            <div class="col s4 l4 "><i class="material-icons faceicon animated jello">tag_faces</i><span class="resulthead">Incorrect</span>
-                <br><span class="resultscore">8</span></div>
-            <div class="col s4 l4 "><i class="material-icons faceicon animated jello">tag_faces</i><span class="resulthead">Unanswered</span>
-                <br><span class="resultscore">8</span></div>
+    </div>
+    <div class="inqbgbottom">
+        <div class="container">
+
+
+            <div class="row textcenter resulttext">
+                <div class="col s4 l4">
+                    <div class="sortedbox">
+                        <i class="material-icons faceicon animated jello">tag_faces</i><span class="resulthead">Correct</span>
+                        <br><span class="resultscore">8</span> </div>
+                </div>
+                <div class="col s4 l4">
+                    <div class="sortedbox">
+                        <i class="material-icons faceicon animated jello">tag_faces</i><span class="resulthead">Incorrect</span>
+                        <br><span class="resultscore">8</span></div>
+                </div>
+                <div class="col s4 l4">
+                    <div class="sortedbox">
+                        <i class="material-icons faceicon animated jello">tag_faces</i><span class="resulthead">Unanswered</span>
+                        <br><span class="resultscore">8</span></div>
+                </div>
+            </div>
+
+            <div class="testconcept ">Your Report is ready! Concepts Tested : </div>
+            <div ng-repeat='s in [1,2,3,4]'>
+                <div class="testconcepthead">Optics</div>
+                <div class="col s12 m12 margin0 padding0 conceptstestedline" ng-style="{width:conceptwidth+'%'}"></div>
+
+
+
+            </div>
+
+            <div>
+                <button class="">Review Test</button>
+                <button class="">Go Back to Chapter</button>
+            </div>
+
         </div>
-    </div>
-</div>
-<div class="container">
-    <div class="testconcept ">Your Report is ready! Concepts Tested : </div>
-    <div ng-repeat='s in [1,2,3,4]'>
-        <div class="testconcepthead">Optics</div>
-        <div class="col s12 m12 margin0 padding0 conceptstestedline" ng-style="{width:conceptwidth+'%'}"></div>
-      
-
 
     </div>
-
-
 </div>

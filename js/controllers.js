@@ -465,6 +465,7 @@ inqcontroller.controller('testresultsCtrl', ['$scope', 'TemplateService', 'Navig
         $scope.title = "testresults";
         $scope.template = TemplateService;
         TemplateService.content = "views/testresults.html";
+        $rootScope.fullpageview = true;
         $scope.conceptwidth = 70;
 
         //INITIALIZATIONS
