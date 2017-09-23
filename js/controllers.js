@@ -345,26 +345,27 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
 
         $scope.title = "Tests";
         $scope.template = TemplateService;
+        $rootScope.fullpageview = true;
         TemplateService.content = "views/tests.html";
 
         //INITIALIZATIONS
 
         //STYLING
         $interval(function () {
-            var height = $('.optiondiv').height();
-            $scope.upperpadding = height / 2;
+           /* var height = $('.optiondiv').height();
+            $scope.upperpadding = height / 2;*/
 
-            $interval(function () {
+            /*$interval(function () {
                 var upperheight = $('.upperdiv').outerHeight();
                 console.log(upperheight);
                 $scope.optionmargin = upperheight - 52 - (height / 2);
 
                 console.log($scope.optionmargin);
-            }, 200, 1);
+            }, 200, 1);*/
 
-            $('.bottomnav').width($('.bd').width());
+            //$('.bottomnav').width($('.bd').width());
 
-            $('.dropdown-button').dropdown({
+            /*$('.dropdown-button').dropdown({
                 inDuration: 300,
                 outDuration: 225,
                 constrainWidth: false, // Does not change width of dropdown to that of the activator
@@ -373,13 +374,44 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
                 belowOrigin: false, // Displays dropdown below the button
                 alignment: 'left', // Displays dropdown with edge aligned to the left of button
                 stopPropagation: false // Stops event propagation
+            });*/
+
+            //$('.dropdown1').height($('.qndiv').height());
+
+            /*TOOLTIPS FOR BUTTONS*/
+                $('.tooltipped').tooltip({
+                    delay: 10
+                });
+
+            /*INITIALIZE MODALS*/
+            $(document).ready(function () {
+                // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+                $('.modal').modal();
             });
 
-            $('.dropdown1').height($('.qndiv').height());
+        }, 2000, 1);
 
-        }, 200, 1);
+        /*Design Functions*/
+
+        /*Open Modal - ERROR REPORT OR DOUBT*/
+        $scope.openmodal = function (modalname) {
+            console.log("open modal");
+            $(modalname).modal('open');
+        };
+
+        /*BOOKMARK QUESTION*/
+        $scope.bookmarkquestion = function (id) {
+            //CHECK IF BOOKMARKED OR TO REMOVE BOOKMARK
+            //SET TEXT ACCORDINGLY
+            var bookmarktoasttext = "This Question has been Bookmarked !"
+            /*ON SUCCESS OF BOOKMARKING*/
+            var $toastContent = $('<span>'+bookmarktoasttext+'</span>').add($('<button class="btn-flat toast-action" ng-click="bookmarkquestion()">Undo</button>'));
+            Materialize.toast($toastContent, 3000);
+        };
 
         /*function*/
+
+
 
         // routing
 
