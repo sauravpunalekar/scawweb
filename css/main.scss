@@ -67,21 +67,22 @@ $break-large: 1200px;
 /*BUTTONS*/
 
 .whitebutton {
-    background: white !important;
     border: 1px $primary-color solid !important;
     color: $primary-color !important;
+    background-color: white !important;
+    &:hover {
+        background-color: white !important;
+    }
+    &:active {
+        background-color: white !important;
+    }
+    &:focus {
+        background-color: white !important;
+    }
 }
 
-.bluebotton {
+.bluebutton {
     background: $primary-color !important;
-}
-
-
-/*BUTTON USED IN TEST AND OTHER PLACES*/
-
-.rounded-button {
-    border-radius: 20px !important;
-    background-color: $primary-color !important;
     &:hover {
         background-color: $primary-dark !important;
     }
@@ -91,6 +92,13 @@ $break-large: 1200px;
     &:focus {
         background-color: $primary-dark !important;
     }
+}
+
+
+/*BUTTON USED IN TEST AND OTHER PLACES*/
+
+.rounded-button {
+    border-radius: 20px !important;
 }
 
 
@@ -768,6 +776,33 @@ li.search {
     width: 100%;
     @extend .cerafont;
     padding: 4%;
+    ol {
+        li {
+            list-style-type: decimal !important;
+        }
+    }
+    ul {
+        li {}
+    }
+    li {
+        width: auto !important;
+        height: auto !important;
+        margin: auto;
+        position: inherit !important;
+        top: 0;
+        left: 0;
+        pointer-events: none !important;
+        background: none !important;
+        /* pointer-events: auto; */
+        -webkit-backface-visibility: inherit !important;
+        -moz-backface-visibility: inherit !important;
+        -ms-backface-visibility: inherit !important;
+        -o-backface-visibility: inherit !important;
+        backface-visibility: inherit !important;
+    }
+    img {
+        max-width: 100%;
+    }
 }
 
 .conceptcontent img {
@@ -1728,6 +1763,121 @@ li.search {
         border-style: solid;
         border-width: 8px 8px 0 8px;
         border-color: rgba(37, 36, 36, 0.9) transparent transparent transparent;
+    }
+}
+
+
+/*LEADERBOARD PAGE*/
+
+.tab-button {
+    width: 12em;
+    height: 40px;
+}
+
+.leaderboard-user-image {
+    margin: 5% 0%;
+    border-radius: 100%;
+    border: 2px solid $primary-color;
+    width: 6em !important;
+    height: 6em !important;
+}
+
+.leaderboard-user-you {
+    margin: 0;
+    font-size: 1em;
+    color: white;
+}
+
+.leaderboard-user-scores {
+    .leaderboard-asked-title {
+        color: rgba(255, 255, 255, 0.77);
+        font-size: 1em;
+        margin-bottom: 4px;
+    }
+    .leaderboard-asked-number {
+        margin-top: 0;
+        font-size: 3.5em;
+        color: white;
+    }
+}
+
+.leaderboard-list-item {
+    width: 80%;
+    background: white;
+    border-radius: 3em;
+    height: 5em;
+    .leaderboard-list-sr-div {
+        .leaderboard-list-sr {
+            font-size: 1.5em;
+            font-weight: 800;
+            color: $primary-color;
+            margin: 1em 1em;
+        }
+    }
+    .leaderboard-list-image-div {
+        .leaderboard-list-img {
+            height: 3.2em;
+            border-radius: 100%;
+            border: 2px solid $primary-color;
+            margin: 0.9em 0;
+        }
+    }
+    .leaderboard-list-name-div {
+        .leaderboard-list-name {
+            color: lighten($grey-text, 10);
+            font-size: 1.3em;
+            font-weight: 300;
+            word-spacing: 8px;
+            letter-spacing: 1.1px;
+            margin: 1.2em 0;
+        }
+    }
+    .leaderboard-list-asked-div {
+        margin: 0.4em 0;
+        .leaderboard-list-asked-number {
+            color: $primary-color;
+            margin: 0;
+            font-size: 2em;
+        }
+        .leaderboard-list-asked {
+            color: lighten($grey-text, 10);
+            margin: 0;
+            font-size: 0.8em;
+        }
+    }
+}
+
+
+/*DASHBOARD*/
+
+.dashboard-div {
+    width: 95%;
+    margin: 2% auto;
+}
+
+
+/*Materialize Class*/
+
+.tabs-content {
+    height: auto !important;
+    .carousel-item {
+        height: auto !important;
+    }
+}
+
+.dashboard-data-div {
+    position: inherit !important;
+    background: white !important;
+    .dashboard-data-chapters-div {
+        .dashboard-data-chapters-list {
+            .dashboard-chapter-title-icons {
+                transform: rotateZ(0deg);
+                transition: 0.3s all cubic-bezier(0.15, 0.76, 1, 1);
+            }
+            .dashboard-chapter-title-icons-rotate {
+                transform: rotateZ(180deg);
+            }
+        }
     }
 }
 

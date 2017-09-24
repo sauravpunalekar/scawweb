@@ -352,8 +352,8 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
 
         //STYLING
         $interval(function () {
-           /* var height = $('.optiondiv').height();
-            $scope.upperpadding = height / 2;*/
+            /* var height = $('.optiondiv').height();
+             $scope.upperpadding = height / 2;*/
 
             /*$interval(function () {
                 var upperheight = $('.upperdiv').outerHeight();
@@ -379,9 +379,9 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
             //$('.dropdown1').height($('.qndiv').height());
 
             /*TOOLTIPS FOR BUTTONS*/
-                $('.tooltipped').tooltip({
-                    delay: 10
-                });
+            $('.tooltipped').tooltip({
+                delay: 10
+            });
 
             /*INITIALIZE MODALS*/
             $(document).ready(function () {
@@ -405,7 +405,7 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
             //SET TEXT ACCORDINGLY
             var bookmarktoasttext = "This Question has been Bookmarked !"
             /*ON SUCCESS OF BOOKMARKING*/
-            var $toastContent = $('<span>'+bookmarktoasttext+'</span>').add($('<button class="btn-flat toast-action" ng-click="bookmarkquestion()">Undo</button>'));
+            var $toastContent = $('<span>' + bookmarktoasttext + '</span>').add($('<button class="btn-flat toast-action" ng-click="bookmarkquestion()">Undo</button>'));
             Materialize.toast($toastContent, 3000);
         };
 
@@ -657,6 +657,67 @@ inqcontroller.controller('dashboardCtrl', ['$scope', 'TemplateService', 'Navigat
         $rootScope.fullpageview = true;
         TemplateService.content = "views/dashboard.html";
         $scope.navigation = NavigationService.getnav();
+
+        $interval(function () {
+            $(document).ready(function () {
+                $('ul.tabs').tabs({
+                    'swipeable': true
+                });
+
+                var ctx = document.getElementById("timeline-graph").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+                            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+                            borderWidth: 1
+        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+            }]
+                        }
+                    }
+                });
+
+            });
+
+            /*CHAPTERS COLLASIBLE*/
+            $('.collapsible').collapsible();
+
+        }, 2000, 1);
+
+        /*OPEN CHAPTER TITLE TO SE CHAPTERS*/
+        $scope.openchaptertitle = function (icon) {
+            console.log($(icon)[0]);
+            if (document.getElementById(icon).hasClass('dashboard-chapter-title-icons-rotate')) {
+                document.getElementById(icon).addClass('dashboard-chapter-title-icons-rotate');
+            } else {
+                document.getElementById(icon).removeClass('dashboard-chapter-title-icons-rotate');
+            };
+        };
 
   }]);
 
