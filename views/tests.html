@@ -6,7 +6,7 @@
             <div class="col l4 m12 s12 textcenter">
                 <div class="test-time-div">
                     <i class="icon-hourglass test-time-icon"></i>
-                    <h3 class="test-time-text textcenter">14:14</h3>
+                    <h3 class="test-time-text textcenter">{{countdown.minutes}}:{{countdown.seconds}}</h3>
                 </div>
 
             </div>
@@ -19,7 +19,7 @@
 
                 <!--CARD HEADER LEFT PART-->
                 <div class="col l6 m6 s6">
-                    <p class="text-card-header-number">#6</p>
+                    <p class="text-card-header-number">#{{test_question_number+1}}</p>
                     <p class="textcenter test-card-name">Light</p>
                 </div>
 
@@ -35,21 +35,21 @@
                 <!--QUESTION DIVISON-->
                 <div class="col l12 m12 s12 test-card-question-div">
                     <h6 class="test-card-question">
-                        What is the question the we need ty over here right now ? What is the questiwe need to display over here right now ? What is the question the we neey over here right now ?
+                        {{test_questions[test_question_number].question}}
                     </h6>
                 </div>
 
                 <!--ANSWER DIVISION-->
                 <div class="col l12 m12 s12 test-card-content-answers-div">
-                    <div class="row optiondiv" ng-repeat="option in [1,2,3,4]" style="position: relative;" ng-class="{'noborder':$index==3}">
+                    <div class="row optiondiv" ng-repeat="option in test_questions[test_question_number].options" style="position: relative;" ng-class="{'noborder':$index==3}">
 
                         <div class="col optionsr optioninnerpadding l1 m1 s1 " style="height: 100%;
     position: absolute;line-height: 100%;">
                             {{$index | letterFromCode}}
                         </div>
 
-                        <div class="col optioninnerpadding l11 m11 s11 test-options-answer-div" style="margin-left: 8.333333%;">
-                            The best way to use these icons onweight, eas best way to use these icons on theuse these ic eas The bese ic eas The best way to use these icons onweight, eas best way to use these icons on theuse these ic eas The best way to use these icons onweight, eas best way to use these ico
+                        <div class="col optioninnerpadding l11 m11 s11 test-options-answer-div" style="margin-left: 8.333333%;" ng-click="optionselected($index)">
+                             {{option}}
                         </div>
                     </div>
                 </div>
@@ -59,9 +59,15 @@
 
         <!--BOTTOM BUTTONS-->
         <div class="row test-bottom-buttons-div">
-            <div class="col l4 m4 s4 textcenter"><button class="waves-effect waves-light btn test-bottom-button"><i class="icon-left-open-big left"></i>Previous</button></div>
-            <div class="col l4 m4 s4 textcenter"><button class="waves-effect waves-light btn test-bottom-button" ng-click="openmodal('#end-modal')">Pause/End</button></div>
-            <div class="col l4 m4 s4 textcenter"><button class="waves-effect waves-light btn test-bottom-button"><i class="icon-right-open-big right"></i>Next</button></div>
+            <div class="col l4 m4 s4 textcenter">
+                <button class="waves-effect waves-light btn test-bottom-button" ng-click="change_question(-1)" ng-disabled="test_question_number == 0"><i class="icon-left-open-big left"></i>Previous</button>
+            </div>
+            <div class="col l4 m4 s4 textcenter">
+                <button class="waves-effect waves-light btn test-bottom-button" ng-click="openmodal('#end-modal')">Pause/End</button>
+            </div>
+            <div class="col l4 m4 s4 textcenter">
+                <button class="waves-effect waves-light btn test-bottom-button" ng-click="change_question(1)" ng-disabled="test_question_number == (total_questions-1)"><i class="icon-right-open-big right"></i>Next</button>
+            </div>
         </div>
     </div>
 </div>
@@ -163,6 +169,6 @@
         </div>
     </div>
     <div class="modal-footer textcenter">
-        <button class="btn waves-effect waves-light end-modal-submit-button">SUBMIT TEST</button>
+        <button class="btn waves-effect waves-light end-modal-submit-button" ng-click="submittest()">SUBMIT TEST</button>
     </div>
 </div>

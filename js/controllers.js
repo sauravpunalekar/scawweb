@@ -340,8 +340,8 @@ inqcontroller.controller('conceptcardsCtrl', ['$scope', 'TemplateService', 'Navi
 
   }]);
 
-inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$interval',
-  function ($scope, TemplateService, NavigationService, $rootScope, $interval) {
+inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$interval', '$q','$location',
+  function ($scope, TemplateService, NavigationService, $rootScope, $interval, $q, $location) {
 
         $scope.title = "Tests";
         $scope.template = TemplateService;
@@ -349,34 +349,10 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
         TemplateService.content = "views/tests.html";
 
         //INITIALIZATIONS
+        var test_questions_array = []; //USED to store data of test answers and options order
 
         //STYLING
         $interval(function () {
-            /* var height = $('.optiondiv').height();
-             $scope.upperpadding = height / 2;*/
-
-            /*$interval(function () {
-                var upperheight = $('.upperdiv').outerHeight();
-                console.log(upperheight);
-                $scope.optionmargin = upperheight - 52 - (height / 2);
-
-                console.log($scope.optionmargin);
-            }, 200, 1);*/
-
-            //$('.bottomnav').width($('.bd').width());
-
-            /*$('.dropdown-button').dropdown({
-                inDuration: 300,
-                outDuration: 225,
-                constrainWidth: false, // Does not change width of dropdown to that of the activator
-                hover: false, // Activate on hover
-                gutter: 0, // Spacing from edge
-                belowOrigin: false, // Displays dropdown below the button
-                alignment: 'left', // Displays dropdown with edge aligned to the left of button
-                stopPropagation: false // Stops event propagation
-            });*/
-
-            //$('.dropdown1').height($('.qndiv').height());
 
             /*TOOLTIPS FOR BUTTONS*/
             $('.tooltipped').tooltip({
@@ -404,18 +380,258 @@ inqcontroller.controller('testsCtrl', ['$scope', 'TemplateService', 'NavigationS
             //CHECK IF BOOKMARKED OR TO REMOVE BOOKMARK
             //SET TEXT ACCORDINGLY
             var bookmarktoasttext = "This Question has been Bookmarked !"
-            /*ON SUCCESS OF BOOKMARKING*/
+                /*ON SUCCESS OF BOOKMARKING*/
             var $toastContent = $('<span>' + bookmarktoasttext + '</span>').add($('<button class="btn-flat toast-action" ng-click="bookmarkquestion()">Undo</button>'));
             Materialize.toast($toastContent, 3000);
         };
 
         /*function*/
+        var getscoresfromchapterssuccess = function (response) {
+            console.log(response.data);
+            $scope.questions_data_response = response.data;
+
+            var number_of_concepts = response.data.length;
+            var number_of_concepts_group1 = Math.ceil(number_of_concepts / 2);
+            var remaining_number_od_concepts = number_of_concepts - number_of_concepts_group1;
+            var question_set = 0;
+            var data_start = 0;
+            var data_end = 0;
+            $scope.total_questions = 20;
+
+            if (remaining_number_od_concepts > 1) {
+                var number_of_concepts_group2 = remaining_number_od_concepts / 2;
+                var number_of_concepts_group3 = number_of_concepts_group2;
+            } else {
+                var number_of_concepts_group2 = 1;
+                var number_of_concepts_group3 = 0;
+            }
+
+            /*CREATE ARRAY*/
+            var create_values_array = function () {
+                var create_values_array_deferred = $q.defer();
+
+                var values_array = [];
+                for (var va = 0; va < 20; va++) {
+                    var level = va < 12 ? 1 : 2;
+                    level = va > 15 ? 3 : level;
+
+                    values_array.push({
+                        answerval: 0,
+                        change: 0,
+                        levelval: level
+                    });
+                };
+                create_values_array_deferred.resolve(values_array);
+
+                return create_values_array_deferred.promise;
+            };
+
+            /*FIND QUESTIONS*/
+            var find_questions = function () {
+
+                var find_questions_deferred = $q.defer();
 
 
+                while ($scope.questions_array.length < question_set) {
+
+                    for (var cd = data_start; cd < data_end; cd++) {
+                        var answerval = $scope.values_array[$scope.questions_array.length].answerval == 0 ? 'questions' : 'answeredquestions';
+
+                        var levelval = $scope.values_array[$scope.questions_array.length].levelval == 1 ? 'easy' : 'medium';
+                        levelval = $scope.values_array[$scope.questions_array.length].levelval == 3 ? 'hard' : levelval;
+
+                        console.log(cd, answerval, levelval);
+                        var length_of_set = $scope.questions_data_response[cd][answerval][levelval].length;
+                        if (length_of_set != 0) {
+                            /*QUESTIONS ARE THERE*/
+                            /*FIND RANDOM QUESTION*/
+                            var random_number = Math.floor(Math.random() * (length_of_set - 1));
+                            /*ADD QUESTION ID TO ARRAY*/
+                            $scope.questions_array.push($scope.questions_data_response[cd][answerval][levelval][random_number]);
+                            /*REMOVE THAT QUESTION TO NOT USE AGAIN*/
+                            $scope.questions_data_response[cd][answerval][levelval].splice(random_number, 1);
+                            console.log($scope.questions_array);
+
+                            /*CHECK IF WE ARE DONE WITH THE SET*/
+                            if ($scope.questions_array.length == question_set) {
+                                if (number_of_concepts_group3 != 0) {
+                                    if (question_set != $scope.total_questions) {
+                                        data_start = data_end;
+                                        data_end = data_start + number_of_concepts_group2;
+                                        question_set += 4;
+                                    };
+                                };
+                            };
+
+                        } else {
+                            /*NO QUESTIONS OF SUCH TYPE*/
+                            if ($scope.values_array[$scope.questions_array.length].change == 3) {
+                                /*CHANGE QUESTION ANSWERED TYPE IF CHANGED ALREADY THREE TIMES*/
+                                $scope.values_array[$scope.questions_array.length].answerval = 1;
+                            };
+                            /*CHANGE LEVEL TYPE*/
+                            $scope.values_array[$scope.questions_array.length].levelval = $scope.values_array[$scope.questions_array.length].levelval == 3 ? 1 : $scope.values_array[$scope.questions_array.length].levelval + 1;
+
+                            $scope.values_array[$scope.questions_array.length].change++;
+
+                            console.log($scope.values_array[$scope.questions_array.length].levelval);
+                            console.log($scope.values_array[$scope.questions_array.length].answerval);
+                            console.log($scope.values_array[$scope.questions_array.length].change);
+
+                            cd -= 1;
+                        };
+
+                    };
+                };
+
+                find_questions_deferred.resolve($scope.questions_array);
+
+                return find_questions_deferred.promise;
+
+            };
+
+            var gettestquestionssuccess = function (response) {
+                console.log(response.data);
+                $scope.test_questions = response.data;
+
+                _.forEach($scope.test_questions, function (value) {
+                    var temporaryValue, randomIndex;
+                    var temporaryarr;
+                    var optionsorder = [1, 2, 3, 4];
+
+                    // While there remain elements to shuffle...
+                    for (var oi = 0; oi < value.options.length; oi++) {
+                        // Pick a remaining element...
+                        randomIndex = Math.floor(Math.random() * oi);
+
+                        // And swap it with the current element.
+                        temporaryValue = value.options[oi];
+                        value.options[oi] = value.options[randomIndex];
+                        value.options[randomIndex] = temporaryValue;
+
+                        temporaryarr = optionsorder[oi];
+                        optionsorder[oi] = optionsorder[randomIndex];
+                        optionsorder[randomIndex] = temporaryarr;
+                    }
+                    test_questions_array.push({
+                        question_id: value.qid,
+                        answergiven: 0,
+                        optionsorder: optionsorder
+                    });
+                });
+                console.log(test_questions_array);
+            };
+            var gettestquestionserror = function (response) {
+                console.log(response.data);
+            };
+
+            if ($scope.questions_data_response.length > 0) {
+                var create_values_array_promise = create_values_array()
+                create_values_array_promise.then(
+                    function (response) {
+                        /*SUCCESS IN CREATING ARRAY*/
+                        console.log(response);
+                        question_set = 12;
+                        data_start = 0;
+                        data_end = number_of_concepts_group1;
+                        $scope.values_array = response;
+                        $scope.questions_array = [];
+                        var find_questions_promise = find_questions();
+                        find_questions_promise.then(
+                            function (response) {
+                                /*QUESTIONS ARRAY RADY*/
+                                NavigationService.gettestquestions(response).then(gettestquestionssuccess, gettestquestionserror);
+                            },
+                            function (response) {
+                                /*QUESTIONS ARRAY ERROR*/
+                            });
+                    },
+                    function (response) {
+                        /*ERROR IN CREATING VALUE ARRAY*/
+                    });
+            }else{
+                alert("Not enough Concepts in this chapter");
+            };
+        };
+        var getscoresfromchapterserror = function (response) {
+            console.log(response.data);
+        };
+        NavigationService.getscorefromchapterids($.jStorage.get('user').id, $rootScope.chaptersarray).then(getscoresfromchapterssuccess, getscoresfromchapterserror);
+
+        /*TIMER FUNCTION*/
+        $scope.countdown = {
+            minutes: 2,
+            seconds: 0
+        };
+
+        $interval(function () {
+            $scope.countdown.minutes--;
+            $scope.countdown.seconds = 59;
+            var timer_interval = $interval(function () {
+                if ($scope.countdown.seconds > 0) {
+                    $scope.countdown.seconds--;
+                    if ($scope.countdown.seconds == 0) {
+                        $scope.countdown.minutes--;
+                        if ($scope.countdown.minutes == 0) {
+                            $interval.cancel(timer_interval);
+                        }
+                    }
+                } else {
+                    $scope.countdown.seconds = 59;
+                };
+            }, 1000);
+        }, 1000, 1);
+
+        /* TO PAUSE TIMER
+        $interval.pause(timer_interval);
+        */
+
+
+        /* DISPLAY TEST FUNCTIONALITIES */
+        $scope.test_question_number = 0;
+
+        $scope.change_question = function (ind) {
+            if (ind == 1 || ind == -1) {
+                $scope.test_question_number += ind;
+            } else {
+                $scope.test_question_number = ind;
+            };
+        };
+
+        /*SCORING*/
+        $scope.optionselected = function (ind) {
+            test_questions_array[$scope.test_question_number].answergiven = test_questions_array[$scope.test_question_number].optionsorder[ind];
+            console.log(test_questions_array);
+            if ($scope.test_question_number < $scope.test_questions.length) {
+                $scope.change_question(1);
+            };
+        };
+
+
+        /*STORE TEST ON SUBMIT*/
+        $scope.submittest = function () {
+            var store_test_detailssuccess = function (response) {
+                console.log(response.data);
+                if(response.data == "true"){
+                    $('#end-modal').modal('close');
+                    $location.path("/testresults");
+                };
+            };
+            var store_test_detailserror = function (response) {
+                console.log(response.data);
+            };
+
+            /*CONVERT optionsorder TO STRING*/
+            _.forEach(test_questions_array, function (value) {
+                value.optionsorder = JSON.stringify(value.optionsorder);
+            });
+
+            NavigationService.store_test_details($.jStorage.get("user").id, $rootScope.chaptersarray, "chapter", test_questions_array).then(store_test_detailssuccess, store_test_detailserror);
+        };
 
         // routing
 
-  }]);
+}]);
 
 inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$routeParams', '$location', '$interval',
   function ($scope, TemplateService, NavigationService, $rootScope, $routeParams, $location, $interval) {
@@ -487,6 +703,10 @@ inqcontroller.controller('conceptsCtrl', ['$scope', 'TemplateService', 'Navigati
         // routing
         $scope.gotoconceptcards = function (id) {
             $location.path('/conceptcards/' + id);
+        };
+        $scope.gototest = function () {
+            $rootScope.chaptersarray = $scope.chapterid;
+            $location.path('/tests');
         };
 
   }]);
@@ -659,37 +879,33 @@ inqcontroller.controller('dashboardCtrl', ['$scope', 'TemplateService', 'Navigat
         $scope.navigation = NavigationService.getnav();
 
         $interval(function () {
+            $('ul.tabs').tabs({
+                'swipeable': true
+            });
+
             $(document).ready(function () {
-                $('ul.tabs').tabs({
-                    'swipeable': true
-                });
+
+
 
                 var ctx = document.getElementById("timeline-graph").getContext('2d');
-                var myChart = new Chart(ctx, {
+
+
+                var mixedChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
                         datasets: [{
-                            label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-                            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-                            borderWidth: 1
-        }]
+                            label: 'Test Marks',
+                            data: [10, 20, 30, 40, 10, 30, 40, 20]
+        }, {
+                            label: 'Time Spent',
+                            data: [10, 30, 40, 20, 10, 30, 40, 20],
+                            "fill": false,
+                            "borderColor": "rgb(75, 192, 192)",
+
+                            // Changes this dataset to become a line
+                            type: 'line'
+        }],
+                        labels: ['21-09', '22-09', '23-09', '24-09', '25-09', '26-09', '27-09', '28-09']
                     },
                     options: {
                         scales: {
@@ -698,28 +914,21 @@ inqcontroller.controller('dashboardCtrl', ['$scope', 'TemplateService', 'Navigat
                                     beginAtZero: true
                                 }
             }]
-                        }
+                        },
+                        fill: 'rgba(1,0,0,1)'
                     }
                 });
 
-            });
+                /*CHAPTERS COLLASIBLE*/
+                $('.collapsible').collapsible();
 
-            /*CHAPTERS COLLASIBLE*/
-            $('.collapsible').collapsible();
-
+            })
         }, 2000, 1);
 
-        /*OPEN CHAPTER TITLE TO SE CHAPTERS*/
-        $scope.openchaptertitle = function (icon) {
-            console.log($(icon)[0]);
-            if (document.getElementById(icon).hasClass('dashboard-chapter-title-icons-rotate')) {
-                document.getElementById(icon).addClass('dashboard-chapter-title-icons-rotate');
-            } else {
-                document.getElementById(icon).removeClass('dashboard-chapter-title-icons-rotate');
-            };
-        };
 
-  }]);
+
+
+                }]);
 
 inqcontroller.controller('starredCtrl', ['$scope', 'TemplateService', 'NavigationService', '$rootScope', '$routeParams', '$location', '$interval',
   function ($scope, TemplateService, NavigationService, $rootScope, $routeParams, $location, $interval) {

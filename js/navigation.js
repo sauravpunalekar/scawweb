@@ -3,11 +3,11 @@ var navigationservice = angular.module('navigationservice', [])
 .factory('NavigationService', function ($http) {
 
     //MACBOOK AND HOME LAPTOP
-    //var adminurl = "http://localhost/rest/rest/index.php/";
+    var adminurl = "http://localhost/rest/rest/index.php/";
     //PC
     //var adminurl = "http://localhost/inqrest/rest/index.php/";
     //SERVER
-    var adminurl = "http://learnwithinq.com/adminpanel/rest/index.php/";
+    //var adminurl = "http://learnwithinq.com/adminpanel/rest/index.php/";
     //HOME LAPTOP
 
     var navigation = [{
@@ -52,7 +52,7 @@ var navigationservice = angular.module('navigationservice', [])
             return menuname;
         },
         getdatabyid: function (table, id) {
-            return $http.get(adminurl + table+'/getbyid', {
+            return $http.get(adminurl + table + '/getbyid', {
                 params: {
                     id: id
                 }
@@ -136,6 +136,34 @@ var navigationservice = angular.module('navigationservice', [])
                 }
             })
         },
+        getscorefromchapterids: function (user, chapterid) {
+            return $http.get(adminurl + 'tests/getscorefromchapterids', {
+                params: {
+                    'user': user,
+                    'chapters': chapterid
+                }
+            });
+        },
+        gettestquestions: function (questions) {
+            return $http.get(adminurl + 'tests/gettestquestions', {
+                params: {
+                    questionsarray: JSON.stringify(questions)
+                }
+            });
+                },
+        store_test_details: function (userid, chaptersarray, type, testdetails) {
+            console.log(testdetails);
+            return $http.get(adminurl + 'tests/storetestdetails', {
+                params: {
+                    testtype: type,
+                    data: {
+                        user_id: userid, 
+                        chapter_id: chaptersarray
+                    },
+                    testdetails: JSON.stringify(testdetails)
+                }
+            });
+                },
 
 
     }

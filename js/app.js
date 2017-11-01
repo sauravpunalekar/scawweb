@@ -1,6 +1,5 @@
 // JavaScript Document
-var inq = angular.module('inq', ['ngRoute', 'inqcontroller', 'templateservicemod', 'navigationservice', 'angularFileUpload', 'angular-loading-bar'
-]);
+var inq = angular.module('inq', ['ngRoute', 'inqcontroller', 'templateservicemod', 'navigationservice', 'angularFileUpload', 'angular-loading-bar','timer']);
 
 /*
 Client ID : 951565546728-s8mpt0u6nblg7qv6mpom6arvqm2o7qp8.apps.googleusercontent.com
