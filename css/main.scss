@@ -22,39 +22,51 @@ $break-large: 1200px;
 .primarybg {
     background-color: $primary-color !important;
 }
+
 .primarycolor {
     color: $primary-color !important;
 }
+
 .margin0 {
     margin: 0px 0px 0px 0px !important;
 }
+
 .padding0 {
     padding: 0px 0px 0px 0px !important;
 }
+
 .textleft {
     text-align: left !important;
 }
+
 .textcenter {
     text-align: center !important;
 }
+
 .textright {
     text-align: right !important;
 }
+
 .white {
     color: white !important;
 }
+
 .noborder {
     border: 0px !important;
 }
+
 .noshadow {
     box-shadow: 0 0 0 black !important;
 }
+
 .MJXc-display {
     text-align: left !important;
 }
+
 .bluehover:hover {
     color: $primary-color !important;
 }
+
 
 /*BUTTONS*/
 
@@ -72,6 +84,7 @@ $break-large: 1200px;
         background-color: white !important;
     }
 }
+
 .bluebutton {
     background: $primary-color !important;
     &:hover {
@@ -85,11 +98,13 @@ $break-large: 1200px;
     }
 }
 
+
 /*BUTTON USED IN TEST AND OTHER PLACES*/
 
 .rounded-button {
     border-radius: 20px !important;
 }
+
 
 /*font*/
 
@@ -97,26 +112,32 @@ $break-large: 1200px;
     font-family: ceraL;
     src: url("../fonts/Cera GR Light.otf")format("opentype");
 }
+
 @font-face {
     font-family: ceraM;
     src: url("../fonts/Cera GR Medium.otf")format("opentype");
 }
+
 @font-face {
     font-family: ceraB;
     src: url("../fonts/Cera GR.otf")format("opentype");
 }
+
 @font-face {
     font-family: congrats;
     src: url("../fonts/congrats.otf")format("opentype");
 }
+
 @font-face {
     font-family: numberfont;
     src: url("../fonts/MathJax_Main-Regular.woff")format("woff");
     unicode-range: U+30-39;
 }
+
 .cerafont {
     font-family: numberfont, ceraB !important;
 }
+
 .loadingdiv {
     height: 300px;
     text-align: center;
@@ -131,13 +152,18 @@ $break-large: 1200px;
         }
     }
 }
-.navmargin {
-    margin-top: 6px;
-    margin-bottom: 6px;
+
+.navigation-div {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background: white;
+    padding: 3px 0px;
     @media screen and (max-width: $break-medium) {
         display: none;
     }
 }
+
 .navtitle {
     max-width: 160px;
     cursor: pointer;
@@ -154,6 +180,7 @@ $break-large: 1200px;
     /* overflow: hidden; */
     text-overflow: inherit;
 }
+
 .navtitlearrow {
     content: "";
     width: 29px;
@@ -172,11 +199,13 @@ $break-large: 1200px;
     /* outline: thick solid #fff; */
     box-shadow: 2px -2px 0px 1px white;
 }
+
 .navyou {
     display: inline;
     font-size: 20px;
     color: $primary-color;
 }
+
 .navarehere {
     display: inline;
     font-size: 11px;
@@ -187,14 +216,17 @@ $break-large: 1200px;
     margin-top: 0px;
 }
 
+
 /*REUSE*/
 
 .relativediv {
     position: relative;
 }
+
 .inlinedisplay {
     display: inline-block;
 }
+
 
 /*sass*/
 
@@ -207,10 +239,12 @@ $break-large: 1200px;
     padding: 1px 0 0 0;
     z-index: 2;
 }
+
 li.search .search-wrapper {
     margin: 0 0px;
     transition: margin .25s ease;
 }
+
 li.search {
     position: absolute;
     left: 0;
@@ -220,12 +254,15 @@ li.search {
     padding: 1px 0 0 0;
     z-index: 2;
 }
+
 #search:focus {
     width: 100%;
 }
+
 #search:focus+searchicon {
     right: 2px;
 }
+
 
 /*#search:focus + #b {
     background: #ccc
@@ -240,18 +277,22 @@ li.search {
     margin: 0 0 0px 0 !important;
     padding: 0 45px 0 15px !important;
 }
+
 .searchicon {
     position: absolute;
     right: 10px;
     top: 10px;
     cursor: pointer;
 }
+
 .logobox {
     background-color: $secondary-color !important;
 }
+
 .loginimg {
     text-align: center;
 }
+
 .loginimg2 {
     width: 40%;
     padding-top: 50%;
@@ -260,9 +301,11 @@ li.search {
         padding-top: 2%;
     }
 }
+
 .menubg {
     background-color: $secondary-light !important;
 }
+
 .standardnumber {
     background-color: $primary-color;
     margin: 10px;
@@ -271,6 +314,7 @@ li.search {
     font-weight: 700;
     color: white !important;
 }
+
 .menuprofilepic {
     border: 1.5px solid $primary-color;
     margin-left: auto !important;
@@ -278,10 +322,12 @@ li.search {
     width: 30% !important;
     height: 30% !important;
 }
+
 .menuprofilename {
     margin-top: 4px !important;
     font-size: 1.1em !important;
 }
+
 
 /*.side-nav li > a:hover {
    
@@ -296,25 +342,30 @@ li.search {
     height: 94vh;
     background-size: cover;
 }
+
 .inqbgtop {
     /*background-image: url(../img/top_bg.png);*/
     height: 35vh;
     background-size: 100%;
 }
+
 .inqbgfull {
     position: relative;
     height: 94vh;
     overflow-y: scroll;
 }
+
 .inqbgbottom {
     height: 59vh;
     overflow-y: scroll;
 }
+
 .dividerline {
     margin-left: 20px !important;
     margin-right: 20px !important;
     margin-top: -10px !important;
 }
+
 .side-nav li>a {
     font-size: 16px !important;
     color: $grey-text !important;
@@ -330,25 +381,32 @@ li.search {
         }
     }
 }
+
 .side-nav .subheader {
     color: $light-text !important;
     font-size: 12px !important;
 }
+
 .icons {
     position: absolute;
 }
+
 .menulist {
     display: inline;
 }
+
 .menutext {
     top: 4px;
 }
+
 .dropdownsub {}
+
 .bg {
     height: 45vh;
     background-image: url(../img/galaxy_bg.jpg);
     background-size: 100%;
 }
+
 .moon {
     display: inline-block;
     position: absolute;
@@ -356,6 +414,7 @@ li.search {
     top: 9vh;
     margin-left: 5vh;
 }
+
 .astro {
     display: inline-block;
     position: absolute;
@@ -363,6 +422,7 @@ li.search {
     top: 4%;
     margin-left: 50%;
 }
+
 .bgtext {
     text-align: -webkit-center;
     padding-top: 85px;
@@ -370,10 +430,12 @@ li.search {
     font-size: 37px;
     font-weight: 900;
 }
+
 .subbox {
     text-align: -webkit-center;
     margin-bottom: 25px;
 }
+
 .subbox2 {
     background-color: white;
     height: 15vw;
@@ -397,6 +459,7 @@ li.search {
         }
     }
 }
+
 .subbox3 {
     text-align: center;
     cursor: pointer;
@@ -405,21 +468,25 @@ li.search {
     padding-top:270px;
     padding-bottom: 50px;*/
 }
+
 .subicons {
     width: 80%;
     margin-bottom: 10px;
 }
+
 .sublist {
     padding-top: 5px;
     font-family: ceraM;
     font-size: 18px;
 }
+
 .subbox4 {
     text-align: center;
     /* padding-left:150px;
     padding-right:150px;
    */
 }
+
 .contentdiv {
     padding-left: 350px;
     @media screen and (max-width: $break-medium) {
@@ -427,11 +494,13 @@ li.search {
     }
     @media screen and (min-width: $break-large) {}
 }
+
 .menuicon {
     color: white;
     font-size: 30px !important;
     margin-left: 10px;
 }
+
 .chapterlist {
     background-color: white;
     height: auto;
@@ -440,16 +509,19 @@ li.search {
     -moz-box-shadow: 0px 1px 6px 0px #4f4d4f;
     box-shadow: 0px 1px 6px 0px #4f4d4f;
 }
+
 .chapbox {
     text-align: -webkit-center;
     margin-top: 15px;
     cursor: pointer;
 }
+
 .chapdivider {
     height: 1.5px !important;
     width: 100% !important;
     margin-left: -11px !important;
 }
+
 .chaptext {
     text-align: -webkit-left !important;
     font-size: 25px !important;
@@ -462,6 +534,7 @@ li.search {
         font-size: 20px !important;
     }
 }
+
 .chapconcept {
     text-align: left !important;
     margin-top: 7px;
@@ -470,16 +543,20 @@ li.search {
     margin-left: 12px;
     font-weight: 800;
 }
+
 .chapicon {
     color: $grey-text !important;
     margin-left: 4px;
 }
+
 .chapicon:hover {
     color: $primary-color !important;
 }
+
 .chapbuttons a {
     color: $grey-text !important;
 }
+
 .chapbuttons {
     margin-top: 7px !important;
     color: $grey-text !important;
@@ -491,15 +568,18 @@ li.search {
         }
     }
 }
+
 .concepthide {
     @media screen and (max-width: $break-medium) {
         display: none !important;
     }
 }
+
 .chapheight {
     padding-bottom: 1.5% !important;
     font-size: 14px;
 }
+
 
 /*Login box*/
 
@@ -507,6 +587,7 @@ li.search {
     background-color: $secondary-color;
     height: 480px;
 }
+
 .loginlogo {
     background-color: $primary-color;
     height: 480px;
@@ -515,15 +596,18 @@ li.search {
     }
 }
 
+
 /*STandard */
 
 .standardtext {
     text-align: center;
 }
+
 .standbox {
     text-align: center;
     cursor: pointer;
 }
+
 .standardbox {
     background-color: white;
     height: 15vw;
@@ -543,6 +627,7 @@ li.search {
         font-size: 50vw;
     }
 }
+
 
 /*card*/
 
@@ -567,6 +652,7 @@ li.search {
         margin-left: -6%;
     }
 }
+
 .cardspage {
     height: 69vh;
     width: 84%;
@@ -580,6 +666,7 @@ li.search {
         margin-left: 3vh;
     }
 }
+
 .concepthead {
     border-bottom: 2px solid rgba(183, 196, 197, 0.33);
     height: 7.5vh;
@@ -591,36 +678,43 @@ li.search {
         padding-top: 4%;
     }
 }
+
 .conceptheadcentralize {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .cardbut {
     background-color: white !important;
     border: 1px solid $primary-color !important;
     width: 100% !important;
 }
+
 .cardicon {
     color: $primary-color !important;
     font-size: 50px !important;
     text-align: -webkit-center;
 }
+
 .iconrow {
     padding-left: 30px !important;
     padding-right: 30px !important;
 }
+
 .starbut {
     background-color: white !important;
     border: 1px solid $primary-color !important;
     width: 100% !important;
 }
+
 .staricon {
     color: $primary-color !important;
     font-size: 57px !important;
     text-align: -webkit-center;
     margin-top: 6px;
 }
+
 
 /*mcq page*/
 
@@ -630,22 +724,27 @@ li.search {
 .scrollbar {
     overflow-y: scroll;
 }
+
 .force-overflow {
     min-height: 450px;
 }
+
 #style-4::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
     background-color: #FFF;
     border-radius: 10px;
 }
+
 #style-4::-webkit-scrollbar {
     width: 6px;
     background-color: #F5F5F5;
 }
+
 #style-4::-webkit-scrollbar-thumb {
     background-color: $primary-color;
     border: 1px solid $primary-color;
 }
+
 .concepttext {
     font-size: 20px;
     margin-top: 2vh;
@@ -653,6 +752,7 @@ li.search {
         font-size: 14px;
     }
 }
+
 .optiontext {
     border: solid 2px #0ed5ca;
     padding: 18px;
@@ -664,17 +764,20 @@ li.search {
         font-size: 14px;
     }
 }
+
 .optionbox {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 3vh;
 }
+
 .mcqcontent {
     overflow-x: hidden;
     overflow-y: scroll;
     height: 90%;
     width: 100%;
 }
+
 .conceptcontent {
     height: 88%;
     width: 100%;
@@ -708,23 +811,28 @@ li.search {
         max-width: 100%;
     }
 }
+
 .conceptcontent img {
     max-width: 100%;
 }
+
 .concepticon {
     font-size: 19px;
     padding-top: 4px;
     float: inherit;
 }
 
+
 /*button*/
 
 .featured-image {
     max-width: 270px;
 }
+
 .round-button {
     width: 100%;
 }
+
 .round-button-circle {
     width: 75%;
     height: 0;
@@ -740,9 +848,11 @@ li.search {
          padding-bottom: 75%;
     }*/
 }
+
 .round-button-circle:hover {
     background: #03bdd6;
 }
+
 .round-button i {
     display: block;
     float: left;
@@ -755,9 +865,11 @@ li.search {
     font-size: 35px !important;
     text-align: -webkit-center;
 }
+
 .round-button:hover {
     color: white !important;
 }
+
 
 /*CONCEPTS TIMELINE*/
 
@@ -765,12 +877,14 @@ li.search {
     height: 75px;
     padding: 15px 10px;
 }
+
 .testline {
     width: 3px;
     height: 50px;
     background: $primary-color;
     margin-top: -20px;
 }
+
 .testcircle {
     width: 80px;
     height: 80px;
@@ -779,10 +893,12 @@ li.search {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.64);
     cursor: pointer;
 }
+
 .conceptpercentouterdiv {
     padding: 2% !important;
     padding-bottom: 0px !important;
 }
+
 .conceptpercentbg {
     text-align: center;
     background-image: url(../img/circle_percent_holder.png);
@@ -802,6 +918,7 @@ li.search {
         margin-top: 30%;
     }
 }
+
 .conceptdiv {
     position: relative;
     width: 100%;
@@ -812,6 +929,7 @@ li.search {
         width: initial;
     }
 }
+
 .conceptdotdiv {
     position: absolute;
     height: 100%;
@@ -819,6 +937,7 @@ li.search {
     flex-direction: column;
     justify-content: center;
 }
+
 .concepttitle {
     color: $grey-text;
     text-align: left;
@@ -829,6 +948,7 @@ li.search {
         font-size: 1.2em;
     }
 }
+
 .conceptbuttons {
     font-size: 1.2em;
     font-weight: 300;
@@ -839,6 +959,7 @@ li.search {
         font-size: 1em;
     }
 }
+
 .conceptcompletionline {
     background-color: $primary-color;
     height: 3px;
@@ -846,6 +967,7 @@ li.search {
     margin-top: 6px !important;
     border-radius: 2px;
 }
+
 .conceptdot {
     width: 20px !important;
     height: 20px !important;
@@ -859,6 +981,7 @@ li.search {
         width: 6px !important;
     }
 }
+
 .circledotanimation {
     text-decoration: none;
     -webkit-transition: all 0.5s;
@@ -868,6 +991,7 @@ li.search {
     -moz-animation: neon2 1.5s ease-in-out infinite alternate;
     animation: neon2 1.5s ease-in-out infinite alternate;
 }
+
 @-webkit-keyframes neon2 {
     from {
         box-shadow: 0 0 2px $primary-color, 0 0 4px $primary-color, 0 0 6px $primary-color, 0 0 8px $primary-color, 0 0 10px $primary-color, 0 0 12px $primary-color, 0 0 14px $primary-color, 0 0 16px $primary-color;
@@ -876,6 +1000,7 @@ li.search {
         box-shadow: 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color, 0 0 2px $primary-color;
     }
 }
+
 
 /*STAR ANIMATION*/
 
@@ -889,6 +1014,7 @@ li.search {
     -ms-transform: translate(-50%, -47.5%);
     transform: translate(-21%, -28%);
 }
+
 @keyframes heart-burst {
     0% {
         background-position: left
@@ -897,6 +1023,7 @@ li.search {
         background-position: right
     }
 }
+
 .HeartAnimation:hover {
     animation-timing-function: steps(28);
     animation-name: heart-burst;
@@ -906,6 +1033,7 @@ li.search {
     background-position: right;
 }
 
+
 /*testsresutls*/
 
 .testbg {
@@ -913,12 +1041,14 @@ li.search {
     height: auto;
     margin-top: -90px;
 }
+
 .testtext {
     padding-top: 6vh;
     text-align: center;
     @extend .cerafont;
     color: white;
 }
+
 .congratstext {
     color: #f9ff00;
     font-size: 30px;
@@ -926,6 +1056,7 @@ li.search {
     margin-top: 20px;
     font-family: congrats;
 }
+
 .scoretext {
     font-size: 15px;
     margin-top: 8px;
@@ -933,6 +1064,7 @@ li.search {
         font-size: 15px;
     }
 }
+
 .score {
     font-size: 40px;
     border: 1px solid;
@@ -942,61 +1074,73 @@ li.search {
     -moz-box-shadow: 0px 0px 9px -4px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 9px -4px rgba(0, 0, 0, 0.75);
 }
+
 .resulttext {
     height: 10vh;
     color: white;
     text-indent: 7px;
 }
+
 .faceicon {
     display: block;
     margin-right: 10px;
 }
+
 .resultscore {
     font-size: 40px;
     font-weight: 500;
     font-family: monospace;
 }
+
 .resulthead {
     font-size: 15px;
     font-weight: 400;
 }
+
 .testconcept {
     font-size: 17px;
     color: #abaaaa;
     @extend .cerafont;
 }
+
 .testconcepthead {
     margin-top: 35px;
     ;
     font-size: 19px;
     color: $grey-text;
 }
+
 .conceptstestedline {
     background-color: $primary-color;
     height: 21px;
     float: left;
     border-radius: 2px;
 }
+
 .hidediv {
     @media screen and (max-width: $break-medium) {
         display: none;
     }
 }
 
+
 /*TEST RESULTS*/
 
 .testresultsbottom {
     height: 59vh;
 }
+
 .testresultconcepts {
     height: 49vh;
     overflow-y: scroll;
 }
+
 .sortedbox {
     background-color: white;
     box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.28);
     color: $grey-text;
 }
+
 
 /*TEST PAGE*/
 
@@ -1008,11 +1152,13 @@ li.search {
     position: fixed;
     margin-top: -52px;
 }
+
 .lowerdiv {
     transition: 1s all;
     position: absolute;
     margin-top: 500px;
 }
+
 .bottomnav {
     position: fixed;
     width: 100%;
@@ -1021,13 +1167,16 @@ li.search {
     background-color: #E91E63;
     color: white;
 }
+
 .pausediv {
     position: relative;
     height: 100%;
 }
+
 .arrowdiv {
     background-color: #E91E63 !important;
 }
+
 .pausebtn {
     height: 100% !important;
     width: 100%;
@@ -1035,6 +1184,7 @@ li.search {
     font-weight: 500;
     background-color: $primary-color !important;
 }
+
 .pausebadge {
     background-color: white;
     height: 40px !important;
@@ -1043,15 +1193,18 @@ li.search {
     line-height: 40px !important;
     border-radius: 40%;
 }
+
 .testarrow {
     font-size: 6vh;
     padding: 3%;
 }
+
 .testques {
     font-size: 1.4em;
     line-height: 1.2em;
     padding: 2%;
 }
+
 .optiondiv {
     border-bottom: 1px solid $light-text;
     height: auto;
@@ -1059,6 +1212,7 @@ li.search {
     margin-bottom: 0 !important;
     cursor: pointer;
 }
+
 .optionsr {
     @extend .textcenter;
     font-size: 1.5em;
@@ -1068,16 +1222,19 @@ li.search {
     flex-direction: column;
     justify-content: center;
 }
+
 .optioninnerpadding {
     padding-top: 3% !important;
     padding-bottom: 3% !important;
 }
+
 .testnav {
     width: 100%;
     top: 0px;
     padding-top: 1%;
     padding-bottom: 1%;
 }
+
 #dropdown1 {
     box-shadow: 0 0 0 black !important;
     background-color: white !important;
@@ -1090,6 +1247,7 @@ li.search {
     left: 0 !important;
     right: 0 !important;
 }
+
 .downarrow {
     border: solid transparent;
     content: " ";
@@ -1103,6 +1261,7 @@ li.search {
     margin-right: auto;
     margin-top: -5px;
 }
+
 .arrow {
     border: solid transparent;
     content: " ";
@@ -1116,12 +1275,14 @@ li.search {
     margin-right: auto;
     margin-top: -20px;
 }
+
 .questionnumber {
     color: white;
     font-size: 1.5em;
     font-weight: 600;
     cursor: pointer;
 }
+
 .dropnodiv {
     width: 50% !important;
     border: solid transparent;
@@ -1135,9 +1296,11 @@ li.search {
     position: absolute;
     margin-top: -22px;
 }
+
 .qndiv {
     position: initial !important;
 }
+
 .qnbox {
     border: 1px solid $primary-color;
     width: 30px !important;
@@ -1151,11 +1314,13 @@ li.search {
     margin-left: 5px !important;
     cursor: pointer;
 }
+
 .qnbox:hover {
     background-color: #3e3a3a !important;
     color: #ffffff !important;
     border: 1px solid #3e3a3a !important;
 }
+
 .quesh5 {
     font-size: 1.5em;
     font-weight: bolder;
@@ -1165,14 +1330,17 @@ li.search {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .qnattempted {
     background-color: $primary-color !important;
     color: white;
 }
+
 .qnunattempted {
     background-color: white;
     color: $primary-color;
 }
+
 .mcqhead {
     background-color: #dae8ea;
     height: 6vh;
@@ -1186,6 +1354,7 @@ li.search {
         font-size: 14px;
     }
 }
+
 
 /*NEW TEST PAGE*/
 
@@ -1206,6 +1375,7 @@ li.search {
         margin-left: -10%;
     }
 }
+
 .test-card-div {
     margin: 30px 7.5%;
     width: 85%;
@@ -1218,6 +1388,7 @@ li.search {
         margin: 30px 22.5%;
     }
 }
+
 .test-card-header {
     border-bottom: 1px solid $secondary-light;
     .text-card-header-number {
@@ -1255,6 +1426,7 @@ li.search {
         }
     }
 }
+
 .test-time-div {
     display: inline-block;
     width: 70%;
@@ -1290,6 +1462,7 @@ li.search {
     }
 }
 
+
 /*HOURGLASS ANIMATION*/
 
 @keyframes ld-spin {
@@ -1309,6 +1482,7 @@ li.search {
         transform: rotate(360deg)
     }
 }
+
 @-webkit-keyframes ld-spin {
     0% {
         -webkit-transform: rotate(0);
@@ -1326,6 +1500,7 @@ li.search {
         transform: rotate(360deg)
     }
 }
+
 .test-card-content {
     overflow-y: scroll;
     max-height: 60vh;
@@ -1349,6 +1524,7 @@ li.search {
         }
     }
 }
+
 .test-bottom-buttons-div {
     position: absolute;
     width: 98%;
@@ -1361,6 +1537,7 @@ li.search {
         }
     }
 }
+
 .report-modal {
     .report-modal-header {
         width: 100%;
@@ -1391,6 +1568,7 @@ li.search {
         margin: 0px 0px !important;
     }
 }
+
 
 /*ASK A DOUBT MODAL*/
 
@@ -1463,21 +1641,25 @@ li.search {
     }
 }
 
+
 /*END MODAL*/
 
 .attempted-text {
     font-size: 15px;
     font-weight: 700;
 }
+
 .score-text {
     font-size: 50px;
     font-weight: bold;
     color: $primary-color;
 }
+
 .questions-text {
     font-size: 20px;
     font-weight: bolder;
 }
+
 .question-box {
     text-align: center;
     width: 30px;
@@ -1489,6 +1671,7 @@ li.search {
         background: $primary-dark;
     }
 }
+
 .end-modal-submit-button {
     width: 100%;
     background-color: $primary-color !important;
@@ -1502,6 +1685,7 @@ li.search {
         background-color: $primary-dark !important;
     }
 }
+
 .resume-button {
     background-color: $pink-color !important;
     &:hover {
@@ -1514,24 +1698,29 @@ li.search {
         background-color: $pink-dark !important;
     }
 }
+
 .sure-text {
     font-size: 15px;
 }
+
 .counted-text {
     font-size: 12px;
     color: $light-text;
 }
+
 
 /*TEST CARD SCROLLBAR DESIGN*/
 
 #test-card-content::-webkit-scrollbar {
     width: 6px;
 }
+
 #test-card-content::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
     background: white;
     border-bottom-right-radius: 5px;
 }
+
 #test-card-content::-webkit-scrollbar-thumb {
     background: $primary-color;
     border-bottom-right-radius: 5px;
@@ -1540,21 +1729,25 @@ li.search {
     }
 }
 
+
 /*DOUBTS MODAL SCROLLBAR DESIGN*/
 
 #doubt-modal-doubts::-webkit-scrollbar {
     width: 6px;
 }
+
 #doubt-modal-doubts::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
     background: white;
 }
+
 #doubt-modal-doubts::-webkit-scrollbar-thumb {
     background: $primary-color;
     &:hover {
         background: $primary-dark;
     }
 }
+
 
 /*TOOLTIP BOTTOM ARROW DESIGN*/
 
@@ -1580,12 +1773,14 @@ li.search {
     }
 }
 
+
 /*LEADERBOARD PAGE*/
 
 .tab-button {
     width: 12em;
     height: 40px;
 }
+
 .leaderboard-user-image {
     margin: 5% 0%;
     border-radius: 100%;
@@ -1593,11 +1788,13 @@ li.search {
     width: 6em !important;
     height: 6em !important;
 }
+
 .leaderboard-user-you {
     margin: 0;
     font-size: 1em;
     color: white;
 }
+
 .leaderboard-user-scores {
     .leaderboard-asked-title {
         color: rgba(255, 255, 255, 0.77);
@@ -1610,6 +1807,7 @@ li.search {
         color: white;
     }
 }
+
 .leaderboard-list-item {
     width: 80%;
     background: white;
@@ -1656,12 +1854,14 @@ li.search {
     }
 }
 
+
 /*DASHBOARD*/
 
 .dashboard-div {
     width: 95%;
     margin: 2% auto;
 }
+
 .dashboard-tabs-div {
     li {
         a {
@@ -1673,6 +1873,7 @@ li.search {
     }
 }
 
+
 /*Materialize Class*/
 
 .tabs-content {
@@ -1681,6 +1882,7 @@ li.search {
         height: auto !important;
     }
 }
+
 .dashboard-data-div {
     background: white !important;
     .dashboard-data-chapters-div {
@@ -1723,16 +1925,18 @@ li.search {
         }
     }
 }
+
 .dashboard-chapters-title {
     font-weight: bolder;
     font-size: 1.2em;
     text-align: center;
 }
 
-.initialized{
-   height: 80vh !important;
+.initialized {
+    height: 80vh !important;
     overflow-y: scroll !important;
 }
+
 .concepts-list-div {
     .concept-div {
         background: $primary-color;
@@ -1749,10 +1953,12 @@ li.search {
         }
     }
 }
+
 .middlediv {
     margin: 12px;
     content: "/";
 }
+
 
 /*TOAST*/
 
@@ -1775,6 +1981,7 @@ li.search {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);
